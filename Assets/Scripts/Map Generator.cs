@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class MapGenerator : MonoBehaviour
 {
     private int[] floorCells;
+    public int[] getFloorCells => floorCells;
 
     private int floorCellsCount;
     private int minRoomCount;
@@ -13,6 +14,7 @@ public class MapGenerator : MonoBehaviour
     private List<int> endRooms;
     private List<Cell> spawnedCells;
     private Queue<int> cellQueue;
+    public List<Cell> getSpawnedCells => spawnedCells;
 
     private int bossRoomIndex;
     private int itemRoomIndex;
@@ -29,10 +31,21 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private Sprite secretSprite;
     [SerializeField] private Sprite bossSprite;
 
+    public static MapGenerator instance;
+
 
 
     private void Start() 
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
         minRoomCount = 6;
         maxRoomCount = 10;
         cellSize = 0.16f;
@@ -117,6 +130,8 @@ public class MapGenerator : MonoBehaviour
 
         SpawnRoom(secretRoomIndex);
         UpdateSpecialRoomSprites();
+        floorCells[secretRoomIndex] = 1;
+        RoomManager.instance.SetupRooms(spawnedCells);
     }
 
     private void UpdateSpecialRoomSprites()
@@ -126,18 +141,22 @@ public class MapGenerator : MonoBehaviour
             if (cell.Index == bossRoomIndex)
             {
                 cell.SetSprite(bossSprite);
+                cell.SetRoomType(RoomType.Boss);
             }
             else if (cell.Index == itemRoomIndex)
             {
                 cell.SetSprite(itemSprite);
+                cell.SetRoomType(RoomType.Item);
             }
             else if (cell.Index == shopRoomIndex)
             {
                 cell.SetSprite(shopSprite);
+                cell.SetRoomType(RoomType.Shop);
             }
             else if (cell.Index == secretRoomIndex)
             {
                 cell.SetSprite(secretSprite);
+                cell.SetRoomType(RoomType.Secret);
             }
         }
     }
@@ -155,6 +174,8 @@ public class MapGenerator : MonoBehaviour
         
         Cell newCell = Instantiate(cellPrefab, pos, Quaternion.identity);
         newCell.Index = index;
+        newCell.SetRoomType(RoomType.Normal);
+        newCell.cellList.Add(index);
 
         spawnedCells.Add(newCell);
     }

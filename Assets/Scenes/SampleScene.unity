@@ -350,6 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 847554326}
   - component: {fileID: 847554325}
+  - component: {fileID: 847554327}
   m_Layer: 0
   m_Name: Map Generator
   m_TagString: Untagged
@@ -389,6 +390,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &847554327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847554324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144496d0b382087428f8c56faaf61eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomManager
+  offsetX: 91
+  offsetY: 60
+  roomPrefab: {fileID: 2050320764703251889, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
+  doorPrefab: {fileID: 6965859512761312662, guid: b202d978a0b59d0489f455ba11eb36aa, type: 3}
+  doors:
+  - {fileID: 11400000, guid: 0c1783a0de57a324a948b63c5decf0ca, type: 2}
+  - {fileID: 11400000, guid: a18cbc445dc313c4086a22224aca8c77, type: 2}
+  - {fileID: 11400000, guid: aca25244da6b17d4ab9c417db482a665, type: 2}
+  - {fileID: 11400000, guid: 3f43292a4fd0012449cbbbc1f30085a8, type: 2}
+  - {fileID: 11400000, guid: 1d82fc2e0c016a048b501cd4e3445973, type: 2}
+  rooms:
+  - {fileID: 11400000, guid: 3937401ef87349b4eb85e2541a850551, type: 2}
+  - {fileID: 11400000, guid: 3bac2fa1b27b36d41b0131315bacae83, type: 2}
+  - {fileID: 11400000, guid: e1f7fc60a59c18c40aee0a31541443d3, type: 2}
+  - {fileID: 11400000, guid: 4f9dd24c3347e474ba04f2c5e049d329, type: 2}
+  - {fileID: 11400000, guid: ca2b617372515464cac1fad128b93a8f, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
