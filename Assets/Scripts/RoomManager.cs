@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
+using System;
 
 public class RoomManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class RoomManager : MonoBehaviour
     [SerializeField] public RoomScript[] rooms;
 
     public static RoomManager instance;
+    public static event Action<Vector2> OnMapGenerated;
 
     private void Awake() {
         if (instance == null)
@@ -30,6 +32,19 @@ public class RoomManager : MonoBehaviour
         createdRooms = new List<Room>();
     }
 
+    public Room GetRoomAtCellIndex(int index)
+    {
+        return createdRooms.Find(r => r.name == "Room_" + index);
+    }
+
+    public Vector2 GetStartRoomPosition()
+    {
+        if (createdRooms.Count > 0)
+        {
+            return createdRooms[0].transform.position;
+        }
+        return Vector2.zero;
+    }
     public void SetupRooms(List<Cell> spawnedCells)
     {
         for(int i = createdRooms.Count - 1; i >= 0; i--)
@@ -47,10 +62,12 @@ public class RoomManager : MonoBehaviour
             var convertedPosition = new Vector2(currentPosition.x * offsetX, currentPosition.y * offsetY);
 
             var spawnedRoom = Instantiate(roomPrefab, convertedPosition, Quaternion.identity);
+            spawnedRoom.name = "Room_" + currentCell.Index;
 
             spawnedRoom.SetupRoom(currentCell, foundRoom);
             
             createdRooms.Add(spawnedRoom);
         }
+        OnMapGenerated?.Invoke(GetStartRoomPosition());
     }
 }
