@@ -14,9 +14,17 @@ public enum EdgeDirection
 public class Room : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
+    public int roomIndex;
+
+    [Header("Wall Door Blockers")]
+    public GameObject blockerUp;
+    public GameObject blockerDown;
+    public GameObject blockerLeft;
+    public GameObject blockerRight;
 
     public void SetupRoom(Cell currentCell, RoomScript room)
     {
+        roomIndex = currentCell.Index;
         spriteRenderer.sprite = room.roomSprite;
 
         //if (currentCell.roomType == RoomType.Secret) return;
@@ -25,6 +33,24 @@ public class Room : MonoBehaviour
         var cellList = MapGenerator.instance.getSpawnedCells;
 
         SetupOneByOne(currentCell, floorplan, cellList);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Player") && CameraController.instance != null) {
+            if (CameraController.instance.SetCurrentRoom(roomIndex)) {
+                Vector2 direction = (transform.position - other.transform.position).normalized;
+
+                if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y)) {
+                    direction = new Vector2(Mathf.Sign(direction.x), 0);
+                } else {
+                    direction = new Vector2(0, Mathf.Sign(direction.y));
+                }
+
+                float pushDistance = 2.8f;
+
+                other.transform.position += (Vector3)(direction * pushDistance);
+            }
+        }
     }
 
     public void SetupOneByOne(Cell cell, int[] floorplan, List<Cell> cellList)
@@ -72,6 +98,24 @@ public class Room : MonoBehaviour
         RoomType correctDoorStyle = GetDoorPriority(currentCell.roomType, foundCell.roomType);
 
         SetupDoor(door, direction, correctDoorStyle);
+
+        switch (direction) 
+        {
+            case EdgeDirection.Up:
+                if (blockerUp != null) blockerUp.SetActive(false);
+                break;
+
+            case EdgeDirection.Down:
+                if (blockerDown != null) blockerDown.SetActive(false);
+                break;
+
+            case EdgeDirection.Left: 
+                if (blockerLeft != null) blockerLeft.SetActive(false);
+                break;
+
+            case EdgeDirection.Right: if (blockerRight != null) blockerRight.SetActive(false);
+                break;
+        }
     }
 
     private void SetupDoor(Door door, EdgeDirection direction, RoomType roomType)

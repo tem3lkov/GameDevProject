@@ -5,8 +5,14 @@ using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
+    public static CameraController instance;
     private CinemachineConfiner2D confiner;
-    private int currentRoomIndex; 
+    private int currentRoomIndex;
+
+    private void Awake() {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+    }
 
     private void OnEnable() => RoomManager.OnMapGenerated += HandleNewMap;
     private void OnDisable() => RoomManager.OnMapGenerated -= HandleNewMap;
@@ -28,15 +34,20 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    private void TryMove(int offset)
-    {
+    private void TryMove(int offset) {
         int targetIndex = currentRoomIndex + offset;
-
-        if (targetIndex >= 0 && targetIndex < 100 && MapGenerator.instance.getFloorCells[targetIndex] == 1)
-        {
-            currentRoomIndex = targetIndex;
-            MoveToRoom(currentRoomIndex);
+        if (targetIndex >= 0 && targetIndex < 100 && MapGenerator.instance.getFloorCells[targetIndex] == 1) {
+            SetCurrentRoom(targetIndex);
         }
+    }
+
+    public bool SetCurrentRoom(int index) {
+        if (currentRoomIndex != index) {
+            currentRoomIndex = index;
+            MoveToRoom(currentRoomIndex);
+            return true;
+        }
+        return false;
     }
 
     private void MoveToRoom(int index)
@@ -49,7 +60,9 @@ public class CameraController : MonoBehaviour
 
             if (confiner == null) confiner = GetComponent<CinemachineConfiner2D>();
 
-            var bounds = room.GetComponentInChildren<Collider2D>();
+            var colliders = room.GetComponentsInChildren<Collider2D>();
+            var bounds = colliders.FirstOrDefault(c => c.isTrigger);
+
             if (bounds != null)
             {
                 confiner.BoundingShape2D = bounds;

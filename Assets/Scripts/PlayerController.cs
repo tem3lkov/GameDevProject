@@ -13,15 +13,22 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         PlayerStats.OnSpeedChanged += UpdateSpeed;
+        RoomManager.OnMapGenerated += SpawnPlayer;
     }
 
     private void OnDisable()
     {
         PlayerStats.OnSpeedChanged -= UpdateSpeed;
+        RoomManager.OnMapGenerated -= SpawnPlayer;
     }
     private void UpdateSpeed(float newSpeed)
     {
         speed = newSpeed;
+    }
+
+    private void SpawnPlayer(Vector2 startPos)
+    {
+        transform.position = startPos;
     }
 
     private void FixedUpdate() {
