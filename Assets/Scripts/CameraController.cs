@@ -23,24 +23,6 @@ public class CameraController : MonoBehaviour
         MoveToRoom(currentRoomIndex);
     }
 
-    private void Update()
-    {
-        if (Keyboard.current.shiftKey.IsPressed())
-        {
-            if (Keyboard.current.wKey.wasPressedThisFrame) TryMove(10);  // Up (Grid is 10 wide)
-            if (Keyboard.current.sKey.wasPressedThisFrame) TryMove(-10); // Down
-            if (Keyboard.current.aKey.wasPressedThisFrame) TryMove(-1);  // Left
-            if (Keyboard.current.dKey.wasPressedThisFrame) TryMove(1); // Right
-        }
-    }
-
-    private void TryMove(int offset) {
-        int targetIndex = currentRoomIndex + offset;
-        if (targetIndex >= 0 && targetIndex < 100 && MapGenerator.instance.getFloorCells[targetIndex] == 1) {
-            SetCurrentRoom(targetIndex);
-        }
-    }
-
     public bool SetCurrentRoom(int index) {
         if (currentRoomIndex != index) {
             currentRoomIndex = index;

@@ -5,21 +5,22 @@ TagManager:
   serializedVersion: 3
   tags:
   - RoomBounds
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - GroundEnemy
+  - FlyingEnemy
+  - Obstacle
+  - Wall
+  - PlayerProjectile
+  - EnemyProjectile
+  - JumpingEnemy
+  - Door
   - 
   - 
   - 
@@ -44,6 +45,12 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3355977557
+    locked: 0
+  - name: Enemy
+    uniqueID: 3171521723
+    locked: 0
+  - name: Projectile
+    uniqueID: 2606563713
     locked: 0
   m_RenderingLayers:
   - Default

@@ -56,10 +56,10 @@ public class MapGenerator : MonoBehaviour
     
     private void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            SetupFloor();
-        }
+        //if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        //{
+        //    SetupFloor();
+        //}
     }
 
     private void SetupFloor()

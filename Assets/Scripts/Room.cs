@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +17,22 @@ public class Room : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public int roomIndex;
 
+    public RoomType roomType;
+
     [Header("Wall Door Blockers")]
     public GameObject blockerUp;
     public GameObject blockerDown;
     public GameObject blockerLeft;
     public GameObject blockerRight;
+
+    [Header("Door Tracking")]
+    public bool hasUpDoor;
+    public bool hasDownDoor;
+    public bool hasLeftDoor;
+    public bool hasRightDoor;
+
+    public event Action OnPlayerEnteredRoom;
+    private bool hasBeenEntered = false;
 
     public void SetupRoom(Cell currentCell, RoomScript room)
     {
@@ -28,6 +40,8 @@ public class Room : MonoBehaviour
         spriteRenderer.sprite = room.roomSprite;
 
         //if (currentCell.roomType == RoomType.Secret) return;
+
+        roomType = room.roomType;
 
         var floorplan = MapGenerator.instance.getFloorCells;
         var cellList = MapGenerator.instance.getSpawnedCells;
@@ -49,6 +63,11 @@ public class Room : MonoBehaviour
                 float pushDistance = 2.8f;
 
                 other.transform.position += (Vector3)(direction * pushDistance);
+
+                if (!hasBeenEntered) {
+                    hasBeenEntered = true;
+                    OnPlayerEnteredRoom?.Invoke(); 
+                }
             }
         }
     }
@@ -99,21 +118,25 @@ public class Room : MonoBehaviour
 
         SetupDoor(door, direction, correctDoorStyle);
 
-        switch (direction) 
-        {
+        switch (direction) {
             case EdgeDirection.Up:
                 if (blockerUp != null) blockerUp.SetActive(false);
+                hasUpDoor = true; 
                 break;
 
             case EdgeDirection.Down:
                 if (blockerDown != null) blockerDown.SetActive(false);
+                hasDownDoor = true;
                 break;
 
-            case EdgeDirection.Left: 
+            case EdgeDirection.Left:
                 if (blockerLeft != null) blockerLeft.SetActive(false);
+                hasLeftDoor = true;
                 break;
 
-            case EdgeDirection.Right: if (blockerRight != null) blockerRight.SetActive(false);
+            case EdgeDirection.Right:
+                if (blockerRight != null) blockerRight.SetActive(false);
+                hasRightDoor = true;
                 break;
         }
     }
@@ -165,5 +188,18 @@ public class Room : MonoBehaviour
         }
 
         return 0;
+    }
+
+    public void LockRoomDoors() {
+        if (hasUpDoor && blockerUp != null) blockerUp.SetActive(true);
+        if (hasDownDoor && blockerDown != null) blockerDown.SetActive(true);
+        if (hasLeftDoor && blockerLeft != null) blockerLeft.SetActive(true);
+        if (hasRightDoor && blockerRight != null) blockerRight.SetActive(true);
+    }
+    public void UnlockRoomDoors() {
+        if (hasUpDoor && blockerUp != null) blockerUp.SetActive(false);
+        if (hasDownDoor && blockerDown != null) blockerDown.SetActive(false);
+        if (hasLeftDoor && blockerLeft != null) blockerLeft.SetActive(false);
+        if (hasRightDoor && blockerRight != null) blockerRight.SetActive(false);
     }
 }

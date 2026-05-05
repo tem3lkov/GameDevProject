@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: c260d8544348db040aa179b242fd2628
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5492041352820963985
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_0
+  - first:
+      213: -6372209705883349421
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_1
+  - first:
+      213: -1354468590486513832
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_2
+  - first:
+      213: 6958296944855082256
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_3
+  - first:
+      213: 742621956797671263
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_4
+  - first:
+      213: 4235379858874595788
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_5
+  - first:
+      213: -9133742332958772759
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_6
+  - first:
+      213: 2712522031030289913
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_7
+  - first:
+      213: 6229679014218741018
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_8
+  - first:
+      213: 3204877204371251807
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_9
+  - first:
+      213: 8483788997948154806
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_10
+  - first:
+      213: -2821001344022137698
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a36a62386a73c40800000000000000
+      internalID: 5492041352820963985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 31
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35ec68ea80d5197a0800000000000000
+      internalID: -6372209705883349421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 31
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85790a44ef5f33de0800000000000000
+      internalID: -1354468590486513832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_3
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 31
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 015e5c76436d09060800000000000000
+      internalID: 6958296944855082256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_4
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 31
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57a4513cb25e4a00800000000000000
+      internalID: 742621956797671263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 39
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc97019aa8717ca30800000000000000
+      internalID: 4235379858874595788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e17b06adbd6e3180800000000000000
+      internalID: -9133742332958772759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_7
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 13
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f54bf86a60d4a520800000000000000
+      internalID: 2712522031030289913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_8
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 14
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15b633ae04447650800000000000000
+      internalID: 6229679014218741018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_9
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 12
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f52ab4356d20a7c20800000000000000
+      internalID: 3204877204371251807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b3211405297cb570800000000000000
+      internalID: 8483788997948154806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_11
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9439a2593ac9d8d0800000000000000
+      internalID: -2821001344022137698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_0: 5492041352820963985
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_1: -6372209705883349421
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_10: 8483788997948154806
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_11: -2821001344022137698
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_2: -1354468590486513832
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_3: 6958296944855082256
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_4: 742621956797671263
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_5: 4235379858874595788
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_6: -9133742332958772759
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_7: 2712522031030289913
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_8: 6229679014218741018
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Hopper_9: 3204877204371251807
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
