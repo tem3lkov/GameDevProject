@@ -35,24 +35,44 @@ public class Room : MonoBehaviour
         TryPlaceDoor(currentCellIndex, new Vector2(0, -3.61f), EdgeDirection.Down, floorplan, cellList, cell);
         TryPlaceDoor(currentCellIndex, new Vector2(-6f, 0), EdgeDirection.Left, floorplan, cellList, cell);
         TryPlaceDoor(currentCellIndex, new Vector2(6f, 0), EdgeDirection.Right, floorplan, cellList, cell);
+
+        //PlaceItem(currentCellIndex, new Vector2(0, 0));
     }
 
     private RoomType GetDoorPriority(RoomType current, RoomType neighbor)
-        {
-            if (current == RoomType.Secret || neighbor == RoomType.Secret)
-                return RoomType.Secret;
+    {
+        if (current == RoomType.Secret || neighbor == RoomType.Secret)
+            return RoomType.Secret;
 
-            if (current == RoomType.Boss || neighbor == RoomType.Boss)
-                return RoomType.Boss;
+        if (current == RoomType.Boss || neighbor == RoomType.Boss)
+            return RoomType.Boss;
 
-            if (current == RoomType.Item || neighbor == RoomType.Item)
-                return RoomType.Item;
+        if (current == RoomType.Item || neighbor == RoomType.Item)
+            return RoomType.Item;
 
-            if (current == RoomType.Shop || neighbor == RoomType.Shop)
-                return RoomType.Shop;
+        if (current == RoomType.Shop || neighbor == RoomType.Shop)
+            return RoomType.Shop;
 
-            return RoomType.Normal;
-        }
+        return RoomType.Normal;
+    }
+
+    private void PlaceItem(int fromIndex, Vector2 positionOffset)
+    {
+        //item prefab alongside item scriptable object are just about the passive items, should implement logic about active items too
+        var item = Instantiate(RoomManager.instance.itemPrefab, transform);
+        item.transform.position = (Vector2)transform.position + positionOffset;
+
+        SetItem(item);
+    }
+
+    private void SetItem(Item item)
+    {
+        int index = Random.Range(0, RoomManager.instance.items.Length);
+        var randomItem = RoomManager.instance.items[index];
+        
+        item.Initialize(randomItem);
+    }
+    
 
     private void TryPlaceDoor(int fromIndex, Vector2 positionOffset, EdgeDirection direction, int[] floorplan, List<Cell> cellList, Cell currentCell)
     {
@@ -64,7 +84,7 @@ public class Room : MonoBehaviour
 
         var foundCell = cellList.FirstOrDefault(x => x.cellList.Contains(neighbourIndex));
 
-        //if (foundCell.roomType == RoomType.Secret) return;
+        if (foundCell.roomType == RoomType.Secret) return;
 
         var door = Instantiate(RoomManager.instance.doorPrefab, transform);
         door.transform.position = (Vector2)transform.position + positionOffset;

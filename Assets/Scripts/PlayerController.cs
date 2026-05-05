@@ -50,11 +50,4 @@ public class PlayerController : MonoBehaviour
         playerBody.linearVelocity *= speed * Time.fixedDeltaTime;
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.TryGetComponent<Item>(out Item item))
-        {
-            item.Collect();
-        }
-    }
-
 }
