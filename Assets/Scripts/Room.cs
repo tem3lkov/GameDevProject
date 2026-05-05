@@ -112,7 +112,7 @@ public class Room : MonoBehaviour
 
     private void SetItem(Item item)
     {
-        int index = Random.Range(0, RoomManager.instance.items.Length);
+        int index = UnityEngine.Random.Range(0, RoomManager.instance.items.Length);
         var randomItem = RoomManager.instance.items[index];
         
         item.Initialize(randomItem);
