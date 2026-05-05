@@ -7,14 +7,16 @@ public class RoomManager : MonoBehaviour
 {
     private List<Room> createdRooms;
 
-    [SerializeField] private float offsetX;
-    [SerializeField] private float offsetY;
+    [SerializeField] private float offsetX = 91;
+    [SerializeField] private float offsetY = 60;
 
     public Room roomPrefab;
     public Door doorPrefab;
+    public Item itemPrefab;
 
     [SerializeField] public DoorScript[] doors;
     [SerializeField] public RoomScript[] rooms;
+    [SerializeField] public ItemScriptable[] items;
 
     public static RoomManager instance;
     public static event Action<Vector2> OnMapGenerated;
