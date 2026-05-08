@@ -13,7 +13,15 @@ MonoBehaviour:
   m_Name: Shop Door
   m_EditorClassIdentifier: Assembly-CSharp::DoorScript
   roomType: 2
-  upDoor: {fileID: -3052917338921963706, guid: b0c3e0e937fa8914192b067123094a53, type: 3}
-  downDoor: {fileID: 5336204560670795669, guid: d27e57181ce08304d8a353ad6600b680, type: 3}
-  leftDoor: {fileID: 6998466837767652499, guid: 13cd6feec1099fd44aa68b0d74d5162a, type: 3}
-  rightDoor: {fileID: -7380100692929915660, guid: e18ad72781963ba47b3991bd9a89817e, type: 3}
+  upDoor:
+    open: {fileID: -4664166503114242415, guid: 81d2ab1679c72ae4aa0e3dc6ce45353a, type: 3}
+    closed: {fileID: -1088112787113321692, guid: 81d2ab1679c72ae4aa0e3dc6ce45353a, type: 3}
+  downDoor:
+    open: {fileID: -119502174937323467, guid: 9f6c4029c2a7f8a4795d9103dae1198d, type: 3}
+    closed: {fileID: -5569013789528268729, guid: 9f6c4029c2a7f8a4795d9103dae1198d, type: 3}
+  leftDoor:
+    open: {fileID: 1147200604750275536, guid: 1ce1cc0a416dd9041a328c8f1d20d5b7, type: 3}
+    closed: {fileID: 511021420958536606, guid: 1ce1cc0a416dd9041a328c8f1d20d5b7, type: 3}
+  rightDoor:
+    open: {fileID: -2434506396258700179, guid: 3592d82226bfe2045a5b632b5a75f743, type: 3}
+    closed: {fileID: -2433010660657559944, guid: 3592d82226bfe2045a5b632b5a75f743, type: 3}

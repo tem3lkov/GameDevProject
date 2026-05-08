@@ -11,7 +11,9 @@ public class RoomManager : MonoBehaviour
     [SerializeField] private float offsetY = 60;
 
     public Room roomPrefab;
-    public Door doorPrefab;
+    public Door normalDoorPrefab;
+    public DoorLocked lockedDoorPrefab;
+    public SecretDoor secretDoorPrefab;
     public Item itemPrefab;
 
     [SerializeField] public DoorScript[] doors;

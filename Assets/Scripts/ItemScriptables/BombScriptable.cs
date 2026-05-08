@@ -6,15 +6,22 @@ public class BombScriptable : ItemScriptable
     public float explosionRadius;
     public float explosionDamage;
     public float explosionDelay;
+    [SerializeField] private GameObject bombPrefab;
+    
     public override void OnPickup(GameObject player)
     {
         int bombAmount = 1;
         player.GetComponent<PlayerInventory>().AddResource(ResourceType.Bomb, bombAmount);
     }
-
     public override void Activate(GameObject player)
     {
-        Debug.Log("Bomb activated!");
-        // TODO instantiate bomb, timer and boom
+        PlayerInventory inventory = player.GetComponent<PlayerInventory>();
+        if (inventory.GetResourceCount(ResourceType.Bomb) <= 0)
+            return;
+
+        inventory.AddResource(ResourceType.Bomb, -1);
+
+        GameObject bombObj = Object.Instantiate(bombPrefab, player.transform.position, Quaternion.identity);
+        bombObj.GetComponent<ResourceBomb>().Initialize(this);
     }
 }

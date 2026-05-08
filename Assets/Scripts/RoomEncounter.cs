@@ -33,6 +33,7 @@ public class RoomEncounter : MonoBehaviour {
 
         doorsInRoom = GetComponentsInChildren<Door>();
 
+        roomLogic.EnterCombat();
         SetDoorsLocked(true);
         SpawnEnemies();
     }
@@ -55,22 +56,22 @@ public class RoomEncounter : MonoBehaviour {
         deadEnemy.OnDeath -= HandleEnemyDeath;
         activeEnemies.Remove(deadEnemy);
 
-        if (activeEnemies.Count == 0) {
-            Debug.Log("Unlock doors");
-            SetDoorsLocked(false);
+        if (activeEnemies.Count == 0)
+        {
+            EndEncounter();
         }
     }
 
-    private void SetDoorsLocked(bool isLocked) {
-        if (isLocked) {
-            roomLogic.LockRoomDoors();
-        } else {
-            roomLogic.UnlockRoomDoors();
-        }
+    private void EndEncounter() {
+        Debug.Log("Open doors");
+        roomLogic.ExitCombat();
+        SetDoorsLocked(false);
+    }
 
+    private void SetDoorsLocked(bool isLocked) {
         foreach (Door door in doorsInRoom) {
-            if (isLocked) door.LockDoor();
-            else door.UnlockDoor();
+            if (isLocked) door.EncounterLock();
+            else door.EncounterUnlock();
         }
     }
 }

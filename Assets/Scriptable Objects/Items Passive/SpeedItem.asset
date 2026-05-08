@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemPassiveScriptable
   itemName: Speed Item
   description: Grants +50 Speed
-  itemSprite: {fileID: -1190472282290740918, guid: e5b71f9f50abe634b96902fa916da0fa, type: 3}
+  itemSprite: {fileID: 3394125744009171543, guid: 5047a33505dfeb5428442a002c3399b8, type: 3}
   statToModify: 1
   amount: 50

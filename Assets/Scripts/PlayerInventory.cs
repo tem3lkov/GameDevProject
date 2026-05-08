@@ -5,12 +5,28 @@ public enum ResourceType { Coin, Key, Bomb }
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private int coins = 0;
+    [SerializeField] private CoinScriptable[] coinData = new CoinScriptable[3]; // more like the room should have the scriptable, or however they are spawned
     [SerializeField] private int keys = 0;
     [SerializeField] private int bombs = 0;
+    [SerializeField] private BombScriptable bombData;
     private int maxResources = 99;
     private ItemActiveScriptable currentItem;
     [SerializeField] private GameObject itemPrefab;
     private float cooldownTimer = 0f;
+    
+    public static PlayerInventory instance;
+
+    private void Awake() {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
 
     private void Update()
     {
@@ -54,10 +70,10 @@ public class PlayerInventory : MonoBehaviour
     {
         if (currentItem == null) return;
 
-        var dropped = Instantiate(itemPrefab, transform.position, Quaternion.identity);
+        Item dropped = Instantiate(itemPrefab, transform.position, Quaternion.identity).GetComponent<Item>();
 
-        dropped.GetComponent<Item>().SetPickupDelay(2f);
-        dropped.GetComponent<Item>().Initialize(currentItem);
+        dropped.SetPickupDelay(2f);
+        dropped.Initialize(currentItem);
         currentItem = null;
     }
 
@@ -91,12 +107,6 @@ public class PlayerInventory : MonoBehaviour
     }
     private void TryExplodeBomb()
     {
-        PlayerInventory inventory = GetComponent<PlayerInventory>();
-        if (inventory.GetResourceCount(ResourceType.Bomb) == 0) return;
-
-        inventory.AddResource(ResourceType.Bomb, -1);
-        
-        BombScriptable bombItem = ScriptableObject.CreateInstance<BombScriptable>();
-        bombItem.Activate(gameObject);
+        bombData.Activate(gameObject);
     }
 }

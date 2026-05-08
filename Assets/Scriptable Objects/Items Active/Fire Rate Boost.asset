@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FireRateBoostItem
   itemName: Fire Rate Boost
   description: Double your fire rate for 10s
-  itemSprite: {fileID: -2834807855373521172, guid: e5b71f9f50abe634b96902fa916da0fa, type: 3}
+  itemSprite: {fileID: -1294323935368864887, guid: 5047a33505dfeb5428442a002c3399b8, type: 3}
   cooldownTime: 0
   multiplier: 2
   duration: 10

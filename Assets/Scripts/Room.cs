@@ -19,12 +19,6 @@ public class Room : MonoBehaviour
 
     public RoomType roomType;
 
-    [Header("Wall Door Blockers")]
-    public GameObject blockerUp;
-    public GameObject blockerDown;
-    public GameObject blockerLeft;
-    public GameObject blockerRight;
-
     [Header("Door Tracking")]
     public bool hasUpDoor;
     public bool hasDownDoor;
@@ -33,6 +27,7 @@ public class Room : MonoBehaviour
 
     public event Action OnPlayerEnteredRoom;
     private bool hasBeenEntered = false;
+    private bool inCombat = false;
 
     public void SetupRoom(Cell currentCell, RoomScript room)
     {
@@ -49,37 +44,14 @@ public class Room : MonoBehaviour
         SetupOneByOne(currentCell, floorplan, cellList);
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player") && CameraController.instance != null) {
-            if (CameraController.instance.SetCurrentRoom(roomIndex)) {
-                Vector2 direction = (transform.position - other.transform.position).normalized;
-
-                if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y)) {
-                    direction = new Vector2(Mathf.Sign(direction.x), 0);
-                } else {
-                    direction = new Vector2(0, Mathf.Sign(direction.y));
-                }
-
-                float pushDistance = 2.8f;
-
-                other.transform.position += (Vector3)(direction * pushDistance);
-
-                if (!hasBeenEntered) {
-                    hasBeenEntered = true;
-                    OnPlayerEnteredRoom?.Invoke(); 
-                }
-            }
-        }
-    }
-
     public void SetupOneByOne(Cell cell, int[] floorplan, List<Cell> cellList)
     {
         var currentCellIndex = cell.cellList[0];
 
-        TryPlaceDoor(currentCellIndex, new Vector2(0, 3.61f), EdgeDirection.Up, floorplan, cellList, cell);
-        TryPlaceDoor(currentCellIndex, new Vector2(0, -3.61f), EdgeDirection.Down, floorplan, cellList, cell);
-        TryPlaceDoor(currentCellIndex, new Vector2(-6f, 0), EdgeDirection.Left, floorplan, cellList, cell);
-        TryPlaceDoor(currentCellIndex, new Vector2(6f, 0), EdgeDirection.Right, floorplan, cellList, cell);
+        TryPlaceDoor(currentCellIndex, new Vector2(0, 3.7f), EdgeDirection.Up, floorplan, cellList, cell);
+        TryPlaceDoor(currentCellIndex, new Vector2(0, -3.7f), EdgeDirection.Down, floorplan, cellList, cell);
+        TryPlaceDoor(currentCellIndex, new Vector2(-6.2f, 0), EdgeDirection.Left, floorplan, cellList, cell);
+        TryPlaceDoor(currentCellIndex, new Vector2(6.2f, 0), EdgeDirection.Right, floorplan, cellList, cell);
 
         //PlaceItem(currentCellIndex, new Vector2(0, 0));
     }
@@ -103,7 +75,6 @@ public class Room : MonoBehaviour
 
     private void PlaceItem(int fromIndex, Vector2 positionOffset)
     {
-        //item prefab alongside item scriptable object are just about the passive items, should implement logic about active items too
         var item = Instantiate(RoomManager.instance.itemPrefab, transform);
         item.transform.position = (Vector2)transform.position + positionOffset;
 
@@ -129,58 +100,60 @@ public class Room : MonoBehaviour
 
         var foundCell = cellList.FirstOrDefault(x => x.cellList.Contains(neighbourIndex));
 
-        if (foundCell.roomType == RoomType.Secret) return;
+        //if (foundCell.roomType == RoomType.Secret) return;
 
-        var door = Instantiate(RoomManager.instance.doorPrefab, transform);
+        Door door;
+        switch (foundCell.roomType)
+        {
+            case RoomType.Secret:
+                door = Instantiate(RoomManager.instance.secretDoorPrefab, transform);
+                break;
+            case RoomType.Item:
+                door = Instantiate(RoomManager.instance.lockedDoorPrefab, transform);
+                break;
+            default:
+                door = Instantiate(RoomManager.instance.normalDoorPrefab, transform);
+                break;
+        }
         door.transform.position = (Vector2)transform.position + positionOffset;
 
         RoomType correctDoorStyle = GetDoorPriority(currentCell.roomType, foundCell.roomType);
 
         SetupDoor(door, direction, correctDoorStyle);
-
-        switch (direction) {
-            case EdgeDirection.Up:
-                if (blockerUp != null) blockerUp.SetActive(false);
-                hasUpDoor = true; 
-                break;
-
-            case EdgeDirection.Down:
-                if (blockerDown != null) blockerDown.SetActive(false);
-                hasDownDoor = true;
-                break;
-
-            case EdgeDirection.Left:
-                if (blockerLeft != null) blockerLeft.SetActive(false);
-                hasLeftDoor = true;
-                break;
-
-            case EdgeDirection.Right:
-                if (blockerRight != null) blockerRight.SetActive(false);
-                hasRightDoor = true;
-                break;
-        }
     }
 
     private void SetupDoor(Door door, EdgeDirection direction, RoomType roomType)
     {
-        var doorTypes = GetDoorOptions(roomType);
+        var doorScript = GetDoorOptions(roomType);
 
         switch (direction)
         {
             case EdgeDirection.Up:
-                door.SetDoorSprite(doorTypes.upDoor);
+                if (door.isOpened())
+                    door.SetupDoor(roomIndex, EdgeDirection.Up, doorScript);
+                else
+                    door.SetupDoor(roomIndex, EdgeDirection.Up, doorScript);
                 break;
 
             case EdgeDirection.Down:
-                door.SetDoorSprite(doorTypes.downDoor);
+                if (door.isOpened())
+                    door.SetupDoor(roomIndex, EdgeDirection.Down, doorScript);
+                else
+                    door.SetupDoor(roomIndex, EdgeDirection.Down, doorScript);
                 break;
 
             case EdgeDirection.Left:
-                door.SetDoorSprite(doorTypes.leftDoor);
+                if (door.isOpened())
+                    door.SetupDoor(roomIndex, EdgeDirection.Left, doorScript);
+                else
+                    door.SetupDoor(roomIndex, EdgeDirection.Left, doorScript);
                 break;
 
             case EdgeDirection.Right:
-                door.SetDoorSprite(doorTypes.rightDoor);
+                if (door.isOpened())
+                    door.SetupDoor(roomIndex, EdgeDirection.Right, doorScript);
+                else
+                    door.SetupDoor(roomIndex, EdgeDirection.Right, doorScript);
                 break;
         }
     }
@@ -210,16 +183,24 @@ public class Room : MonoBehaviour
         return 0;
     }
 
-    public void LockRoomDoors() {
-        if (hasUpDoor && blockerUp != null) blockerUp.SetActive(true);
-        if (hasDownDoor && blockerDown != null) blockerDown.SetActive(true);
-        if (hasLeftDoor && blockerLeft != null) blockerLeft.SetActive(true);
-        if (hasRightDoor && blockerRight != null) blockerRight.SetActive(true);
+    public void PlayerEntered()
+    {
+        if (hasBeenEntered) return;
+        hasBeenEntered = true;
+
+        OnPlayerEnteredRoom?.Invoke();
     }
-    public void UnlockRoomDoors() {
-        if (hasUpDoor && blockerUp != null) blockerUp.SetActive(false);
-        if (hasDownDoor && blockerDown != null) blockerDown.SetActive(false);
-        if (hasLeftDoor && blockerLeft != null) blockerLeft.SetActive(false);
-        if (hasRightDoor && blockerRight != null) blockerRight.SetActive(false);
+
+    public void EnterCombat()
+    {
+        inCombat = true;
+    }
+    public void ExitCombat()
+    {
+        inCombat = false;
+    }
+    public bool IsInCombat()
+    {
+        return inCombat;
     }
 }

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BombScriptable
   itemName: Bomb
   description: Prime a bomb for a delayed explosion
-  itemSprite: {fileID: 7526063986639565968, guid: e5b71f9f50abe634b96902fa916da0fa, type: 3}
-  explosionRadius: 5
-  explosionDamage: 2
-  explosionDelay: 3
+  itemSprite: {fileID: -1483665779731714255, guid: 5baa15b2d42dde143ba824fdbddaec0f, type: 3}
+  explosionRadius: 2
+  explosionDamage: 3
+  explosionDelay: 2
+  bombPrefab: {fileID: 5188331097645824666, guid: e33777eb8b3332f4fa69ab170f0bdf1a, type: 3}
