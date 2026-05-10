@@ -644,12 +644,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
   spriteRenderer: {fileID: 7350237666129924915}
-  roomIndex: 0
-  roomType: 0
-  hasUpDoor: 0
-  hasDownDoor: 0
-  hasLeftDoor: 0
-  hasRightDoor: 0
 --- !u!61 &6580494642657179334
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -717,6 +711,10 @@ MonoBehaviour:
   - {fileID: 3880911479304530031}
   - {fileID: 3684270814902793462}
   - {fileID: 656102375341017895}
+  coinData:
+  - {fileID: 11400000, guid: 1ea457aa18d37fb4bbe7dba4d3f2d6a5, type: 2}
+  - {fileID: 11400000, guid: 9fc32670e18e38346b134f5dfa4fe33e, type: 2}
+  - {fileID: 11400000, guid: 5458935aab34fce43b459e6f8f910bca, type: 2}
 --- !u!1 &7380435790700365304
 GameObject:
   m_ObjectHideFlags: 0

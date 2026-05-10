@@ -4,12 +4,6 @@ public class DoorLocked : Door
 {
     private bool unlocked = false;
 
-    public override void SetupDoor(int roomIndex, EdgeDirection dir, DoorScript doorData)
-    {
-        base.SetupDoor(roomIndex, dir, doorData);
-
-        CloseDoor();
-    }
     public override bool CanAutoOpen()
     {
         return false;

@@ -4,9 +4,10 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Room))]
 public class RoomEncounter : MonoBehaviour {
     [Header("Encounter Settings")]
-    public Enemy[] enemyPrefabsToSpawn;
-    public Transform[] spawnPoints; 
+    [SerializeField] private Enemy[] enemyPrefabsToSpawn;
+    [SerializeField] private Transform[] spawnPoints; 
 
+    [SerializeField] private CoinScriptable[] coinData = new CoinScriptable[3];
     private Room roomLogic;
     private List<Enemy> activeEnemies = new List<Enemy>();
     private Door[] doorsInRoom;
@@ -24,8 +25,8 @@ public class RoomEncounter : MonoBehaviour {
     }
 
     private void StartEncounter() {
-        if (roomLogic.roomType == RoomType.Item || roomLogic.roomType == RoomType.Shop ||
-            roomLogic.roomType == RoomType.Secret || roomLogic.roomType == RoomType.Boss) {
+        if (roomLogic.GetRoomType() == RoomType.Item || roomLogic.GetRoomType() == RoomType.Shop ||
+            roomLogic.GetRoomType() == RoomType.Secret || roomLogic.GetRoomType() == RoomType.Boss) {
             return;
         }
 
@@ -66,6 +67,7 @@ public class RoomEncounter : MonoBehaviour {
         Debug.Log("Open doors");
         roomLogic.ExitCombat();
         SetDoorsLocked(false);
+        SpawnCoin();
     }
 
     private void SetDoorsLocked(bool isLocked) {
@@ -73,5 +75,28 @@ public class RoomEncounter : MonoBehaviour {
             if (isLocked) door.EncounterLock();
             else door.EncounterUnlock();
         }
+    }
+
+    private void SpawnCoin()
+    {
+        int chosenCoin = Random.Range(1, 10);
+        int coinIndex;
+        switch (chosenCoin)
+        {
+            case 8:
+            case 9:
+                coinIndex = 1; // Uncommon coin
+                break;
+            case 10:
+                coinIndex = 2; // Rare coin
+                break;
+            default:
+                coinIndex = 0; // Default to common coin
+                break;
+        }
+        CoinScriptable coinToSpawn = coinData[coinIndex];        
+        
+        var newCoin = Instantiate(RoomManager.instance.coinPrefab, transform.position, Quaternion.identity);
+        newCoin.Initialize(coinToSpawn);
     }
 }

@@ -582,6 +582,7 @@ MonoBehaviour:
   normalDoorPrefab: {fileID: 6965859512761312662, guid: b202d978a0b59d0489f455ba11eb36aa, type: 3}
   lockedDoorPrefab: {fileID: 134312689333857679, guid: 02b13bb40d8252349ade87f4396a7ca7, type: 3}
   secretDoorPrefab: {fileID: 1881235390307916900, guid: 761dcf01b3c137a46b590e685bf1705a, type: 3}
+  coinPrefab: {fileID: 2792798747431599678, guid: e98429d1efb1d71418b7a75f348ffb7a, type: 3}
   itemPrefab: {fileID: 2701523048425264169, guid: 0831c3c1c5e2f4743b4faddfb23cdeaa, type: 3}
   doors:
   - {fileID: 11400000, guid: 0c1783a0de57a324a948b63c5decf0ca, type: 2}
@@ -659,26 +660,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3256209675560166803, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
-      propertyPath: keys
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3256209675560166803, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
-      propertyPath: bombs
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3256209675560166803, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
-      propertyPath: 'coinData.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 1ea457aa18d37fb4bbe7dba4d3f2d6a5, type: 2}
-    - target: {fileID: 3256209675560166803, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
-      propertyPath: 'coinData.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 9fc32670e18e38346b134f5dfa4fe33e, type: 2}
-    - target: {fileID: 3256209675560166803, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
-      propertyPath: 'coinData.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 5458935aab34fce43b459e6f8f910bca, type: 2}
     - target: {fileID: 6843945369307570833, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 72.46

@@ -6,6 +6,6 @@ public abstract class ItemActiveScriptable : ItemScriptable
 
     public override void OnPickup(GameObject player)
     {
-        player.GetComponent<PlayerInventory>().PickupActiveItem(this);
+        PlayerInventory.instance.PickupActiveItem(this);
     }
 }

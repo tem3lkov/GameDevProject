@@ -6,16 +6,18 @@ public enum StatType { Health, Speed, Damage, FireRate }
 
 public class Item : MonoBehaviour
 {
-    private ItemScriptable data;
-    [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private Collider2D col;
-    private bool canBePickedUp = true;
-    private bool isCollected = false;
+    protected ItemScriptable data;
+    [SerializeField] protected SpriteRenderer spriteRenderer;
+    [SerializeField] protected Collider2D col;
+    protected bool canBePickedUp = true;
+    protected bool isCollected = false;
 
     private void Awake()
     {
         if (col == null)
             col = GetComponent<Collider2D>();
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void SetPickupDelay(float delay = 2f)
@@ -23,7 +25,7 @@ public class Item : MonoBehaviour
         StartCoroutine(PickupDelayCoroutine(delay));
     }
 
-    private IEnumerator PickupDelayCoroutine(float delay)
+    protected IEnumerator PickupDelayCoroutine(float delay)
     {
         canBePickedUp = false;
         col.enabled = false;
@@ -35,12 +37,12 @@ public class Item : MonoBehaviour
     }
 
     
-    public void Initialize(ItemScriptable itemData)
+    public virtual void Initialize(ItemScriptable itemData)
     {
         data = itemData;
         SetItemSprite(data.itemSprite);
     }
-    private void SetItemSprite(Sprite item)
+    protected void SetItemSprite(Sprite item)
     {
         spriteRenderer.sprite = item;
         spriteRenderer.sortingOrder = 10;
@@ -49,7 +51,7 @@ public class Item : MonoBehaviour
     }
     public ItemScriptable GetInventoryItemData() => data;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (!canBePickedUp) return;
 

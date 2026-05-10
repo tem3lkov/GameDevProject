@@ -7,7 +7,7 @@ public class CoinScriptable : ItemScriptable
     
     public override void OnPickup(GameObject player)
     {
-        player.GetComponent<PlayerInventory>().AddResource(ResourceType.Coin, amount);
+        PlayerInventory.instance.AddResource(ResourceType.Coin, amount);
     }
     public override void Activate(GameObject player) {}
 }

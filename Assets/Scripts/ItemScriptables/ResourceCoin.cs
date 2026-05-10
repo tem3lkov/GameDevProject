@@ -1,16 +1,37 @@
 using UnityEngine;
 
-public class ResourceCoin : MonoBehaviour
+public class ResourceCoin : Item
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    CoinScriptable coinData;
+
+    public void InitializeCoin(CoinScriptable coinData)
     {
-        
+        this.coinData = coinData;
+        SetItemSprite(coinData.itemSprite);
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Initialize(ItemScriptable itemData)
     {
-        
+        if (itemData is CoinScriptable coinData)
+        {
+            InitializeCoin(coinData);
+        }
+        else
+        {
+            Debug.LogWarning("Invalid item data for ResourceCoin. Expected CoinScriptable.");
+        }
+    }
+    protected override void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!canBePickedUp) return;
+
+        if (collision.CompareTag("Player"))
+        {
+            if (isCollected) return;
+            isCollected = true;
+            coinData.OnPickup(collision.gameObject);
+            Debug.Log("Item collected: " + coinData.itemName);
+            Destroy(gameObject);
+        }
     }
 }

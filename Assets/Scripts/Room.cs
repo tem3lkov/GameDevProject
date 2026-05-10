@@ -14,27 +14,26 @@ public enum EdgeDirection
 
 public class Room : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
-    public int roomIndex;
-
-    public RoomType roomType;
-
-    [Header("Door Tracking")]
-    public bool hasUpDoor;
-    public bool hasDownDoor;
-    public bool hasLeftDoor;
-    public bool hasRightDoor;
-
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    private int roomIndex;
+    private RoomType roomType;
     public event Action OnPlayerEnteredRoom;
     private bool hasBeenEntered = false;
     private bool inCombat = false;
+
+    public int GetRoomIndex()
+    {
+        return roomIndex;
+    }
+    public RoomType GetRoomType()
+    {
+        return roomType;
+    }
 
     public void SetupRoom(Cell currentCell, RoomScript room)
     {
         roomIndex = currentCell.Index;
         spriteRenderer.sprite = room.roomSprite;
-
-        //if (currentCell.roomType == RoomType.Secret) return;
 
         roomType = room.roomType;
 
@@ -99,8 +98,6 @@ public class Room : MonoBehaviour
         if (floorplan[neighbourIndex] != 1) return;
 
         var foundCell = cellList.FirstOrDefault(x => x.cellList.Contains(neighbourIndex));
-
-        //if (foundCell.roomType == RoomType.Secret) return;
 
         Door door;
         switch (foundCell.roomType)
