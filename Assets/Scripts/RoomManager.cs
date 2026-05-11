@@ -14,6 +14,7 @@ public class RoomManager : MonoBehaviour
     public Door normalDoorPrefab;
     public DoorLocked lockedDoorPrefab;
     public SecretDoor secretDoorPrefab;
+    public ResourceCoin coinPrefab;
     public Item itemPrefab;
 
     [SerializeField] public DoorScript[] doors;

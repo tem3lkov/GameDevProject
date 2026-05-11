@@ -4,12 +4,6 @@ public class SecretDoor : Door, IDestructible
 {
     private bool destroyed = false;
 
-    public override void SetupDoor(int roomIndex, EdgeDirection dir, DoorScript doorData)
-    {
-        base.SetupDoor(roomIndex, dir, doorData);
-
-        CloseDoor();
-    }
     public override bool CanAutoOpen()
     {
         return true;

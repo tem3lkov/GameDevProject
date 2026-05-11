@@ -16,7 +16,7 @@ public class Door : MonoBehaviour
             spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public virtual void SetupDoor(int roomIndex, EdgeDirection dir, DoorScript doorData)
+    public void SetupDoor(int roomIndex, EdgeDirection dir, DoorScript doorData)
     {
         currentRoomIndex = roomIndex;
         direction = dir;
@@ -98,8 +98,8 @@ public class Door : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!TryOpen()) return;
         if (!other.CompareTag("Player")) return;
+        if (!TryOpen()) return;
         if (CameraController.instance == null) return;
 
         int targetRoomIndex;

@@ -5,7 +5,6 @@ public enum ResourceType { Coin, Key, Bomb }
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private int coins = 0;
-    [SerializeField] private CoinScriptable[] coinData = new CoinScriptable[3];
     [SerializeField] private int keys = 0;
     [SerializeField] private int bombs = 0;
     [SerializeField] private BombScriptable bombData;

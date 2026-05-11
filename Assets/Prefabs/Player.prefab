@@ -85,7 +85,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9fc32670e18e38346b134f5dfa4fe33e, type: 2}
   - {fileID: 11400000, guid: 5458935aab34fce43b459e6f8f910bca, type: 2}
   keys: 1
-  bombs: 30
+  bombs: 3
   bombData: {fileID: 11400000, guid: 67f387fbe904dbf48b38f93e65f61b84, type: 2}
   itemPrefab: {fileID: 0}
 --- !u!114 &2470142304638617473

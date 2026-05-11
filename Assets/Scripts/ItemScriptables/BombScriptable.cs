@@ -11,11 +11,11 @@ public class BombScriptable : ItemScriptable
     public override void OnPickup(GameObject player)
     {
         int bombAmount = 1;
-        player.GetComponent<PlayerInventory>().AddResource(ResourceType.Bomb, bombAmount);
+        PlayerInventory.instance.AddResource(ResourceType.Bomb, bombAmount);
     }
     public override void Activate(GameObject player)
     {
-        PlayerInventory inventory = player.GetComponent<PlayerInventory>();
+        PlayerInventory inventory = PlayerInventory.instance;
         if (inventory.GetResourceCount(ResourceType.Bomb) <= 0)
             return;
 
