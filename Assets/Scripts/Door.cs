@@ -17,11 +17,11 @@ public class Door : MonoBehaviour
     }
     private void OnEnable()
     {
-        Room.OnSpecialRoomEnteredGlobal += ForceOpen;
+        Room.OnRoomEnteredGlobal += ForceOpen;
     }
     private void OnDisable()
     {
-        Room.OnSpecialRoomEnteredGlobal -= ForceOpen;
+        Room.OnRoomEnteredGlobal -= ForceOpen;
     }
 
     public void SetupDoor(int roomIndex, EdgeDirection dir, DoorScript doorData)

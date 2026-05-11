@@ -22,7 +22,6 @@ public class Room : MonoBehaviour
     private bool inCombat = false;
 
     public static event Action<Room> OnRoomEnteredGlobal;
-    public static event Action<Room> OnSpecialRoomEnteredGlobal;
     public int GetRoomIndex()
     {
         return roomIndex;
@@ -190,10 +189,6 @@ public class Room : MonoBehaviour
         OnRoomEnteredGlobal?.Invoke(this);
 
         if (hasBeenEntered) return;
-        if (roomType == RoomType.Item || roomType == RoomType.Secret)
-        {
-            OnSpecialRoomEnteredGlobal?.Invoke(this);
-        }
 
         hasBeenEntered = true;
 
