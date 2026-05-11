@@ -10,23 +10,27 @@ public class DoorLocked : Door
     }
     public override bool TryOpen()
     {
-        TryUnlock();
-
-        if (!unlocked)
+        if (!unlocked && !TryUnlock())
             return false;
 
         return base.TryOpen();
+    }
+    protected override void ForceOpen(Room room) {
+        if (room.GetRoomIndex() != currentRoomIndex) return;
+        unlocked = true;
+        OpenDoor();
     }
     public override bool isOpened() {
         return unlocked && base.isOpened();
     }
 
-    public void TryUnlock()
+    public bool TryUnlock()
     {
         if (PlayerInventory.instance.GetResourceCount(ResourceType.Key) <= 0) 
-            return;
+            return false;
 
         PlayerInventory.instance.AddResource(ResourceType.Key, -1);
         unlocked = true;
+        return true;
     }
 }

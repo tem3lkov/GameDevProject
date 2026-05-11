@@ -15,6 +15,14 @@ public class Door : MonoBehaviour
         if (spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();
     }
+    private void OnEnable()
+    {
+        Room.OnSpecialRoomEnteredGlobal += ForceOpen;
+    }
+    private void OnDisable()
+    {
+        Room.OnSpecialRoomEnteredGlobal -= ForceOpen;
+    }
 
     public void SetupDoor(int roomIndex, EdgeDirection dir, DoorScript doorData)
     {
@@ -92,6 +100,10 @@ public class Door : MonoBehaviour
     protected bool RoomInCombat() {
         return RoomManager.instance.GetRoomAtCellIndex(currentRoomIndex) && RoomManager.instance.GetRoomAtCellIndex(currentRoomIndex).IsInCombat()
         || false;
+    }
+    protected virtual void ForceOpen(Room room) {
+        if (room.GetRoomIndex() != currentRoomIndex) return;
+        OpenDoor();
     }
     protected void OpenDoor() {
         SetDoorSprite();

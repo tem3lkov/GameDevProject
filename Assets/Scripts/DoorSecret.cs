@@ -15,6 +15,11 @@ public class SecretDoor : Door, IDestructible
 
         return base.TryOpen();
     }
+    protected override void ForceOpen(Room room) {
+        if (room.GetRoomType() != RoomType.Secret) return;
+        destroyed = true;
+        OpenDoor();
+    }
     public override bool isOpened() {
         return destroyed;
     }

@@ -22,6 +22,7 @@ public class Room : MonoBehaviour
     private bool inCombat = false;
 
     public static event Action<Room> OnRoomEnteredGlobal;
+    public static event Action<Room> OnSpecialRoomEnteredGlobal;
     public int GetRoomIndex()
     {
         return roomIndex;
@@ -54,7 +55,10 @@ public class Room : MonoBehaviour
         TryPlaceDoor(currentCellIndex, new Vector2(-6.2f, 0), EdgeDirection.Left, floorplan, cellList, cell);
         TryPlaceDoor(currentCellIndex, new Vector2(6.2f, 0), EdgeDirection.Right, floorplan, cellList, cell);
 
-        //PlaceItem(currentCellIndex, new Vector2(0, 0));
+        if (roomType == RoomType.Item)
+        {
+            PlaceItem(currentCellIndex, new Vector2(0, 0));
+        }
     }
 
     private RoomType GetDoorPriority(RoomType current, RoomType neighbor)
@@ -102,7 +106,7 @@ public class Room : MonoBehaviour
         var foundCell = cellList.FirstOrDefault(x => x.cellList.Contains(neighbourIndex));
 
         Door door;
-        switch (foundCell.roomType)
+        switch (GetDoorPriority(currentCell.roomType, foundCell.roomType))
         {
             case RoomType.Secret:
                 door = Instantiate(RoomManager.instance.secretDoorPrefab, transform);
@@ -186,6 +190,10 @@ public class Room : MonoBehaviour
         OnRoomEnteredGlobal?.Invoke(this);
 
         if (hasBeenEntered) return;
+        if (roomType == RoomType.Item || roomType == RoomType.Secret)
+        {
+            OnSpecialRoomEnteredGlobal?.Invoke(this);
+        }
 
         hasBeenEntered = true;
 
