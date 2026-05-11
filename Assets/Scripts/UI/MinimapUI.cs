@@ -54,8 +54,8 @@ public class MinimapUI : MonoBehaviour {
     }
 
     private void UpdateMap(Room currentRoom) {
-        if (!visitedRoomIndices.Contains(currentRoom.roomIndex)) {
-            visitedRoomIndices.Add(currentRoom.roomIndex);
+        if (!visitedRoomIndices.Contains(currentRoom.GetRoomIndex())) {
+            visitedRoomIndices.Add(currentRoom.GetRoomIndex());
         }
 
         var spawnedCells = MapGenerator.instance.getSpawnedCells;
@@ -68,7 +68,7 @@ public class MinimapUI : MonoBehaviour {
                 continue;
             }
 
-            bool isCurrent = (i == currentRoom.roomIndex);
+            bool isCurrent = (i == currentRoom.GetRoomIndex());
             bool isVisited = visitedRoomIndices.Contains(i);
             bool isAdjacent = IsAdjacentToVisited(i);
 
@@ -83,7 +83,7 @@ public class MinimapUI : MonoBehaviour {
             }
         }
 
-        CenterMapOnRoom(currentRoom.roomIndex);
+        CenterMapOnRoom(currentRoom.GetRoomIndex());
     }
 
     private void CenterMapOnRoom(int roomIndex) {

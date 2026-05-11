@@ -17,7 +17,7 @@ public class BossEncounter : RoomEncounter {
     public static int currentFloor = 1;
 
     protected override void StartEncounter() {
-        if (roomLogic.roomType != RoomType.Boss) return;
+        if (roomLogic.GetRoomType() != RoomType.Boss) return;
         doorsInRoom = GetComponentsInChildren<Door>();
 
         roomLogic.EnterCombat();

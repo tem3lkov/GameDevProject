@@ -776,6 +776,10 @@ MonoBehaviour:
   - {fileID: 3880911479304530031}
   - {fileID: 3684270814902793462}
   - {fileID: 656102375341017895}
+  coinData:
+  - {fileID: 11400000, guid: 1ea457aa18d37fb4bbe7dba4d3f2d6a5, type: 2}
+  - {fileID: 11400000, guid: 9fc32670e18e38346b134f5dfa4fe33e, type: 2}
+  - {fileID: 11400000, guid: 5458935aab34fce43b459e6f8f910bca, type: 2}
 --- !u!114 &45051912847949446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,15 +794,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossEncounter
   enemyPrefabsToSpawn: []
   spawnPoints: []
+  coinData:
+  - {fileID: 11400000, guid: 1ea457aa18d37fb4bbe7dba4d3f2d6a5, type: 2}
+  - {fileID: 11400000, guid: 9fc32670e18e38346b134f5dfa4fe33e, type: 2}
+  - {fileID: 11400000, guid: 5458935aab34fce43b459e6f8f910bca, type: 2}
   floorOneBossPrefab: {fileID: 3854895436850853500, guid: 206e71f553ac2b64e8eeed7c83d980f5, type: 3}
   trapdoorPrefab: {fileID: 8206568770470944981, guid: fbcf4c10778c2dc4da38680360b04575, type: 3}
   trapdoorSpawnPoint: {fileID: 2796664447495719952}
   randomBossPool: []
   bossSpawnPoint: {fileID: 3942029015542354390}
-  coinData:
-  - {fileID: 11400000, guid: 1ea457aa18d37fb4bbe7dba4d3f2d6a5, type: 2}
-  - {fileID: 11400000, guid: 9fc32670e18e38346b134f5dfa4fe33e, type: 2}
-  - {fileID: 11400000, guid: 5458935aab34fce43b459e6f8f910bca, type: 2}
 --- !u!1 &7380435790700365304
 GameObject:
   m_ObjectHideFlags: 0
