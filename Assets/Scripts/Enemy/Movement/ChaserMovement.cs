@@ -9,10 +9,10 @@ public class ChaserMovement : MonoBehaviour {
     }
 
     private void Update() {
-        if (enemy.CurrentState == EnemyState.Aggro && enemy.Target != null) {
+        if (enemy.CanMove && !enemy.IsAttacking && enemy.CurrentState == EnemyState.Aggro && enemy.Target != null) {
             Vector2 direction = (enemy.Target.position - transform.position).normalized;
             enemy.Rb.linearVelocity = direction * enemy.stats.movementSpeed;
-        } else if (enemy.CurrentState == EnemyState.Idle) {
+        } else {
             enemy.Rb.linearVelocity = Vector2.zero;
         }
     }

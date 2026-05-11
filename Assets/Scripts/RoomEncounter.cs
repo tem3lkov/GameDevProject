@@ -7,23 +7,23 @@ public class RoomEncounter : MonoBehaviour {
     public Enemy[] enemyPrefabsToSpawn;
     public Transform[] spawnPoints; 
 
-    private Room roomLogic;
-    private List<Enemy> activeEnemies = new List<Enemy>();
-    private Door[] doorsInRoom;
+    protected Room roomLogic;
+    protected List<Enemy> activeEnemies = new List<Enemy>();
+    protected Door[] doorsInRoom;
 
-    private void Awake() {
+    protected virtual void Awake() {
         roomLogic = GetComponent<Room>();
     }
 
-    private void OnEnable() {
+    protected virtual void OnEnable() {
         roomLogic.OnPlayerEnteredRoom += StartEncounter;
     }
 
-    private void OnDisable() {
+    protected virtual void OnDisable() {
         roomLogic.OnPlayerEnteredRoom -= StartEncounter;
     }
 
-    private void StartEncounter() {
+    protected virtual void StartEncounter() {
         if (roomLogic.roomType == RoomType.Item || roomLogic.roomType == RoomType.Shop ||
             roomLogic.roomType == RoomType.Secret || roomLogic.roomType == RoomType.Boss) {
             return;
@@ -38,7 +38,7 @@ public class RoomEncounter : MonoBehaviour {
         SpawnEnemies();
     }
 
-    private void SpawnEnemies() {
+    protected virtual void SpawnEnemies() {
         int enemiesToSpawn = Random.Range(1, 4);
 
         for (int i = 0; i < enemiesToSpawn; i++) {
@@ -52,23 +52,22 @@ public class RoomEncounter : MonoBehaviour {
         }
     }
 
-    private void HandleEnemyDeath(Enemy deadEnemy) {
+    protected virtual void HandleEnemyDeath(Enemy deadEnemy) {
         deadEnemy.OnDeath -= HandleEnemyDeath;
         activeEnemies.Remove(deadEnemy);
 
-        if (activeEnemies.Count == 0)
-        {
+        if (activeEnemies.Count == 0) {
             EndEncounter();
         }
     }
 
-    private void EndEncounter() {
+    protected virtual void EndEncounter() {
         Debug.Log("Open doors");
         roomLogic.ExitCombat();
         SetDoorsLocked(false);
     }
 
-    private void SetDoorsLocked(bool isLocked) {
+    protected void SetDoorsLocked(bool isLocked) {
         foreach (Door door in doorsInRoom) {
             if (isLocked) door.EncounterLock();
             else door.EncounterUnlock();

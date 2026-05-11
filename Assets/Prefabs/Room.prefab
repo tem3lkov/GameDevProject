@@ -111,6 +111,8 @@ Transform:
   - {fileID: 3880911479304530031}
   - {fileID: 3684270814902793462}
   - {fileID: 656102375341017895}
+  - {fileID: 3942029015542354390}
+  - {fileID: 2796664447495719952}
   m_Father: {fileID: 3866143093080415324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &331731262373455068
@@ -562,6 +564,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7553926296005669037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4968326795206135438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3942029015542354390}
+  m_Layer: 0
+  m_Name: SpawnPoint_Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3942029015542354390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968326795206135438}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7553926296005669037}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5748031590496033061
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +626,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7553926296005669037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6767362216389235511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2796664447495719952}
+  m_Layer: 0
+  m_Name: SpawnPoint_Trapdoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2796664447495719952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6767362216389235511}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7553926296005669037}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7035528657868956926
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +669,7 @@ GameObject:
   - component: {fileID: 2050320764703251889}
   - component: {fileID: 6580494642657179334}
   - component: {fileID: 7058452018801457783}
+  - component: {fileID: 45051912847949446}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -709,14 +774,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomEncounter
   enemyPrefabsToSpawn:
-  - {fileID: 4675325182072575855, guid: 3e112d3763c704945a8ea78b7c27ac55, type: 3}
-  - {fileID: 544356099421934619, guid: 72800e96156fbc84baa04506599eac90, type: 3}
-  - {fileID: 8166751528422447675, guid: b1b4195d40ff40341909bce2cee0ede9, type: 3}
+  - {fileID: 9052474797898227604, guid: 3e112d3763c704945a8ea78b7c27ac55, type: 3}
+  - {fileID: 1250670529337911595, guid: 72800e96156fbc84baa04506599eac90, type: 3}
+  - {fileID: 8802455203800201913, guid: b1b4195d40ff40341909bce2cee0ede9, type: 3}
   spawnPoints:
   - {fileID: 8012627835761268168}
   - {fileID: 3880911479304530031}
   - {fileID: 3684270814902793462}
   - {fileID: 656102375341017895}
+--- !u!114 &45051912847949446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7035528657868956926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521779dbe45b8e04db54e867c0040f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossEncounter
+  enemyPrefabsToSpawn: []
+  spawnPoints: []
+  floorOneBossPrefab: {fileID: 3854895436850853500, guid: 206e71f553ac2b64e8eeed7c83d980f5, type: 3}
+  trapdoorPrefab: {fileID: 8206568770470944981, guid: fbcf4c10778c2dc4da38680360b04575, type: 3}
+  trapdoorSpawnPoint: {fileID: 2796664447495719952}
+  randomBossPool: []
+  bossSpawnPoint: {fileID: 3942029015542354390}
 --- !u!1 &7380435790700365304
 GameObject:
   m_ObjectHideFlags: 0

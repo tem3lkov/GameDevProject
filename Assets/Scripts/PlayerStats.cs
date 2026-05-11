@@ -27,8 +27,8 @@ public class PlayerStats : MonoBehaviour
     {
         AddSpeed(200f);
         AddHealth(3f);
-        AddDamage(5f);// adjust as needed
-        AddTearsROF(1f);// adjust as needed
+        AddDamage(2f);// adjust as needed
+        AddTearsROF(2f);// adjust as needed
     }
 
     private void AddStats(PassiveStats boost)

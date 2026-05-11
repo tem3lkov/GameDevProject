@@ -1,0 +1,6110 @@
+fileFormatVersion: 2
+guid: 289f9f711b4e7cf43b9b357e38c30d71
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8920012073806626978
+    second: bulletatlas 1_0
+  - first:
+      213: -4064464496408686247
+    second: bulletatlas 1_1
+  - first:
+      213: 4274530871036264801
+    second: bulletatlas 1_2
+  - first:
+      213: 1885558425708299761
+    second: bulletatlas 1_3
+  - first:
+      213: -8034822314945147904
+    second: bulletatlas 1_4
+  - first:
+      213: 407609164924195403
+    second: bulletatlas 1_5
+  - first:
+      213: 8487237224139983373
+    second: bulletatlas 1_6
+  - first:
+      213: -3119359410161463229
+    second: bulletatlas 1_7
+  - first:
+      213: 3751992968204975290
+    second: bulletatlas 1_8
+  - first:
+      213: -2169136620446123883
+    second: bulletatlas 1_9
+  - first:
+      213: 847133335452021071
+    second: bulletatlas 1_10
+  - first:
+      213: 4466976164085818287
+    second: bulletatlas 1_11
+  - first:
+      213: 195658337099035334
+    second: bulletatlas 1_12
+  - first:
+      213: 5307679918119457164
+    second: bulletatlas 1_13
+  - first:
+      213: -118566146557585942
+    second: bulletatlas 1_14
+  - first:
+      213: -5602594264046789296
+    second: bulletatlas 1_15
+  - first:
+      213: -468288907489989837
+    second: bulletatlas 1_16
+  - first:
+      213: -463765458226764081
+    second: bulletatlas 1_17
+  - first:
+      213: 6056556631872744070
+    second: bulletatlas 1_18
+  - first:
+      213: -7057846754804684284
+    second: bulletatlas 1_19
+  - first:
+      213: 7332622411270809400
+    second: bulletatlas 1_20
+  - first:
+      213: 2936112312638138605
+    second: bulletatlas 1_21
+  - first:
+      213: -2108152049340581930
+    second: bulletatlas 1_22
+  - first:
+      213: -5850089285624909443
+    second: bulletatlas 1_23
+  - first:
+      213: -4697879176737260600
+    second: bulletatlas 1_24
+  - first:
+      213: -8584529945242890737
+    second: bulletatlas 1_25
+  - first:
+      213: -8349665028462636881
+    second: bulletatlas 1_26
+  - first:
+      213: -6587652295328263423
+    second: bulletatlas 1_27
+  - first:
+      213: -8725191187585363019
+    second: bulletatlas 1_28
+  - first:
+      213: 1468490543992402729
+    second: bulletatlas 1_29
+  - first:
+      213: 8891997596020136833
+    second: bulletatlas 1_30
+  - first:
+      213: 1230028737359178004
+    second: bulletatlas 1_31
+  - first:
+      213: -1444932604062556364
+    second: bulletatlas 1_32
+  - first:
+      213: 5513390264020518469
+    second: bulletatlas 1_33
+  - first:
+      213: 1704949981503229466
+    second: bulletatlas 1_34
+  - first:
+      213: -5972153860443640392
+    second: bulletatlas 1_35
+  - first:
+      213: -6758176924088574382
+    second: bulletatlas 1_36
+  - first:
+      213: -1643958066436602083
+    second: bulletatlas 1_37
+  - first:
+      213: 1397462766161528117
+    second: bulletatlas 1_38
+  - first:
+      213: -2591531792293763238
+    second: bulletatlas 1_39
+  - first:
+      213: -527893546080193068
+    second: bulletatlas 1_40
+  - first:
+      213: -703389289015696392
+    second: bulletatlas 1_41
+  - first:
+      213: -1436466904925765011
+    second: bulletatlas 1_42
+  - first:
+      213: -8693370155820579007
+    second: bulletatlas 1_43
+  - first:
+      213: -7463964689112851522
+    second: bulletatlas 1_44
+  - first:
+      213: 9014085364551582015
+    second: bulletatlas 1_45
+  - first:
+      213: 5439069031885415288
+    second: bulletatlas 1_46
+  - first:
+      213: 7168991025294536345
+    second: bulletatlas 1_47
+  - first:
+      213: -2009164010961180786
+    second: bulletatlas 1_48
+  - first:
+      213: -3402843402797576938
+    second: bulletatlas 1_49
+  - first:
+      213: 8568227241008769724
+    second: bulletatlas 1_50
+  - first:
+      213: -7939208922755691701
+    second: bulletatlas 1_51
+  - first:
+      213: 3022501779098199329
+    second: bulletatlas 1_52
+  - first:
+      213: -6036268261480163786
+    second: bulletatlas 1_53
+  - first:
+      213: -7443513772264443117
+    second: bulletatlas 1_54
+  - first:
+      213: -4387856647050513597
+    second: bulletatlas 1_55
+  - first:
+      213: 8164236205771354203
+    second: bulletatlas 1_56
+  - first:
+      213: 32465335065075155
+    second: bulletatlas 1_57
+  - first:
+      213: -3255206192435870318
+    second: bulletatlas 1_58
+  - first:
+      213: -4478014950368283689
+    second: bulletatlas 1_59
+  - first:
+      213: 7588720784829969426
+    second: bulletatlas 1_60
+  - first:
+      213: -6911691809372213536
+    second: bulletatlas 1_61
+  - first:
+      213: 3243583370844465720
+    second: bulletatlas 1_62
+  - first:
+      213: -7773923192383264988
+    second: bulletatlas 1_63
+  - first:
+      213: -7942305938573729624
+    second: bulletatlas 1_64
+  - first:
+      213: 7363054894386840174
+    second: bulletatlas 1_65
+  - first:
+      213: -1078850649917358025
+    second: bulletatlas 1_66
+  - first:
+      213: 6854465494324205187
+    second: bulletatlas 1_67
+  - first:
+      213: 272132472444808568
+    second: bulletatlas 1_68
+  - first:
+      213: 83660103725719703
+    second: bulletatlas 1_69
+  - first:
+      213: -1844364476157772384
+    second: bulletatlas 1_70
+  - first:
+      213: -7322399898511433986
+    second: bulletatlas 1_71
+  - first:
+      213: -2701613033861518314
+    second: bulletatlas 1_72
+  - first:
+      213: -972702427382930022
+    second: bulletatlas 1_73
+  - first:
+      213: 7607910234645740419
+    second: bulletatlas 1_74
+  - first:
+      213: -4591552525309404818
+    second: bulletatlas 1_75
+  - first:
+      213: 7656905347200522251
+    second: bulletatlas 1_76
+  - first:
+      213: 8855645071004260458
+    second: bulletatlas 1_77
+  - first:
+      213: 8463260287717483506
+    second: bulletatlas 1_78
+  - first:
+      213: -8463786357052025320
+    second: bulletatlas 1_79
+  - first:
+      213: -6390679893556949476
+    second: bulletatlas 1_80
+  - first:
+      213: -7537738640461143240
+    second: bulletatlas 1_81
+  - first:
+      213: 8195042706387519942
+    second: bulletatlas 1_82
+  - first:
+      213: 2430778649378445890
+    second: bulletatlas 1_83
+  - first:
+      213: -1980602762666647024
+    second: bulletatlas 1_84
+  - first:
+      213: 4260067149840599814
+    second: bulletatlas 1_85
+  - first:
+      213: -7397746338477344927
+    second: bulletatlas 1_86
+  - first:
+      213: -5737798186313782487
+    second: bulletatlas 1_87
+  - first:
+      213: -3028214831119684070
+    second: bulletatlas 1_88
+  - first:
+      213: 274358464648127234
+    second: bulletatlas 1_89
+  - first:
+      213: 8924045485116990022
+    second: bulletatlas 1_90
+  - first:
+      213: -9054110496377232324
+    second: bulletatlas 1_91
+  - first:
+      213: -7267652293795114717
+    second: bulletatlas 1_92
+  - first:
+      213: -3313604637068097532
+    second: bulletatlas 1_93
+  - first:
+      213: 6405569322007668026
+    second: bulletatlas 1_94
+  - first:
+      213: 4366988835231989617
+    second: bulletatlas 1_95
+  - first:
+      213: 6360416580591254990
+    second: bulletatlas 1_96
+  - first:
+      213: -2576582072303752622
+    second: bulletatlas 1_97
+  - first:
+      213: -7230140993595805157
+    second: bulletatlas 1_98
+  - first:
+      213: 4414040157934318889
+    second: bulletatlas 1_99
+  - first:
+      213: -1916819064718730412
+    second: bulletatlas 1_100
+  - first:
+      213: -3002699722177508306
+    second: bulletatlas 1_101
+  - first:
+      213: 4158341001993863900
+    second: bulletatlas 1_102
+  - first:
+      213: -8168767089804328280
+    second: bulletatlas 1_103
+  - first:
+      213: 2738730292128751447
+    second: bulletatlas 1_104
+  - first:
+      213: -2575098345770901254
+    second: bulletatlas 1_105
+  - first:
+      213: -7269102336508442996
+    second: bulletatlas 1_106
+  - first:
+      213: -9137816915385004184
+    second: bulletatlas 1_107
+  - first:
+      213: 1909177726502077314
+    second: bulletatlas 1_108
+  - first:
+      213: -2486575032978900363
+    second: bulletatlas 1_109
+  - first:
+      213: -3837041272832405339
+    second: bulletatlas 1_110
+  - first:
+      213: -2402436795119248203
+    second: bulletatlas 1_111
+  - first:
+      213: -7923009535225908303
+    second: bulletatlas 1_112
+  - first:
+      213: -1535239532271716319
+    second: bulletatlas 1_113
+  - first:
+      213: -3567512040658808700
+    second: bulletatlas 1_114
+  - first:
+      213: -506388913343936733
+    second: bulletatlas 1_115
+  - first:
+      213: -6964048744247612597
+    second: bulletatlas 1_116
+  - first:
+      213: -4456557322021990633
+    second: bulletatlas 1_117
+  - first:
+      213: -2313032137282072691
+    second: bulletatlas 1_118
+  - first:
+      213: 7542773501923448145
+    second: bulletatlas 1_119
+  - first:
+      213: 1973288662333523799
+    second: bulletatlas 1_120
+  - first:
+      213: -5590800771822340102
+    second: bulletatlas 1_121
+  - first:
+      213: -499628387408682402
+    second: bulletatlas 1_122
+  - first:
+      213: -3155716890755136130
+    second: bulletatlas 1_123
+  - first:
+      213: 2639964922064400500
+    second: bulletatlas 1_124
+  - first:
+      213: -5955458403685495095
+    second: bulletatlas 1_125
+  - first:
+      213: 332013413878980643
+    second: bulletatlas 1_126
+  - first:
+      213: 3453638671559972090
+    second: bulletatlas 1_127
+  - first:
+      213: 5781475726850045837
+    second: bulletatlas 1_128
+  - first:
+      213: -8939722680638440714
+    second: bulletatlas 1_129
+  - first:
+      213: -6002281693423143263
+    second: bulletatlas 1_130
+  - first:
+      213: 3804080729995370161
+    second: bulletatlas 1_131
+  - first:
+      213: 1083842388090888150
+    second: bulletatlas 1_132
+  - first:
+      213: 49862930278792934
+    second: bulletatlas 1_133
+  - first:
+      213: 5346880373553421486
+    second: bulletatlas 1_134
+  - first:
+      213: 6679725668182490290
+    second: bulletatlas 1_135
+  - first:
+      213: -307693992675867078
+    second: bulletatlas 1_136
+  - first:
+      213: 1381408816997723530
+    second: bulletatlas 1_137
+  - first:
+      213: 5969247774156806186
+    second: bulletatlas 1_138
+  - first:
+      213: -61122795485290714
+    second: bulletatlas 1_139
+  - first:
+      213: -92810951375372980
+    second: bulletatlas 1_140
+  - first:
+      213: -1537722583491636307
+    second: bulletatlas 1_141
+  - first:
+      213: -6149160760496835910
+    second: bulletatlas 1_142
+  - first:
+      213: -3542907218958952275
+    second: bulletatlas 1_143
+  - first:
+      213: -3850081307666580181
+    second: bulletatlas 1_144
+  - first:
+      213: -3628503709272513736
+    second: bulletatlas 1_145
+  - first:
+      213: 6696984591270822265
+    second: bulletatlas 1_146
+  - first:
+      213: 5257753660870440582
+    second: bulletatlas 1_147
+  - first:
+      213: 5012845266090939756
+    second: bulletatlas 1_148
+  - first:
+      213: -1024821259288359496
+    second: bulletatlas 1_149
+  - first:
+      213: 7601098125835643785
+    second: bulletatlas 1_150
+  - first:
+      213: -8021799076178846825
+    second: bulletatlas 1_151
+  - first:
+      213: 1100867300048063204
+    second: bulletatlas 1_152
+  - first:
+      213: 3684345810109331551
+    second: bulletatlas 1_153
+  - first:
+      213: -7422370572902339263
+    second: bulletatlas 1_154
+  - first:
+      213: 9157585376170098970
+    second: bulletatlas 1_155
+  - first:
+      213: -5727977962279844152
+    second: bulletatlas 1_156
+  - first:
+      213: 1803085195684735124
+    second: bulletatlas 1_157
+  - first:
+      213: -2461869851102736501
+    second: bulletatlas 1_158
+  - first:
+      213: -3045168146691594399
+    second: bulletatlas 1_159
+  - first:
+      213: -6054580483115988771
+    second: bulletatlas 1_160
+  - first:
+      213: 5583551045800861957
+    second: bulletatlas 1_161
+  - first:
+      213: 4715843133567797231
+    second: bulletatlas 1_162
+  - first:
+      213: 8107442623767546718
+    second: bulletatlas 1_163
+  - first:
+      213: 8222400899792727210
+    second: bulletatlas 1_164
+  - first:
+      213: -956296197958077843
+    second: bulletatlas 1_165
+  - first:
+      213: 4789883586250376915
+    second: bulletatlas 1_166
+  - first:
+      213: -6174583069517396987
+    second: bulletatlas 1_167
+  - first:
+      213: 3558116345534324146
+    second: bulletatlas 1_168
+  - first:
+      213: -1117687650277752666
+    second: bulletatlas 1_169
+  - first:
+      213: 8710087831551291410
+    second: bulletatlas 1_170
+  - first:
+      213: -5201378470846275724
+    second: bulletatlas 1_171
+  - first:
+      213: 4694460774045835571
+    second: bulletatlas 1_172
+  - first:
+      213: 2401492710274295095
+    second: bulletatlas 1_173
+  - first:
+      213: 7597902957867446271
+    second: bulletatlas 1_174
+  - first:
+      213: -7653744091190965350
+    second: bulletatlas 1_175
+  - first:
+      213: -6143134467721094985
+    second: bulletatlas 1_176
+  - first:
+      213: 6949178617642444390
+    second: bulletatlas 1_177
+  - first:
+      213: -388186890147641715
+    second: bulletatlas 1_178
+  - first:
+      213: -2076634006002432513
+    second: bulletatlas 1_179
+  - first:
+      213: 1598337750371631980
+    second: bulletatlas 1_180
+  - first:
+      213: -975289659627415139
+    second: bulletatlas 1_181
+  - first:
+      213: 1633241392405954042
+    second: bulletatlas 1_182
+  - first:
+      213: -68525283107566639
+    second: bulletatlas 1_183
+  - first:
+      213: -7575235289996162173
+    second: bulletatlas 1_184
+  - first:
+      213: -7009251205974029623
+    second: bulletatlas 1_185
+  - first:
+      213: -4015095758647111217
+    second: bulletatlas 1_186
+  - first:
+      213: 1122910350509280349
+    second: bulletatlas 1_187
+  - first:
+      213: 4889421232289629449
+    second: bulletatlas 1_188
+  - first:
+      213: 1227845624461782605
+    second: bulletatlas 1_189
+  - first:
+      213: 1514988938377314131
+    second: bulletatlas 1_190
+  - first:
+      213: -6206105310130297012
+    second: bulletatlas 1_191
+  - first:
+      213: -6155909183520644263
+    second: bulletatlas 1_192
+  - first:
+      213: -3746473992014047485
+    second: bulletatlas 1_193
+  - first:
+      213: -2724250318596359333
+    second: bulletatlas 1_194
+  - first:
+      213: -5240627726301354857
+    second: bulletatlas 1_195
+  - first:
+      213: -8798433343806838097
+    second: bulletatlas 1_196
+  - first:
+      213: 3295615720165986848
+    second: bulletatlas 1_197
+  - first:
+      213: -7751217250704722088
+    second: bulletatlas 1_198
+  - first:
+      213: 2726550513662829017
+    second: bulletatlas 1_199
+  - first:
+      213: -7545870330795982718
+    second: bulletatlas 1_200
+  - first:
+      213: -2127759944886229451
+    second: bulletatlas 1_201
+  - first:
+      213: -3638087770434674213
+    second: bulletatlas 1_202
+  - first:
+      213: -34880275313623258
+    second: bulletatlas 1_203
+  - first:
+      213: 5837276229614957087
+    second: bulletatlas 1_204
+  - first:
+      213: 6345655728830641158
+    second: bulletatlas 1_205
+  - first:
+      213: 5311761301522442349
+    second: bulletatlas 1_206
+  - first:
+      213: -8785133401819988012
+    second: bulletatlas 1_207
+  - first:
+      213: 2396858507936061252
+    second: bulletatlas 1_208
+  - first:
+      213: 8574691623103529873
+    second: bulletatlas 1_209
+  - first:
+      213: 3602973604377248976
+    second: bulletatlas 1_210
+  - first:
+      213: -473924004444064727
+    second: bulletatlas 1_211
+  - first:
+      213: -2901457463837830283
+    second: bulletatlas 1_212
+  - first:
+      213: -1761125054124446262
+    second: bulletatlas 1_213
+  - first:
+      213: 4065746822104597949
+    second: bulletatlas 1_214
+  - first:
+      213: -1265095344030414253
+    second: bulletatlas 1_215
+  - first:
+      213: 3342336652641990797
+    second: bulletatlas 1_216
+  - first:
+      213: -2040564306860528957
+    second: bulletatlas 1_217
+  - first:
+      213: 6126689176145274023
+    second: bulletatlas 1_218
+  - first:
+      213: 7024158854063716816
+    second: bulletatlas 1_219
+  - first:
+      213: -6995725407637728571
+    second: bulletatlas 1_220
+  - first:
+      213: 731601759960375351
+    second: bulletatlas 1_221
+  - first:
+      213: -3996053374477332915
+    second: bulletatlas 1_222
+  - first:
+      213: -2221374618100298832
+    second: bulletatlas 1_223
+  - first:
+      213: -3836220229915775059
+    second: bulletatlas 1_224
+  - first:
+      213: 4309387508013594057
+    second: bulletatlas 1_225
+  - first:
+      213: 336719699306563949
+    second: bulletatlas 1_226
+  - first:
+      213: -1084077767033892668
+    second: bulletatlas 1_227
+  - first:
+      213: 4696748967485718508
+    second: bulletatlas 1_228
+  - first:
+      213: 1352073051308468292
+    second: bulletatlas 1_229
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bulletatlas 1_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 492
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f7f847740c53480800000000000000
+      internalID: -8920012073806626978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 491
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9519f51331f1897c0800000000000000
+      internalID: -4064464496408686247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 491
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 161ce850e2f225b30800000000000000
+      internalID: 4274530871036264801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 490
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f58697e569da2a10800000000000000
+      internalID: 1885558425708299761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_4
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 490
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c0054cca39e7090800000000000000
+      internalID: -8034822314945147904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_5
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 489
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b42108a306e18a500800000000000000
+      internalID: 407609164924195403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_6
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 489
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a065db949b8c570800000000000000
+      internalID: 8487237224139983373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_7
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 488
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 340dd8eb42fc5b4d0800000000000000
+      internalID: -3119359410161463229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_8
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 498
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abcfe95c9b1c11430800000000000000
+      internalID: 3751992968204975290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_9
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 499
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 598740d7cbda5e1e0800000000000000
+      internalID: -2169136620446123883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 497
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f417201c74f91cb00800000000000000
+      internalID: 847133335452021071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_11
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 501
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa3e8787723edfd30800000000000000
+      internalID: 4466976164085818287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_12
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 464
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c2b120983e17b200800000000000000
+      internalID: 195658337099035334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_13
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 489
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c811cf4a3caa8a940800000000000000
+      internalID: 5307679918119457164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_14
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 494
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae55c08c7b4ca5ef0800000000000000
+      internalID: -118566146557585942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_15
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 487
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d99de53369f32b0800000000000000
+      internalID: -5602594264046789296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_16
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 497
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33badc048bd4089f0800000000000000
+      internalID: -468288907489989837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_17
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 491
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc62c4bd5cf5099f0800000000000000
+      internalID: -463765458226764081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_18
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 492
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68aafccea263d0450800000000000000
+      internalID: 6056556631872744070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_19
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 469
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a29b445cd7d0e90800000000000000
+      internalID: -7057846754804684284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_20
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 490
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8376ddfab35b2c560800000000000000
+      internalID: 7332622411270809400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_21
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 452
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de86277979a2fb820800000000000000
+      internalID: 2936112312638138605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_22
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 484
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d7fa8e61e65eb2e0800000000000000
+      internalID: -2108152049340581930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_23
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 484
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7132023ace40dea0800000000000000
+      internalID: -5850089285624909443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_24
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 485
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbfed877c7cdceb0800000000000000
+      internalID: -4697879176737260600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_25
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 483
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e08126f7f9dd880800000000000000
+      internalID: -8584529945242890737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_26
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 469
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa09bf025e7002c80800000000000000
+      internalID: -8349665028462636881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_27
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 440
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1031c29e325f394a0800000000000000
+      internalID: -6587652295328263423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_28
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 452
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b31b9ac7d4e9e680800000000000000
+      internalID: -8725191187585363019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_29
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 473
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923ffae8e50216410800000000000000
+      internalID: 1468490543992402729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_30
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 473
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b5866a3b8b66b70800000000000000
+      internalID: 8891997596020136833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_31
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 473
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419e0d1ae90f11110800000000000000
+      internalID: 1230028737359178004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_32
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 488
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f9872c37192fbe0800000000000000
+      internalID: -1444932604062556364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_33
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 459
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5464a03eb3f738c40800000000000000
+      internalID: 5513390264020518469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_34
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 484
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e0f4799f239a710800000000000000
+      internalID: 1704949981503229466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_35
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 451
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bd674ca4b5ae1da0800000000000000
+      internalID: -5972153860443640392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_36
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 466
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e5576d4e12632a0800000000000000
+      internalID: -6758176924088574382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_37
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 446
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d17886049dc7f29e0800000000000000
+      internalID: -1643958066436602083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_38
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 478
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53584e35bf8c46310800000000000000
+      internalID: 1397462766161528117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_39
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 455
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57e230c097090cd0800000000000000
+      internalID: -2591531792293763238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_40
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 454
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d53ba2ed9b8ca8f0800000000000000
+      internalID: -527893546080193068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_41
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 453
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f3a7691b2f0d36f0800000000000000
+      internalID: -703389289015696392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_42
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 452
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d628b40f5f4a01ce0800000000000000
+      internalID: -1436466904925765011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_43
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 455
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147055917e1fa5780800000000000000
+      internalID: -8693370155820579007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_44
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 468
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb9e5939abaa6890800000000000000
+      internalID: -7463964689112851522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_45
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 460
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31052161e6781d70800000000000000
+      internalID: 9014085364551582015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_46
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 466
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873ab5297747b7b40800000000000000
+      internalID: 5439069031885415288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_47
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 463
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ee4a4ca5f5d7360800000000000000
+      internalID: 7168991025294536345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_48
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 463
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e87e82f1af30e14e0800000000000000
+      internalID: -2009164010961180786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_49
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 457
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d08f544fba6c0d0800000000000000
+      internalID: -3402843402797576938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_50
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 468
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba272f774578e670800000000000000
+      internalID: 8568227241008769724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_51
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 442
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4b09896c8342d190800000000000000
+      internalID: -7939208922755691701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_52
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 450
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 125622caa5512f920800000000000000
+      internalID: 3022501779098199329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_53
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 450
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63692896ffdda3ca0800000000000000
+      internalID: -6036268261480163786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_54
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 451
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 313337b59a353b890800000000000000
+      internalID: -7443513772264443117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_55
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 427
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343b73b90a33b13c0800000000000000
+      internalID: -4387856647050513597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_56
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 426
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50726bb2913d4170800000000000000
+      internalID: 8164236205771354203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_57
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 426
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd511cdc07537000800000000000000
+      internalID: 32465335065075155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_58
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 425
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 295453df63f23d2d0800000000000000
+      internalID: -3255206192435870318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_59
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 425
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3f860d025ead1c0800000000000000
+      internalID: -4478014950368283689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_60
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 424
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 214f967d85d805960800000000000000
+      internalID: 7588720784829969426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_61
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 431
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee64694becb410a0800000000000000
+      internalID: -6911691809372213536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_62
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 435
+        width: 48
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a6c8af3e5830d20800000000000000
+      internalID: 3243583370844465720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_63
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 418
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42723d66b0a7d1490800000000000000
+      internalID: -7773923192383264988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_64
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 399
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a066d934d247c190800000000000000
+      internalID: -7942305938573729624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_65
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 432
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6201a15a63de2660800000000000000
+      internalID: 7363054894386840174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_66
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 408
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7300af5cc072701f0800000000000000
+      internalID: -1078850649917358025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_67
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 440
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386dd52fc04ff1f50800000000000000
+      internalID: 6854465494324205187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_68
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 438
+        width: 48
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87debe7ba0fc6c300800000000000000
+      internalID: 272132472444808568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_69
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 428
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 790a17ccb68392100800000000000000
+      internalID: 83660103725719703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_70
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 427
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad3442e7408766e0800000000000000
+      internalID: -1844364476157772384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_71
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 414
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe9ed9861c916a90800000000000000
+      internalID: -7322399898511433986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_72
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 371
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c6e1c6241f18ad0800000000000000
+      internalID: -2701613033861518314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_73
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 427
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a952eafbb444082f0800000000000000
+      internalID: -972702427382930022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_74
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 414
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b3e1bcc0ab49960800000000000000
+      internalID: 7607910234645740419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_75
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 367
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6992692e478740c0800000000000000
+      internalID: -4591552525309404818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_76
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 409
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b081da268dac24a60800000000000000
+      internalID: 7656905347200522251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_77
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 388
+        width: 53
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68d52ad54295ea70800000000000000
+      internalID: 8855645071004260458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_78
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 414
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f32213346a837570800000000000000
+      internalID: 8463260287717483506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_79
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 411
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 816dd1db6279a8a80800000000000000
+      internalID: -8463786357052025320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_80
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 410
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e8e4ffe7ebf47a0800000000000000
+      internalID: -6390679893556949476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_81
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 410
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833e395a4a2946790800000000000000
+      internalID: -7537738640461143240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_82
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 400
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c942691ce3aab170800000000000000
+      internalID: 8195042706387519942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_83
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 420
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a5ec38d4cdbb120800000000000000
+      internalID: 2430778649378445890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_84
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 390
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012e812f74c7384e0800000000000000
+      internalID: -1980602762666647024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_85
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 389
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b4f81808cce1b30800000000000000
+      internalID: 4260067149840599814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_86
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 388
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1677c9c66ece55990800000000000000
+      internalID: -7397746338477344927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_87
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 387
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92be2ef13fe3f50b0800000000000000
+      internalID: -5737798186313782487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_88
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 408
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1eaa8fb7ae99f5d0800000000000000
+      internalID: -3028214831119684070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_89
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 344
+        width: 52
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 203297ae197bec300800000000000000
+      internalID: 274358464648127234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_90
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 388
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 642a3db461498db70800000000000000
+      internalID: 8924045485116990022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_91
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 407
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c34ac4a6976595280800000000000000
+      internalID: -9054110496377232324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_92
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 411
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3211a459ebc142b90800000000000000
+      internalID: -7267652293795114717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_93
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 386
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40808798326b302d0800000000000000
+      internalID: -3313604637068097532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_94
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 331
+        width: 85
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3528663c5725e850800000000000000
+      internalID: 6405569322007668026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_95
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 407
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f79165539aa9c30800000000000000
+      internalID: 4366988835231989617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_96
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 406
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd75ad5e2db44850800000000000000
+      internalID: 6360416580591254990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_97
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 407
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ae1bda1442e3cd0800000000000000
+      internalID: -2576582072303752622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_98
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 391
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b127bb0c21169ab90800000000000000
+      internalID: -7230140993595805157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_99
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 393
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 925fbf51322d14d30800000000000000
+      internalID: 4414040157934318889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_100
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 382
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b5eb467371665e0800000000000000
+      internalID: -1916819064718730412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_101
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 392
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c027cf2844456d0800000000000000
+      internalID: -3002699722177508306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_102
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 394
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd249c60c1565b930800000000000000
+      internalID: 4158341001993863900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_103
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 389
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2cf4f9c95b2ae80800000000000000
+      internalID: -8168767089804328280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_104
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 341
+        width: 34
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75f9fe5b0bce10620800000000000000
+      internalID: 2738730292128751447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_105
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 384
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af021aea2b9634cd0800000000000000
+      internalID: -2575098345770901254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_106
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 363
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c86c37430f5fe1b90800000000000000
+      internalID: -7269102336508442996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_107
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 362
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86fcbeffde3ff2180800000000000000
+      internalID: -9137816915385004184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_108
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 362
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2838e39e603ce7a10800000000000000
+      internalID: 1909177726502077314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_109
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 361
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57affe39e29ed7dd0800000000000000
+      internalID: -2486575032978900363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_110
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 361
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a0df48ba4710cac0800000000000000
+      internalID: -3837041272832405339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_111
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 360
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bcd697a674d8aed0800000000000000
+      internalID: -2402436795119248203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_112
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 360
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b3b3dc3ec0db0290800000000000000
+      internalID: -7923009535225908303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_113
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 359
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128bec987cbb1bae0800000000000000
+      internalID: -1535239532271716319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_114
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 371
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4805a9453b6ad7ec0800000000000000
+      internalID: -3567512040658808700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_115
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 364
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32740fd57f1f8f8f0800000000000000
+      internalID: -506388913343936733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_116
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 365
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4bad90709aba5f90800000000000000
+      internalID: -6964048744247612597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_117
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 361
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f86bb3ab02722c0800000000000000
+      internalID: -4456557322021990633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_118
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 263
+        width: 234
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f4d3fa68576efd0800000000000000
+      internalID: -2313032137282072691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_119
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 352
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 155506369805da860800000000000000
+      internalID: 7542773501923448145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_120
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 351
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75702bd5597826b10800000000000000
+      internalID: 1973288662333523799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_121
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 344
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af7bc81c15c7962b0800000000000000
+      internalID: -5590800771822340102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_122
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 326
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e52edc8f0a6f019f0800000000000000
+      internalID: -499628387408682402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_123
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 325
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7507d22534a434d0800000000000000
+      internalID: -3155716890755136130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_124
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 324
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 470f3270c1a03a420800000000000000
+      internalID: 2639964922064400500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_125
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 323
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce06bd9226f95da0800000000000000
+      internalID: -5955458403685495095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_126
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 322
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320ebead07c8b9400800000000000000
+      internalID: 332013413878980643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_127
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 345
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af452e8d21acdef20800000000000000
+      internalID: 3453638671559972090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_128
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 341
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87b070ca8deb3050800000000000000
+      internalID: 5781475726850045837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_129
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 340
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fafa0e2699bfe380800000000000000
+      internalID: -8939722680638440714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_130
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 336
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a6feade99c93bca0800000000000000
+      internalID: -6002281693423143263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_131
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 266
+        width: 42
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be5840e44fcac430800000000000000
+      internalID: 3804080729995370161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_132
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 314
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df1ba6d8e49a0f00800000000000000
+      internalID: 1083842388090888150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_133
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 310
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee3ab6221621b000800000000000000
+      internalID: 49862930278792934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_134
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 304
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eacd82aee5fe33a40800000000000000
+      internalID: 5346880373553421486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_135
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 315
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc7311ca1723bc50800000000000000
+      internalID: 6679725668182490290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_136
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 299
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a368803a1f9dabbf0800000000000000
+      internalID: -307693992675867078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_137
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 298
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8dedb20000cb2310800000000000000
+      internalID: 1381408816997723530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_138
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 298
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2858e2693707d250800000000000000
+      internalID: 5969247774156806186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_139
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 297
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f9b6f2429d62ff0800000000000000
+      internalID: -61122795485290714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_140
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 297
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4d31047ee446bef0800000000000000
+      internalID: -92810951375372980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_141
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 296
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da392ef1579e8aae0800000000000000
+      internalID: -1537722583491636307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_142
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 296
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2b0d33edac9aaa0800000000000000
+      internalID: -6149160760496835910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_143
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 295
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da8d8cdc7a015dec0800000000000000
+      internalID: -3542907218958952275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_144
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 306
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2d79240373c19ac0800000000000000
+      internalID: -3850081307666580181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_145
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 303
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833ef9ed917f4adc0800000000000000
+      internalID: -3628503709272513736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_146
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 302
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97146fce00870fc50800000000000000
+      internalID: 6696984591270822265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_147
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 306
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68631b8091b47f840800000000000000
+      internalID: 5257753660870440582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_148
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 297
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c655957d534319540800000000000000
+      internalID: 5012845266090939756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_149
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 301
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bd49d19e7a17c1f0800000000000000
+      internalID: -1024821259288359496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_150
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 262
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b225d19768c7960800000000000000
+      internalID: 7601098125835643785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_151
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 261
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b9dc4dd38dca090800000000000000
+      internalID: -8021799076178846825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_152
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 260
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ea453c0af0174f00800000000000000
+      internalID: 1100867300048063204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_153
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 259
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f58f3496efc612330800000000000000
+      internalID: 3684345810109331551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_154
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 258
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14de7d21a417ef890800000000000000
+      internalID: -7422370572902339263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_155
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 234
+        width: 7
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a114ee27167461f70800000000000000
+      internalID: 9157585376170098970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_156
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 269
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c64b0534622280b0800000000000000
+      internalID: -5727977962279844152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_157
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 270
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 498ed8cae68d50910800000000000000
+      internalID: 1803085195684735124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_158
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 271
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f07c9f96ea5ddd0800000000000000
+      internalID: -2461869851102736501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_159
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 277
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167ec1f54b36db5d0800000000000000
+      internalID: -3045168146691594399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_160
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 236
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8cbdf012fc9fba0800000000000000
+      internalID: -6054580483115988771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_161
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 245
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501a83ed712cc7d40800000000000000
+      internalID: 5583551045800861957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_162
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 218
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe706c8285a027140800000000000000
+      internalID: 4715843133567797231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_163
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 217
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b868a7c1c638070800000000000000
+      internalID: 8107442623767546718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_164
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 217
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac6ff0ed06db1270800000000000000
+      internalID: 8222400899792727210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_165
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 217
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62f6a4bcad8ab2f0800000000000000
+      internalID: -956296197958077843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_166
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 232
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d68de96eb5197240800000000000000
+      internalID: 4789883586250376915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_167
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 213
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5044641a9697f4aa0800000000000000
+      internalID: -6174583069517396987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_168
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 234
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd951de6f7f06130800000000000000
+      internalID: 3558116345534324146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_169
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 217
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a08a5bf00d2d70f0800000000000000
+      internalID: -1117687650277752666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_170
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 217
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 210311a1cb270e870800000000000000
+      internalID: 8710087831551291410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_171
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 217
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47fd7deb6ddf0d7b0800000000000000
+      internalID: -5201378470846275724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_172
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 232
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 331e101a333162140800000000000000
+      internalID: 4694460774045835571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_173
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 213
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735e69675e0d35120800000000000000
+      internalID: 2401492710274295095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_174
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 191
+        width: 78
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff24991c7c217960800000000000000
+      internalID: 7597902957867446271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_175
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 225
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b41d2ec4078c590800000000000000
+      internalID: -7653744091190965350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_176
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 152
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b89604dfb33fbaa0800000000000000
+      internalID: -6143134467721094985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_177
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 221
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66661596221707060800000000000000
+      internalID: 6949178617642444390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_178
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 31
+        width: 36
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8649428412ec9af0800000000000000
+      internalID: -388186890147641715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_179
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 221
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff58abfbf505e23e0800000000000000
+      internalID: -2076634006002432513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_180
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 142
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c638ff137bf6e2610800000000000000
+      internalID: 1598337750371631980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_181
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 220
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99dbccc8331772f0800000000000000
+      internalID: -975289659627415139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_182
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 95
+        width: 87
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afd32d2a4607aa610800000000000000
+      internalID: 1633241392405954042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_183
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 143
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db8d3a3e9c8c0ff0800000000000000
+      internalID: -68525283107566639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_184
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 126
+        width: 31
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b86c993ab5fd690800000000000000
+      internalID: -7575235289996162173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_185
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 158
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca807e2a232abe90800000000000000
+      internalID: -7009251205974029623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_186
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 176
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc159ae2ea38748c0800000000000000
+      internalID: -4015095758647111217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_187
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 151
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5c07bca301659f00800000000000000
+      internalID: 1122910350509280349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_188
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 136
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90540eb94b6bad340800000000000000
+      internalID: 4889421232289629449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_189
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 152
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4eef0d071f2a0110800000000000000
+      internalID: 1227845624461782605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_190
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 138
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35f30a6a962560510800000000000000
+      internalID: 1514988938377314131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_191
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 184
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c47a40f0a1c7fd9a0800000000000000
+      internalID: -6206105310130297012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_192
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 155
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 953efa68631d19aa0800000000000000
+      internalID: -6155909183520644263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_193
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 133
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30753c101c9d10cc0800000000000000
+      internalID: -3746473992014047485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_194
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 182
+        width: 48
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5bb1d8d4c4813ad0800000000000000
+      internalID: -2724250318596359333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_195
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 155
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 794aeb559dc8547b0800000000000000
+      internalID: -5240627726301354857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_196
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 212
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faae07a6d7fa5e580800000000000000
+      internalID: -8798433343806838097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_197
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 130
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 022dfac59016cbd20800000000000000
+      internalID: 3295615720165986848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_198
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 186
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8577dda6af42e6490800000000000000
+      internalID: -7751217250704722088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_199
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 154
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d1280d0f37a6d520800000000000000
+      internalID: 2726550513662829017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_200
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 89
+        width: 55
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2800fb3f9eea74790800000000000000
+      internalID: -7545870330795982718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_201
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 143
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53660cd7a9da872e0800000000000000
+      internalID: -2127759944886229451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_202
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 158
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd16c8db27ae28dc0800000000000000
+      internalID: -3638087770434674213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_203
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 176
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f734c0394148ff0800000000000000
+      internalID: -34880275313623258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_204
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 151
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f12f70abdcb220150800000000000000
+      internalID: 5837276229614957087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_205
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 136
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6047fdfb34c401850800000000000000
+      internalID: 6345655728830641158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_206
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 152
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6869e4c2ca27b940800000000000000
+      internalID: 5311761301522442349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_207
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 138
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dfb91877bfe41680800000000000000
+      internalID: -8785133401819988012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_208
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 184
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 447d6662d1a534120800000000000000
+      internalID: 2396858507936061252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_209
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 155
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1938a9db99c6ff670800000000000000
+      internalID: 8574691623103529873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_210
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 133
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d4c3006765500230800000000000000
+      internalID: 3602973604377248976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_211
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 182
+        width: 48
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924b49001a84c69f0800000000000000
+      internalID: -473924004444064727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_212
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 155
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5735a092fc3fbb7d0800000000000000
+      internalID: -2901457463837830283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_213
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 212
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd2fd7181a3f87e0800000000000000
+      internalID: -1761125054124446262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_214
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 130
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5c736813f6c6830800000000000000
+      internalID: 4065746822104597949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_215
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 186
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a0114cc7a717ee0800000000000000
+      internalID: -1265095344030414253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_216
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 139
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d887e742a7d526e20800000000000000
+      internalID: 3342336652641990797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_217
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 96
+        width: 24
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3caac3403957ea3e0800000000000000
+      internalID: -2040564306860528957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_218
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 171
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4ae59585f560550800000000000000
+      internalID: 6126689176145274023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_219
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 142
+        width: 60
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d9f16e1343da7160800000000000000
+      internalID: 7024158854063716816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_220
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 31
+        width: 35
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c214938ec03aee90800000000000000
+      internalID: -6995725407637728571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_221
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 29
+        width: 163
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7302d7baceb272a00800000000000000
+      internalID: 731601759960375351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_222
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 96
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4e07ceb0aa2b88c0800000000000000
+      internalID: -3996053374477332915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_223
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 95
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb001fdd871c21e0800000000000000
+      internalID: -2221374618100298832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_224
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 64
+        width: 59
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dafe3bba60203cac0800000000000000
+      internalID: -3836220229915775059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_225
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 28
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c5f7ae3b150ecb30800000000000000
+      internalID: 4309387508013594057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_226
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 30
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d694b0258c44ca400800000000000000
+      internalID: 336719699306563949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_227
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 94
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c0db0bb30594f0f0800000000000000
+      internalID: -1084077767033892668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_228
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 33
+        width: 16
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef3b2e2d443e2140800000000000000
+      internalID: 4696748967485718508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulletatlas 1_229
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 91
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448ae9dc64783c210800000000000000
+      internalID: 1352073051308468292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bulletatlas 1_0: -8920012073806626978
+      bulletatlas 1_1: -4064464496408686247
+      bulletatlas 1_10: 847133335452021071
+      bulletatlas 1_100: -1916819064718730412
+      bulletatlas 1_101: -3002699722177508306
+      bulletatlas 1_102: 4158341001993863900
+      bulletatlas 1_103: -8168767089804328280
+      bulletatlas 1_104: 2738730292128751447
+      bulletatlas 1_105: -2575098345770901254
+      bulletatlas 1_106: -7269102336508442996
+      bulletatlas 1_107: -9137816915385004184
+      bulletatlas 1_108: 1909177726502077314
+      bulletatlas 1_109: -2486575032978900363
+      bulletatlas 1_11: 4466976164085818287
+      bulletatlas 1_110: -3837041272832405339
+      bulletatlas 1_111: -2402436795119248203
+      bulletatlas 1_112: -7923009535225908303
+      bulletatlas 1_113: -1535239532271716319
+      bulletatlas 1_114: -3567512040658808700
+      bulletatlas 1_115: -506388913343936733
+      bulletatlas 1_116: -6964048744247612597
+      bulletatlas 1_117: -4456557322021990633
+      bulletatlas 1_118: -2313032137282072691
+      bulletatlas 1_119: 7542773501923448145
+      bulletatlas 1_12: 195658337099035334
+      bulletatlas 1_120: 1973288662333523799
+      bulletatlas 1_121: -5590800771822340102
+      bulletatlas 1_122: -499628387408682402
+      bulletatlas 1_123: -3155716890755136130
+      bulletatlas 1_124: 2639964922064400500
+      bulletatlas 1_125: -5955458403685495095
+      bulletatlas 1_126: 332013413878980643
+      bulletatlas 1_127: 3453638671559972090
+      bulletatlas 1_128: 5781475726850045837
+      bulletatlas 1_129: -8939722680638440714
+      bulletatlas 1_13: 5307679918119457164
+      bulletatlas 1_130: -6002281693423143263
+      bulletatlas 1_131: 3804080729995370161
+      bulletatlas 1_132: 1083842388090888150
+      bulletatlas 1_133: 49862930278792934
+      bulletatlas 1_134: 5346880373553421486
+      bulletatlas 1_135: 6679725668182490290
+      bulletatlas 1_136: -307693992675867078
+      bulletatlas 1_137: 1381408816997723530
+      bulletatlas 1_138: 5969247774156806186
+      bulletatlas 1_139: -61122795485290714
+      bulletatlas 1_14: -118566146557585942
+      bulletatlas 1_140: -92810951375372980
+      bulletatlas 1_141: -1537722583491636307
+      bulletatlas 1_142: -6149160760496835910
+      bulletatlas 1_143: -3542907218958952275
+      bulletatlas 1_144: -3850081307666580181
+      bulletatlas 1_145: -3628503709272513736
+      bulletatlas 1_146: 6696984591270822265
+      bulletatlas 1_147: 5257753660870440582
+      bulletatlas 1_148: 5012845266090939756
+      bulletatlas 1_149: -1024821259288359496
+      bulletatlas 1_15: -5602594264046789296
+      bulletatlas 1_150: 7601098125835643785
+      bulletatlas 1_151: -8021799076178846825
+      bulletatlas 1_152: 1100867300048063204
+      bulletatlas 1_153: 3684345810109331551
+      bulletatlas 1_154: -7422370572902339263
+      bulletatlas 1_155: 9157585376170098970
+      bulletatlas 1_156: -5727977962279844152
+      bulletatlas 1_157: 1803085195684735124
+      bulletatlas 1_158: -2461869851102736501
+      bulletatlas 1_159: -3045168146691594399
+      bulletatlas 1_16: -468288907489989837
+      bulletatlas 1_160: -6054580483115988771
+      bulletatlas 1_161: 5583551045800861957
+      bulletatlas 1_162: 4715843133567797231
+      bulletatlas 1_163: 8107442623767546718
+      bulletatlas 1_164: 8222400899792727210
+      bulletatlas 1_165: -956296197958077843
+      bulletatlas 1_166: 4789883586250376915
+      bulletatlas 1_167: -6174583069517396987
+      bulletatlas 1_168: 3558116345534324146
+      bulletatlas 1_169: -1117687650277752666
+      bulletatlas 1_17: -463765458226764081
+      bulletatlas 1_170: 8710087831551291410
+      bulletatlas 1_171: -5201378470846275724
+      bulletatlas 1_172: 4694460774045835571
+      bulletatlas 1_173: 2401492710274295095
+      bulletatlas 1_174: 7597902957867446271
+      bulletatlas 1_175: -7653744091190965350
+      bulletatlas 1_176: -6143134467721094985
+      bulletatlas 1_177: 6949178617642444390
+      bulletatlas 1_178: -388186890147641715
+      bulletatlas 1_179: -2076634006002432513
+      bulletatlas 1_18: 6056556631872744070
+      bulletatlas 1_180: 1598337750371631980
+      bulletatlas 1_181: -975289659627415139
+      bulletatlas 1_182: 1633241392405954042
+      bulletatlas 1_183: -68525283107566639
+      bulletatlas 1_184: -7575235289996162173
+      bulletatlas 1_185: -7009251205974029623
+      bulletatlas 1_186: -4015095758647111217
+      bulletatlas 1_187: 1122910350509280349
+      bulletatlas 1_188: 4889421232289629449
+      bulletatlas 1_189: 1227845624461782605
+      bulletatlas 1_19: -7057846754804684284
+      bulletatlas 1_190: 1514988938377314131
+      bulletatlas 1_191: -6206105310130297012
+      bulletatlas 1_192: -6155909183520644263
+      bulletatlas 1_193: -3746473992014047485
+      bulletatlas 1_194: -2724250318596359333
+      bulletatlas 1_195: -5240627726301354857
+      bulletatlas 1_196: -8798433343806838097
+      bulletatlas 1_197: 3295615720165986848
+      bulletatlas 1_198: -7751217250704722088
+      bulletatlas 1_199: 2726550513662829017
+      bulletatlas 1_2: 4274530871036264801
+      bulletatlas 1_20: 7332622411270809400
+      bulletatlas 1_200: -7545870330795982718
+      bulletatlas 1_201: -2127759944886229451
+      bulletatlas 1_202: -3638087770434674213
+      bulletatlas 1_203: -34880275313623258
+      bulletatlas 1_204: 5837276229614957087
+      bulletatlas 1_205: 6345655728830641158
+      bulletatlas 1_206: 5311761301522442349
+      bulletatlas 1_207: -8785133401819988012
+      bulletatlas 1_208: 2396858507936061252
+      bulletatlas 1_209: 8574691623103529873
+      bulletatlas 1_21: 2936112312638138605
+      bulletatlas 1_210: 3602973604377248976
+      bulletatlas 1_211: -473924004444064727
+      bulletatlas 1_212: -2901457463837830283
+      bulletatlas 1_213: -1761125054124446262
+      bulletatlas 1_214: 4065746822104597949
+      bulletatlas 1_215: -1265095344030414253
+      bulletatlas 1_216: 3342336652641990797
+      bulletatlas 1_217: -2040564306860528957
+      bulletatlas 1_218: 6126689176145274023
+      bulletatlas 1_219: 7024158854063716816
+      bulletatlas 1_22: -2108152049340581930
+      bulletatlas 1_220: -6995725407637728571
+      bulletatlas 1_221: 731601759960375351
+      bulletatlas 1_222: -3996053374477332915
+      bulletatlas 1_223: -2221374618100298832
+      bulletatlas 1_224: -3836220229915775059
+      bulletatlas 1_225: 4309387508013594057
+      bulletatlas 1_226: 336719699306563949
+      bulletatlas 1_227: -1084077767033892668
+      bulletatlas 1_228: 4696748967485718508
+      bulletatlas 1_229: 1352073051308468292
+      bulletatlas 1_23: -5850089285624909443
+      bulletatlas 1_24: -4697879176737260600
+      bulletatlas 1_25: -8584529945242890737
+      bulletatlas 1_26: -8349665028462636881
+      bulletatlas 1_27: -6587652295328263423
+      bulletatlas 1_28: -8725191187585363019
+      bulletatlas 1_29: 1468490543992402729
+      bulletatlas 1_3: 1885558425708299761
+      bulletatlas 1_30: 8891997596020136833
+      bulletatlas 1_31: 1230028737359178004
+      bulletatlas 1_32: -1444932604062556364
+      bulletatlas 1_33: 5513390264020518469
+      bulletatlas 1_34: 1704949981503229466
+      bulletatlas 1_35: -5972153860443640392
+      bulletatlas 1_36: -6758176924088574382
+      bulletatlas 1_37: -1643958066436602083
+      bulletatlas 1_38: 1397462766161528117
+      bulletatlas 1_39: -2591531792293763238
+      bulletatlas 1_4: -8034822314945147904
+      bulletatlas 1_40: -527893546080193068
+      bulletatlas 1_41: -703389289015696392
+      bulletatlas 1_42: -1436466904925765011
+      bulletatlas 1_43: -8693370155820579007
+      bulletatlas 1_44: -7463964689112851522
+      bulletatlas 1_45: 9014085364551582015
+      bulletatlas 1_46: 5439069031885415288
+      bulletatlas 1_47: 7168991025294536345
+      bulletatlas 1_48: -2009164010961180786
+      bulletatlas 1_49: -3402843402797576938
+      bulletatlas 1_5: 407609164924195403
+      bulletatlas 1_50: 8568227241008769724
+      bulletatlas 1_51: -7939208922755691701
+      bulletatlas 1_52: 3022501779098199329
+      bulletatlas 1_53: -6036268261480163786
+      bulletatlas 1_54: -7443513772264443117
+      bulletatlas 1_55: -4387856647050513597
+      bulletatlas 1_56: 8164236205771354203
+      bulletatlas 1_57: 32465335065075155
+      bulletatlas 1_58: -3255206192435870318
+      bulletatlas 1_59: -4478014950368283689
+      bulletatlas 1_6: 8487237224139983373
+      bulletatlas 1_60: 7588720784829969426
+      bulletatlas 1_61: -6911691809372213536
+      bulletatlas 1_62: 3243583370844465720
+      bulletatlas 1_63: -7773923192383264988
+      bulletatlas 1_64: -7942305938573729624
+      bulletatlas 1_65: 7363054894386840174
+      bulletatlas 1_66: -1078850649917358025
+      bulletatlas 1_67: 6854465494324205187
+      bulletatlas 1_68: 272132472444808568
+      bulletatlas 1_69: 83660103725719703
+      bulletatlas 1_7: -3119359410161463229
+      bulletatlas 1_70: -1844364476157772384
+      bulletatlas 1_71: -7322399898511433986
+      bulletatlas 1_72: -2701613033861518314
+      bulletatlas 1_73: -972702427382930022
+      bulletatlas 1_74: 7607910234645740419
+      bulletatlas 1_75: -4591552525309404818
+      bulletatlas 1_76: 7656905347200522251
+      bulletatlas 1_77: 8855645071004260458
+      bulletatlas 1_78: 8463260287717483506
+      bulletatlas 1_79: -8463786357052025320
+      bulletatlas 1_8: 3751992968204975290
+      bulletatlas 1_80: -6390679893556949476
+      bulletatlas 1_81: -7537738640461143240
+      bulletatlas 1_82: 8195042706387519942
+      bulletatlas 1_83: 2430778649378445890
+      bulletatlas 1_84: -1980602762666647024
+      bulletatlas 1_85: 4260067149840599814
+      bulletatlas 1_86: -7397746338477344927
+      bulletatlas 1_87: -5737798186313782487
+      bulletatlas 1_88: -3028214831119684070
+      bulletatlas 1_89: 274358464648127234
+      bulletatlas 1_9: -2169136620446123883
+      bulletatlas 1_90: 8924045485116990022
+      bulletatlas 1_91: -9054110496377232324
+      bulletatlas 1_92: -7267652293795114717
+      bulletatlas 1_93: -3313604637068097532
+      bulletatlas 1_94: 6405569322007668026
+      bulletatlas 1_95: 4366988835231989617
+      bulletatlas 1_96: 6360416580591254990
+      bulletatlas 1_97: -2576582072303752622
+      bulletatlas 1_98: -7230140993595805157
+      bulletatlas 1_99: 4414040157934318889
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

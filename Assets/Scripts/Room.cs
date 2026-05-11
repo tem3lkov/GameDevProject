@@ -29,6 +29,8 @@ public class Room : MonoBehaviour
     private bool hasBeenEntered = false;
     private bool inCombat = false;
 
+    public static event Action<Room> OnRoomEnteredGlobal;
+
     public void SetupRoom(Cell currentCell, RoomScript room)
     {
         roomIndex = currentCell.Index;
@@ -183,9 +185,11 @@ public class Room : MonoBehaviour
         return 0;
     }
 
-    public void PlayerEntered()
-    {
+    public void PlayerEntered() {
+        OnRoomEnteredGlobal?.Invoke(this);
+
         if (hasBeenEntered) return;
+
         hasBeenEntered = true;
 
         OnPlayerEnteredRoom?.Invoke();

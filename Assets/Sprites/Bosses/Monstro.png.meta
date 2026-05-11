@@ -1,0 +1,1068 @@
+fileFormatVersion: 2
+guid: 8094cca53d3575248b03dc4765232a9c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4060831680340686043
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_0
+  - first:
+      213: 5431232679843225972
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_1
+  - first:
+      213: -1696450301030760193
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_2
+  - first:
+      213: -3824669080013101589
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_3
+  - first:
+      213: 4924359440084222729
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_4
+  - first:
+      213: -7925894372313852576
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_5
+  - first:
+      213: -245121376833598108
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_6
+  - first:
+      213: 2573528678899058353
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_7
+  - first:
+      213: -6244137606116801146
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_8
+  - first:
+      213: 989221282672283333
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_9
+  - first:
+      213: 5005508379931989483
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_10
+  - first:
+      213: 1907981306045608803
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_11
+  - first:
+      213: 3923701462843717619
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_12
+  - first:
+      213: 3543057282775024221
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_13
+  - first:
+      213: 8079108294820529615
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_14
+  - first:
+      213: -7411767997556887303
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_15
+  - first:
+      213: -6415179023162055337
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_16
+  - first:
+      213: 5010179165207015552
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_17
+  - first:
+      213: 6748229810427125664
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_18
+  - first:
+      213: -5504371724653284902
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_19
+  - first:
+      213: 5158252115597415413
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_20
+  - first:
+      213: 139366823827106650
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_21
+  - first:
+      213: 2694801538213043133
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_22
+  - first:
+      213: 652957664487059048
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_23
+  - first:
+      213: 2612573854131484834
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_24
+  - first:
+      213: 3241841317631990194
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_25
+  - first:
+      213: -3736775909817384341
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_26
+  - first:
+      213: 8794248918393507400
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_27
+  - first:
+      213: -8875449064742536059
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_28
+  - first:
+      213: 1306713375735071186
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_29
+  - first:
+      213: 3135260544405822936
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_30
+  - first:
+      213: -2066484093613125896
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_31
+  - first:
+      213: 6764012745335871970
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_32
+  - first:
+      213: 8263010069139757546
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_33
+  - first:
+      213: 3304091539606696458
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_34
+  - first:
+      213: 8370676935726699778
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Monstro_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Monstro_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 261
+        width: 67
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d08c807672a22848a41d342d76d4783
+      internalID: -1041158180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 261
+        width: 67
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406b669733801584dac3abc79d8c3272
+      internalID: -571408345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_2
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 261
+        width: 67
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7087f24f2d3254486102a09d9a0252
+      internalID: 6694907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 261
+        width: 67
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8cd6e66e4e2a5408170baf414b89c3
+      internalID: 1127938433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_4
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 261
+        width: 66
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a512e7981f44c27439c0acbb78a0e287
+      internalID: -842858877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 149
+        width: 78
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a71fd86594fa54891975847ac3d862
+      internalID: -29404962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_6
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 149
+        width: 65
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9fb017a83c37040bcab7a9a5b3bcdd
+      internalID: -1421998358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_7
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 149
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4e014fece371d49a253e9ae9cd5530
+      internalID: -1327949058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_8
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 149
+        width: 67
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93971921be8b0744fa65ee5ea59f147f
+      internalID: 986744095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_9
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 18
+        width: 132
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac659ca4577f9f64ebde7ed9803d487a
+      internalID: 264020217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_10
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 95
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde45c07b74f55b458122764db5f52fd
+      internalID: -2027055317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 102
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c943c634717e92f4caa7dcf3d928ee86
+      internalID: 1326225002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_12
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 101
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d716f50e6c375394097ed6966554df89
+      internalID: 1869497457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_13
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 101
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17970970eaca7694595f80f4c9c23fb2
+      internalID: 1258807654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_14
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 99
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23518e86772b1e4d8c3fa989c3d25db
+      internalID: 606961057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_15
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 101
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac542b77991c0da489fc49b19965de7e
+      internalID: -627239614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_16
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 100
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef2a0824d070624ca87bfecf26f9100
+      internalID: 1234977666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_17
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 99
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391128fc5d495d34a82945b5f253a703
+      internalID: -360015521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_18
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 93
+        width: 60
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f6bbfe1eb8fe4469c99adcadbcb45b
+      internalID: -594701232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_19
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 21
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d672ad488b4824eae4953c23f5ddb2
+      internalID: 87596684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_20
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 19
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022e6b62aa785ea4795713d580ceb622
+      internalID: -533484903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_21
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 19
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60c699c9231179489a9b224e495066f
+      internalID: 110672156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_22
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 21
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1349d307767c341b6334a34c273807
+      internalID: -1183517178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_23
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 21
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deeffb076a213924b80c667dc83cf792
+      internalID: 1642441668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_24
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 21
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97fe6e1ecca28e44a848e3e04e9c9cdd
+      internalID: -769170249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_25
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 19
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da276ae7a3386b42a9ff8213cd5a9a8
+      internalID: 1257813999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_26
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 3
+        width: 42
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1feab755e1d6b649b434e55017bcdb5
+      internalID: 1938242625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_27
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 7
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0b5077b8a669f448ab1ca9da591fab
+      internalID: 357153480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_28
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 7
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3a0db42eb76bc41b31dcb99498a442
+      internalID: -1548564690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_29
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 5
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f48df9c087c664185f2433727bdbef
+      internalID: 970409748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_30
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 7
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fca189136dfe1840a0b62a3c32796cf
+      internalID: 799834799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_31
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 7
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8564237943a06484a9b065f7dcbaadd8
+      internalID: 1770775875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_32
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 7
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960b220f5f8630e4b9ecddc3ce540ffd
+      internalID: 380920211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_33
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 7
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b147e3800bae444a9344245207007b8
+      internalID: -1224011035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_34
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 7
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec72f0d0edc947d438524307ac1cfdd0
+      internalID: 1285799365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monstro_35
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 7
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c43b7d06e25de4b90c3bd3b7eefeee
+      internalID: -771975749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4ccb90fd3587033469332314da9c4b08
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Monstro_0: -1041158180
+      Monstro_1: -571408345
+      Monstro_10: -2027055317
+      Monstro_11: 1326225002
+      Monstro_12: 1869497457
+      Monstro_13: 1258807654
+      Monstro_14: 606961057
+      Monstro_15: -627239614
+      Monstro_16: 1234977666
+      Monstro_17: -360015521
+      Monstro_18: -594701232
+      Monstro_19: 87596684
+      Monstro_2: 6694907
+      Monstro_20: -533484903
+      Monstro_21: 110672156
+      Monstro_22: -1183517178
+      Monstro_23: 1642441668
+      Monstro_24: -769170249
+      Monstro_25: 1257813999
+      Monstro_26: 1938242625
+      Monstro_27: 357153480
+      Monstro_28: -1548564690
+      Monstro_29: 970409748
+      Monstro_3: 1127938433
+      Monstro_30: 799834799
+      Monstro_31: 1770775875
+      Monstro_32: 380920211
+      Monstro_33: -1224011035
+      Monstro_34: 1285799365
+      Monstro_35: -771975749
+      Monstro_4: -842858877
+      Monstro_5: -29404962
+      Monstro_6: -1421998358
+      Monstro_7: -1327949058
+      Monstro_8: 986744095
+      Monstro_9: 264020217
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

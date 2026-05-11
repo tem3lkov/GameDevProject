@@ -1,7 +1,12 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerCombat : MonoBehaviour {
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip shootSound;
+
     [Header("Combat Settings")]
     public GameObject projectilePrefab;
     public float projectileSpeed = 8f;
@@ -63,7 +68,11 @@ public class PlayerCombat : MonoBehaviour {
     private void Shoot(Vector2 direction) {
         if (projectilePrefab == null) return;
 
-        GameObject tearObj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        if (audioSource != null && shootSound != null) {
+            audioSource.PlayOneShot(shootSound);
+        }
+
+        GameObject tearObj = Instantiate(projectilePrefab, transform.position + new Vector3(direction.x, direction.y, 0).normalized * 0.25f, Quaternion.identity);
 
         if (tearObj.TryGetComponent<Projectile>(out Projectile proj)) {
             proj.damage = currentDamage;
