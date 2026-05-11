@@ -21,6 +21,11 @@ public class ResourceCoin : Item
             Debug.LogWarning("Invalid item data for ResourceCoin. Expected CoinScriptable.");
         }
     }
+    protected override void SetItemSprite(Sprite item)
+    {
+        spriteRenderer.sprite = item;
+        spriteRenderer.sortingOrder = 10;
+    }
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if (!canBePickedUp) return;
