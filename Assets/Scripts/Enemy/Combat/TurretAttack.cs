@@ -7,13 +7,12 @@ public class TurretAttack : EnemyAttack {
     public float projectileSpeed = 5f;
     public float damage = 1f;
 
-    public override IEnumerator Execute(Enemy user) {
-        user.CanMove = false;
-        user.Rb.linearVelocity = Vector2.zero;
+    public override IEnumerator Execute(Enemy enemy) {
+        enemy.Rb.linearVelocity = Vector2.zero;
         yield return new WaitForSeconds(0.3f);
 
-        if (projectilePrefab != null && user.Target != null) {
-            Vector2 direction = (user.Target.position - transform.position).normalized;
+        if (projectilePrefab != null && enemy.Target != null) {
+            Vector2 direction = (enemy.Target.position - transform.position).normalized;
             GameObject tear = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
             if (tear.TryGetComponent<Projectile>(out Projectile proj)) proj.damage = damage;
@@ -21,7 +20,5 @@ public class TurretAttack : EnemyAttack {
         }
 
         yield return new WaitForSeconds(0.5f);
-
-        user.CanMove = true;
     }
 }

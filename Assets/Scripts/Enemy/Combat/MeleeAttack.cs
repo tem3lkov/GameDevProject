@@ -7,17 +7,16 @@ public class Attack_Melee : EnemyAttack {
     public float hitRadius = 1.8f;
     public float damage = 1f;
 
-    public override IEnumerator Execute(Enemy user) {
-        user.CanMove = false;
-        user.Rb.linearVelocity = Vector2.zero;
+    public override IEnumerator Execute(Enemy enemy) {
+        enemy.Rb.linearVelocity = Vector2.zero;
 
         yield return new WaitForSeconds(0.2f);
 
-        if (user.Target != null) {
-            float distanceToTarget = Vector2.Distance(transform.position, user.Target.position);
+        if (enemy.Target != null) {
+            float distanceToTarget = Vector2.Distance(transform.position, enemy.Target.position);
 
             if (distanceToTarget <= hitRadius) {
-                if (user.Target.TryGetComponent<IDamageable>(out IDamageable hitTarget)) {
+                if (enemy.Target.TryGetComponent<IDamageable>(out IDamageable hitTarget)) {
                     hitTarget.TakeDamage(damage);
                 }
             }
@@ -25,6 +24,5 @@ public class Attack_Melee : EnemyAttack {
 
         yield return new WaitForSeconds(0.4f);
 
-        user.CanMove = true;
     }
 }

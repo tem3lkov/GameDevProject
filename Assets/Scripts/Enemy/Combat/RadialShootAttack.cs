@@ -7,9 +7,8 @@ public class Attack_RadialShoot : EnemyAttack {
     public float projectileSpeed = 6f;
     public float damage = 1f;
 
-    public override IEnumerator Execute(Enemy user) {
-        user.CanMove = false;
-        user.Rb.linearVelocity = Vector2.zero;
+    public override IEnumerator Execute(Enemy enemy) {
+        enemy.Rb.linearVelocity = Vector2.zero;
 
         yield return new WaitForSeconds(0.5f);
 
@@ -26,7 +25,5 @@ public class Attack_RadialShoot : EnemyAttack {
         }
 
         yield return new WaitForSeconds(0.5f);
-
-        user.CanMove = true;
     }
 }

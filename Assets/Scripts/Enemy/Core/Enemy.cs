@@ -18,8 +18,6 @@ public class Enemy : MonoBehaviour, IDamageable {
 
     // Control flags
     public bool IsAttacking { get; set; } = false;
-    public bool CanMove { get; set; } = true;
-
     protected float currentHealth;
     private float lastStateCheckTime;
 

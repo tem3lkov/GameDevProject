@@ -13,7 +13,6 @@ public class MonstroHighJumpAttack : EnemyAttack {
     public float bumpKnockbackForce = 15f;
 
     public override IEnumerator Execute(Enemy user) {
-        user.CanMove = false;
         user.Rb.linearVelocity = Vector2.zero;
         Vector3 originalScale = transform.localScale;
 
@@ -87,11 +86,9 @@ public class MonstroHighJumpAttack : EnemyAttack {
 
         yield return new WaitForSeconds(0.5f);
         if (user.Anim != null) user.Anim.SetTrigger("Idle");
-
-        user.CanMove = true;
     }
 
-    private void SpawnRadialBurst(Enemy user) {
+    private void SpawnRadialBurst(Enemy enemy) {
         if (projectilePrefab == null) return;
         for (int i = 0; i < 8; i++) {
             float angle = i * 45f;

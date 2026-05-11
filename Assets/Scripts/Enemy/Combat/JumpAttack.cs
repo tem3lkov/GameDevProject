@@ -12,37 +12,34 @@ public class JumpAttack : EnemyAttack {
     [Tooltip("How close the enemy needs to land to the player to hurt them.")]
     public float landingDamageRadius = 1.2f;
 
-    public override IEnumerator Execute(Enemy user) {
-        user.CanMove = false;
-        user.Rb.linearVelocity = Vector2.zero;
+    public override IEnumerator Execute(Enemy enemy) {
+        enemy.Rb.linearVelocity = Vector2.zero;
 
-        if (user.Anim != null) user.Anim.SetTrigger("Prep");
+        if (enemy.Anim != null) enemy.Anim.SetTrigger("Prep");
         yield return new WaitForSeconds(0.2f);
 
-        if (user.Target != null) {
-            if (user.Anim != null) user.Anim.SetTrigger("Jump");
+        if (enemy.Target != null) {
+            if (enemy.Anim != null) enemy.Anim.SetTrigger("Jump");
 
-            Vector2 dir = (user.Target.position - transform.position).normalized;
-            user.Rb.AddForce(dir * hopForce, ForceMode2D.Impulse);
+            Vector2 dir = (enemy.Target.position - transform.position).normalized;
+            enemy.Rb.AddForce(dir * hopForce, ForceMode2D.Impulse);
 
             yield return new WaitForSeconds(airTime);
 
-            user.Rb.linearVelocity = Vector2.zero;
+            enemy.Rb.linearVelocity = Vector2.zero;
 
-            if (user.Target != null) {
-                float distanceToPlayer = Vector2.Distance(transform.position, user.Target.position);
+            if (enemy.Target != null) {
+                float distanceToPlayer = Vector2.Distance(transform.position, enemy.Target.position);
 
                 if (distanceToPlayer <= landingDamageRadius) {
-                    if (user.Target.TryGetComponent<IDamageable>(out IDamageable hitTarget)) {
+                    if (enemy.Target.TryGetComponent<IDamageable>(out IDamageable hitTarget)) {
                         hitTarget.TakeDamage(landingDamage);
                     }
                 }
             }
         }
 
-        if (user.Anim != null) user.Anim.SetTrigger("Land");
+        if (enemy.Anim != null) enemy.Anim.SetTrigger("Land");
         yield return new WaitForSeconds(0.2f);
-
-        user.CanMove = true;
     }
 }

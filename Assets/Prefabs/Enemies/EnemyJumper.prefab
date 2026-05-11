@@ -105,7 +105,6 @@ GameObject:
   - component: {fileID: 8797798037846103182}
   - component: {fileID: 8802455203800201913}
   - component: {fileID: 7324158658380364282}
-  - component: {fileID: -4177400272548827331}
   m_Layer: 12
   m_Name: EnemyJumper
   m_TagString: Enemy
@@ -295,19 +294,3 @@ MonoBehaviour:
   airTime: 0.6
   landingDamage: 1
   landingDamageRadius: 1.2
---- !u!114 &-4177400272548827331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3513645816983278822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef4b306c3714f664babf6ad6c8a64150, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Attack_Melee
-  minRange: 0
-  maxRange: 2
-  hitRadius: 1.8
-  damage: 1

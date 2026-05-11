@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable {
     [Header("Visuals")]
     public SpriteRenderer spriteRenderer;
     private float invincibilityTimer = 0f;
-    private float invincibilityDuration = 1f;
+    private float invincibilityDuration = 2f;
 
     public static event Action<int, int, int> OnHealthChanged;
 

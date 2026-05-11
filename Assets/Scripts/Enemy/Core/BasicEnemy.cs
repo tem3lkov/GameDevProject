@@ -7,6 +7,12 @@ public class BasicEnemy : Enemy {
 
     private float nextAttackTime;
 
+    protected virtual void FixedUpdate() {
+        if (!IsAttacking) {
+            Rb.linearVelocity = Vector2.MoveTowards(Rb.linearVelocity, Vector2.zero, 15f * Time.deltaTime);
+        }
+    }
+
     protected override void HandleAggroBehavior() {
         if (IsAttacking || Time.time < nextAttackTime) return;
 

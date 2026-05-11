@@ -12,20 +12,19 @@ public class Attack_MonstroSpit : EnemyAttack {
     public float maxSpeed = 5f;
     public float spreadAngle = 30f;
 
-    public override IEnumerator Execute(Enemy user) {
-        if (user == null) yield break; // Safety
+    public override IEnumerator Execute(Enemy enemy) {
+        if (enemy == null) yield break;
 
-        user.CanMove = false;
-        user.Rb.linearVelocity = Vector2.zero;
+        enemy.Rb.linearVelocity = Vector2.zero;
 
-        if (user.Anim != null) user.Anim.SetTrigger("Spit");
+        if (enemy.Anim != null) enemy.Anim.SetTrigger("Spit");
         yield return new WaitForSeconds(0.5f);
 
-        if (user.Target != null && projectilePrefab != null) {
-            Vector2 dirToPlayer = (user.Target.position - (transform.position + spawnOffset)).normalized;
+        if (enemy.Target != null && projectilePrefab != null) {
+            Vector2 dirToPlayer = (enemy.Target.position - (transform.position + spawnOffset)).normalized;
 
             for (int i = 0; i < projectileCount; i++) {
-                if (user.Target == null) break;
+                if (enemy.Target == null) break;
 
                 float randomAngle = Random.Range(-spreadAngle, spreadAngle);
                 Vector2 finalDir = Quaternion.Euler(0, 0, randomAngle) * dirToPlayer;
@@ -41,8 +40,6 @@ public class Attack_MonstroSpit : EnemyAttack {
         }
 
         yield return new WaitForSeconds(0.5f);
-        if (user.Anim != null) user.Anim.SetTrigger("Idle");
-
-        user.CanMove = true;
+        if (enemy.Anim != null) enemy.Anim.SetTrigger("Idle");
     }
 }
