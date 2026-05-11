@@ -42,7 +42,7 @@ public class Item : MonoBehaviour
         data = itemData;
         SetItemSprite(data.itemSprite);
     }
-    protected void SetItemSprite(Sprite item)
+    protected virtual void SetItemSprite(Sprite item)
     {
         spriteRenderer.sprite = item;
         spriteRenderer.sortingOrder = 10;
