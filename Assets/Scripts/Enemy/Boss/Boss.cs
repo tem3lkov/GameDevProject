@@ -18,6 +18,10 @@ public class Boss : Enemy {
     public static event Action<float> OnBossHealthUpdatedUI;
     public static event Action<bool> OnBossFightActiveUI;
 
+    protected override bool HasLineOfSight() {
+        return Target != null;
+    }
+
     protected override void Start() {
         base.Start();
         System.Array.Sort(phases, (a, b) => b.healthThreshold.CompareTo(a.healthThreshold));

@@ -5,7 +5,12 @@ public class Attack_MonstroSpit : EnemyAttack {
     [Header("Projectile Settings")]
     public GameObject projectilePrefab;
     public int projectileCount = 8;
+
+    [Tooltip("Offset to make tears come out of the mouth area")]
     public Vector3 spawnOffset = new Vector3(0, 0.8f, 0);
+
+    [Tooltip("How far forward to push the tear so it clears the boss's collider")]
+    public float spawnDistance = 1.0f; // Added this!
 
     [Header("Speed Settings")]
     public float minSpeed = 3f;
@@ -21,7 +26,8 @@ public class Attack_MonstroSpit : EnemyAttack {
         yield return new WaitForSeconds(0.5f);
 
         if (enemy.Target != null && projectilePrefab != null) {
-            Vector2 dirToPlayer = (enemy.Target.position - (transform.position + spawnOffset)).normalized;
+            Vector3 mouthPos = transform.position + spawnOffset;
+            Vector2 dirToPlayer = (enemy.Target.position - mouthPos).normalized;
 
             for (int i = 0; i < projectileCount; i++) {
                 if (enemy.Target == null) break;
@@ -29,7 +35,9 @@ public class Attack_MonstroSpit : EnemyAttack {
                 float randomAngle = Random.Range(-spreadAngle, spreadAngle);
                 Vector2 finalDir = Quaternion.Euler(0, 0, randomAngle) * dirToPlayer;
 
-                GameObject tear = Instantiate(projectilePrefab, transform.position + spawnOffset, Quaternion.identity);
+                Vector3 finalSpawnPos = mouthPos + (Vector3)(finalDir * spawnDistance);
+
+                GameObject tear = Instantiate(projectilePrefab, finalSpawnPos, Quaternion.identity);
 
                 if (tear.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)) {
                     rb.linearVelocity = finalDir * Random.Range(minSpeed, maxSpeed);

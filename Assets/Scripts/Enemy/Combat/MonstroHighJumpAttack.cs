@@ -13,16 +13,16 @@ public class MonstroHighJumpAttack : EnemyAttack {
     public float bumpKnockbackForce = 15f;
 
     public override IEnumerator Execute(Enemy user) {
+        if (user == null) yield break;
+
         user.Rb.linearVelocity = Vector2.zero;
         Vector3 originalScale = transform.localScale;
-
         Collider2D myCollider = user.GetComponent<Collider2D>();
 
         if (user.Anim != null) user.Anim.SetTrigger("Prep");
         yield return new WaitForSeconds(0.4f);
 
         if (myCollider != null) myCollider.enabled = false;
-
         if (user.Anim != null) user.Anim.SetTrigger("Jump");
 
         float originalDamping = user.Rb.linearDamping;
@@ -43,7 +43,16 @@ public class MonstroHighJumpAttack : EnemyAttack {
         while (trackingElapsed < trackingTime) {
             trackingElapsed += Time.deltaTime;
             if (user.Target != null) {
-                user.Rb.MovePosition((Vector2)user.Target.position + new Vector2(0, 1.5f));
+                Vector2 playerPos = user.Target.position;
+                Vector2 desiredPos = playerPos + new Vector2(0, 1.5f);
+
+                RaycastHit2D hit = Physics2D.Linecast(playerPos, desiredPos, user.stats.obstacleMask);
+
+                if (hit.collider != null) {
+                    desiredPos = hit.point + (hit.normal * 0.8f);
+                }
+
+                user.Rb.MovePosition(desiredPos);
             }
             yield return null;
         }
@@ -66,21 +75,7 @@ public class MonstroHighJumpAttack : EnemyAttack {
 
         if (myCollider != null) myCollider.enabled = true;
 
-        if (user.Target != null) {
-            float distanceToPlayer = Vector2.Distance(transform.position, user.Target.position);
-
-            if (distanceToPlayer <= landingDamageRadius) {
-                if (user.Target.TryGetComponent<IDamageable>(out IDamageable hitTarget)) {
-                    hitTarget.TakeDamage(landingDamage);
-                }
-
-                if (user.Target.TryGetComponent<Rigidbody2D>(out Rigidbody2D playerRb)) {
-                    Vector2 knockbackDir = (user.Target.position - transform.position).normalized;
-                    if (knockbackDir == Vector2.zero) knockbackDir = Random.insideUnitCircle.normalized;
-                    playerRb.AddForce(knockbackDir * bumpKnockbackForce, ForceMode2D.Impulse);
-                }
-            }
-        }
+        HandleLandingImpact(user);
 
         SpawnRadialBurst(user);
 
@@ -88,12 +83,33 @@ public class MonstroHighJumpAttack : EnemyAttack {
         if (user.Anim != null) user.Anim.SetTrigger("Idle");
     }
 
+    private void HandleLandingImpact(Enemy user) {
+        if (user.Target == null) return;
+
+        float distanceToPlayer = Vector2.Distance(transform.position, user.Target.position);
+        if (distanceToPlayer <= landingDamageRadius) {
+            if (user.Target.TryGetComponent<IDamageable>(out IDamageable hitTarget)) {
+                hitTarget.TakeDamage(landingDamage);
+            }
+
+            if (user.Target.TryGetComponent<Rigidbody2D>(out Rigidbody2D playerRb)) {
+                Vector2 knockbackDir = (user.Target.position - transform.position).normalized;
+                if (knockbackDir == Vector2.zero) knockbackDir = Random.insideUnitCircle.normalized;
+                playerRb.AddForce(knockbackDir * bumpKnockbackForce, ForceMode2D.Impulse);
+            }
+        }
+    }
+
     private void SpawnRadialBurst(Enemy enemy) {
         if (projectilePrefab == null) return;
+
         for (int i = 0; i < 8; i++) {
             float angle = i * 45f;
             Vector2 dir = Quaternion.Euler(0, 0, angle) * Vector2.up;
-            GameObject tear = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+
+            Vector3 spawnPos = transform.position + (Vector3)(dir * 0.2f);
+
+            GameObject tear = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
             if (tear.TryGetComponent<Rigidbody2D>(out Rigidbody2D tearRb)) {
                 tearRb.linearVelocity = dir * 6f;
             }

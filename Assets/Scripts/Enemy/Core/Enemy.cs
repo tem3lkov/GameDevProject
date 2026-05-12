@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour, IDamageable {
         CurrentState = HasLineOfSight() ? EnemyState.Aggro : EnemyState.Idle;
     }
 
-    private bool HasLineOfSight() {
+    protected virtual bool HasLineOfSight() {
         if (Target == null) return false;
         Vector2 direction = Target.position - transform.position;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction.normalized, direction.magnitude, stats.obstacleMask);

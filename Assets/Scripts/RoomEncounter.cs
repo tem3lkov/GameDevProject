@@ -41,12 +41,18 @@ public class RoomEncounter : MonoBehaviour {
     }
 
     protected virtual void SpawnEnemies() {
-        int enemiesToSpawn = Random.Range(1, 4);
+        int maxEnemies = Mathf.Min(4, spawnPoints.Length + 1);
+        int enemiesToSpawn = Random.Range(1, maxEnemies);
+
+        List<Transform> availableSpawns = new List<Transform>(spawnPoints);
 
         for (int i = 0; i < enemiesToSpawn; i++) {
-            Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-            Enemy randomEnemy = enemyPrefabsToSpawn[Random.Range(0, enemyPrefabsToSpawn.Length)];
+            int randomIndex = Random.Range(0, availableSpawns.Count);
+            Transform spawnPoint = availableSpawns[randomIndex];
 
+            availableSpawns.RemoveAt(randomIndex);
+
+            Enemy randomEnemy = enemyPrefabsToSpawn[Random.Range(0, enemyPrefabsToSpawn.Length)];
             Enemy spawnedEnemy = Instantiate(randomEnemy, spawnPoint.position, Quaternion.identity, transform);
 
             spawnedEnemy.OnDeath += HandleEnemyDeath;

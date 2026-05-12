@@ -104,7 +104,6 @@ GameObject:
   - component: {fileID: 5692021411736089670}
   - component: {fileID: 9172049017095761150}
   - component: {fileID: 9052474797898227604}
-  - component: {fileID: 2904561770497338383}
   - component: {fileID: 5284024851552842133}
   m_Layer: 6
   m_Name: EnemyChaser
@@ -275,24 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BasicEnemy
   stats: {fileID: 11400000, guid: fbc299d12fc324141b8b9baab9218398, type: 2}
   spriteRenderer: {fileID: 9172049017095761150}
-  allAttacks:
-  - {fileID: 2904561770497338383}
---- !u!114 &2904561770497338383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6635692401108958368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef4b306c3714f664babf6ad6c8a64150, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Attack_Melee
-  minRange: 0
-  maxRange: 1.5
-  hitRadius: 1.8
-  damage: 1
+  allAttacks: []
 --- !u!114 &5284024851552842133
 MonoBehaviour:
   m_ObjectHideFlags: 0

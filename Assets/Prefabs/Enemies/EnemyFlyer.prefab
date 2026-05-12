@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TurretAttack
   minRange: 0
-  maxRange: 10
+  maxRange: 20
   projectilePrefab: {fileID: 960703002302910434, guid: 9641b9e50c273124591ae077b627b775, type: 3}
   projectileSpeed: 5
   damage: 2

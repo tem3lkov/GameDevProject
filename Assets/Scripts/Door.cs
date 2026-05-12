@@ -31,42 +31,26 @@ public class Door : MonoBehaviour
         doorTypes = doorData;
         SetDoorSprite();
     }
-    public void SetDoorSprite()
-    {
-        switch (direction)
-        {
-            case EdgeDirection.Up:
-                if (isOpened())
-                    spriteRenderer.sprite = doorTypes.upDoor.open;
-                else
-                    spriteRenderer.sprite = doorTypes.upDoor.closed;
-                break;
-            case EdgeDirection.Down:
-                if (isOpened())
-                    spriteRenderer.sprite = doorTypes.downDoor.open;
-                else
-                    spriteRenderer.sprite = doorTypes.downDoor.closed;
-                break;
-            case EdgeDirection.Left:
-                if (isOpened())
-                    spriteRenderer.sprite = doorTypes.leftDoor.open;
-                else
-                    spriteRenderer.sprite = doorTypes.leftDoor.closed;
-                break;
-            case EdgeDirection.Right:
-                if (isOpened())
-                    spriteRenderer.sprite = doorTypes.rightDoor.open;
-                else
-                    spriteRenderer.sprite = doorTypes.rightDoor.closed;
-                break;
+    public void SetDoorSprite() {
+        DoorSpriteSet activeDoorSet = null;
+
+        switch (direction) {
+            case EdgeDirection.Up: activeDoorSet = doorTypes.upDoor; break;
+            case EdgeDirection.Down: activeDoorSet = doorTypes.downDoor; break;
+            case EdgeDirection.Left: activeDoorSet = doorTypes.leftDoor; break;
+            case EdgeDirection.Right: activeDoorSet = doorTypes.rightDoor; break;
         }
+
+        if (activeDoorSet != null) {
+            spriteRenderer.sprite = isOpened() ? activeDoorSet.open : activeDoorSet.closed;
+        }
+
         var colliderBounds = GetComponent<BoxCollider2D>();
-        if (spriteRenderer.sprite != null)
-        {
+        if (spriteRenderer.sprite != null) {
             colliderBounds.size = spriteRenderer.bounds.size;
         }
     }
-    
+
     public void EncounterLock() {
         col.enabled = false;
         CloseDoor();

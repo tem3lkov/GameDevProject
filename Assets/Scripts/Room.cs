@@ -124,40 +124,9 @@ public class Room : MonoBehaviour
         SetupDoor(door, direction, correctDoorStyle);
     }
 
-    private void SetupDoor(Door door, EdgeDirection direction, RoomType roomType)
-    {
-        var doorScript = GetDoorOptions(roomType);
-
-        switch (direction)
-        {
-            case EdgeDirection.Up:
-                if (door.isOpened())
-                    door.SetupDoor(roomIndex, EdgeDirection.Up, doorScript);
-                else
-                    door.SetupDoor(roomIndex, EdgeDirection.Up, doorScript);
-                break;
-
-            case EdgeDirection.Down:
-                if (door.isOpened())
-                    door.SetupDoor(roomIndex, EdgeDirection.Down, doorScript);
-                else
-                    door.SetupDoor(roomIndex, EdgeDirection.Down, doorScript);
-                break;
-
-            case EdgeDirection.Left:
-                if (door.isOpened())
-                    door.SetupDoor(roomIndex, EdgeDirection.Left, doorScript);
-                else
-                    door.SetupDoor(roomIndex, EdgeDirection.Left, doorScript);
-                break;
-
-            case EdgeDirection.Right:
-                if (door.isOpened())
-                    door.SetupDoor(roomIndex, EdgeDirection.Right, doorScript);
-                else
-                    door.SetupDoor(roomIndex, EdgeDirection.Right, doorScript);
-                break;
-        }
+    private void SetupDoor(Door door, EdgeDirection direction, RoomType roomType) {
+        var doorScript = GetDoorOptions(roomType); 
+        door.SetupDoor(roomIndex, direction, doorScript); 
     }
 
     private DoorScript GetDoorOptions(RoomType roomType)
