@@ -14,12 +14,9 @@ public class RoomManager : MonoBehaviour
     public Door normalDoorPrefab;
     public DoorLocked lockedDoorPrefab;
     public SecretDoor secretDoorPrefab;
-    public ResourceCoin coinPrefab;
-    public Item itemPrefab;
 
     [SerializeField] public DoorScript[] doors;
     [SerializeField] public RoomScript[] rooms;
-    [SerializeField] public ItemScriptable[] items;
 
     public static RoomManager instance;
     public static event Action<Vector2> OnMapGenerated;

@@ -8,7 +8,7 @@ public class PassiveStats : EventArgs
     public float damage = 0f;
     public float tearsROF = 0f;
 }
-[CreateAssetMenu(fileName = "New Passive Item", menuName = "Scriptable Objects/Passive Item")]
+[CreateAssetMenu(fileName = "New Passive Item", menuName = "Scriptable Objects/Item/Passive Item")]
 public class ItemPassiveScriptable : ItemScriptable
 {
     public StatType statToModify;

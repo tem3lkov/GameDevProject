@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Scriptable Objects/Active Items/FireRateBoost")]
+[CreateAssetMenu(menuName = "Scriptable Objects/Item/Active Items/FireRateBoost")]
 public class FireRateBoostItem : ItemActiveScriptable
 {
     public float multiplier = 2f;

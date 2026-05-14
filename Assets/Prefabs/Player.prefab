@@ -80,14 +80,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   coins: 0
-  coinData:
-  - {fileID: 11400000, guid: 1ea457aa18d37fb4bbe7dba4d3f2d6a5, type: 2}
-  - {fileID: 11400000, guid: 9fc32670e18e38346b134f5dfa4fe33e, type: 2}
-  - {fileID: 11400000, guid: 5458935aab34fce43b459e6f8f910bca, type: 2}
   keys: 1
   bombs: 3
   bombData: {fileID: 11400000, guid: 67f387fbe904dbf48b38f93e65f61b84, type: 2}
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 5188331097645824666, guid: 0831c3c1c5e2f4743b4faddfb23cdeaa, type: 3}
 --- !u!114 &2470142304638617473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
   audioSource: {fileID: 1951884539863950561}
-  shootSound: {fileID: 8300000, guid: 125e35f1a0bdf8f4f9f74e12a38fe4d5, type: 3}
+  shootSound: {fileID: 8300000, guid: 529ce23b6ac288d4f8cd934f395c5373, type: 3}
   projectilePrefab: {fileID: 960703002302910434, guid: f7c84337aecdde34695e7ca06a2c4d6c, type: 3}
   projectileSpeed: 8
   inheritPlayerMomentum: 1

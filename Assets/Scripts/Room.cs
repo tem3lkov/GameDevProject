@@ -79,20 +79,9 @@ public class Room : MonoBehaviour
 
     private void PlaceItem(int fromIndex, Vector2 positionOffset)
     {
-        var item = Instantiate(RoomManager.instance.itemPrefab, transform);
-        item.transform.position = (Vector2)transform.position + positionOffset;
-
-        SetItem(item);
-    }
-
-    private void SetItem(Item item)
-    {
-        int index = UnityEngine.Random.Range(0, RoomManager.instance.items.Length);
-        var randomItem = RoomManager.instance.items[index];
-        
-        item.Initialize(randomItem);
-    }
-    
+        var pos = (Vector2)transform.position + positionOffset;
+        ItemManager.instance.SpawnRandomNonResourceItem(pos);
+    }    
 
     private void TryPlaceDoor(int fromIndex, Vector2 positionOffset, EdgeDirection direction, int[] floorplan, List<Cell> cellList, Cell currentCell)
     {

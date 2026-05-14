@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61e7f899e897a7418a5953a449d7ac1, type: 3}
+  m_Name: Coin1
+  m_EditorClassIdentifier: Assembly-CSharp::ResourceScriptable
+  itemName: 1 Coin
+  description: Give purchasing power
+  itemSprite: {fileID: -1855192469984654483, guid: e303661665dbf5743a2abb323727ffb3, type: 3}
+  resourceType: 0
+  amount: 1

@@ -7,7 +7,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private int coins = 0;
     [SerializeField] private int keys = 0;
     [SerializeField] private int bombs = 0;
-    [SerializeField] private BombScriptable bombData;
+    [SerializeField] private Explosion bombData;
     private int maxResources = 99;
     private ItemActiveScriptable currentItem;
     [SerializeField] private GameObject itemPrefab;
@@ -106,6 +106,13 @@ public class PlayerInventory : MonoBehaviour
     }
     private void TryExplodeBomb()
     {
-        bombData.Activate(gameObject);
+        if (GetResourceCount(ResourceType.Bomb) <= 0)
+            return;
+            
+        AddResource(ResourceType.Bomb, -1);
+
+
+        Explosion bombInstance = Instantiate(bombData, transform.position, Quaternion.identity);
+        bombInstance.TriggerExplode();
     }
 }

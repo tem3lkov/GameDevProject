@@ -10,7 +10,6 @@ public class RoomEncounter : MonoBehaviour {
     protected Room roomLogic;
     protected List<Enemy> activeEnemies = new List<Enemy>();
     protected Door[] doorsInRoom;
-    [SerializeField] public CoinScriptable[] coinData = new CoinScriptable[3];
 
 
     protected virtual void Awake() {
@@ -73,7 +72,7 @@ public class RoomEncounter : MonoBehaviour {
         Debug.Log("Open doors");
         roomLogic.ExitCombat();
         SetDoorsLocked(false);
-        SpawnCoin();
+        ItemManager.instance.SpawnCoin(transform.position);
     }
 
     protected void SetDoorsLocked(bool isLocked) {
@@ -81,28 +80,5 @@ public class RoomEncounter : MonoBehaviour {
             if (isLocked) door.EncounterLock();
             else door.EncounterUnlock();
         }
-    }
-
-    private void SpawnCoin()
-    {
-        int chosenCoin = Random.Range(1, 10);
-        int coinIndex;
-        switch (chosenCoin)
-        {
-            case 8:
-            case 9:
-                coinIndex = 1; // Uncommon coin
-                break;
-            case 10:
-                coinIndex = 2; // Rare coin
-                break;
-            default:
-                coinIndex = 0; // Default to common coin
-                break;
-        }
-        CoinScriptable coinToSpawn = coinData[coinIndex];        
-        
-        var newCoin = Instantiate(RoomManager.instance.coinPrefab, transform.position, Quaternion.identity);
-        newCoin.Initialize(coinToSpawn);
     }
 }

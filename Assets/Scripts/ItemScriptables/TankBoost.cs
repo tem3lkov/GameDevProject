@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Scriptable Objects/Active Items/TankBoost")]
+[CreateAssetMenu(menuName = "Scriptable Objects/Item/Active Items/TankBoost")]
 public class TankBoost : ItemActiveScriptable
 {
     public float damageMultiplier = 3f;

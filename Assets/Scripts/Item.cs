@@ -47,7 +47,11 @@ public class Item : MonoBehaviour
         spriteRenderer.sprite = item;
         spriteRenderer.sortingOrder = 10;
         var colliderBounds = GetComponent<BoxCollider2D>();
-        colliderBounds.size = spriteRenderer.bounds.size;
+        if (colliderBounds != null && colliderBounds.size == Vector2.zero)
+        {
+            colliderBounds.size = spriteRenderer.bounds.size;
+        }
+            
     }
     public ItemScriptable GetInventoryItemData() => data;
 
