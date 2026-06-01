@@ -102,9 +102,8 @@ GameObject:
   - component: {fileID: 5973413588800921288}
   - component: {fileID: 1715777330296825887}
   - component: {fileID: 5961407020338194072}
-  - component: {fileID: 8797798037846103182}
-  - component: {fileID: 8802455203800201913}
-  - component: {fileID: 7324158658380364282}
+  - component: {fileID: 4670140684548198471}
+  - component: {fileID: 4884537957175668073}
   m_Layer: 12
   m_Name: EnemyJumper
   m_TagString: Enemy
@@ -214,8 +213,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
---- !u!61 &8797798037846103182
-BoxCollider2D:
+--- !u!114 &4670140684548198471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3513645816983278822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cf6d38ff5937b4c984ae1b56bde093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  details: {fileID: 11400000, guid: 21ee5fe3c9e2dd94e93bcaec00c2f5e7, type: 2}
+--- !u!58 &4884537957175668073
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -248,49 +260,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00982666, y: 0.001291275}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.7444916, y: 0.6428261}
-  m_EdgeRadius: 0
---- !u!114 &8802455203800201913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3513645816983278822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8d3bf363474064bad38a7b7043fec2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicEnemy
-  stats: {fileID: 11400000, guid: 140d086f8d9501048b5379a3b7a13472, type: 2}
-  spriteRenderer: {fileID: 5961407020338194072}
-  allAttacks:
-  - {fileID: 7324158658380364282}
---- !u!114 &7324158658380364282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3513645816983278822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7d8185b7f786184fb4c2bedcd5b2772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Attack_Hop
-  minRange: 0
-  maxRange: 15
-  hopForce: 6
-  airTime: 0.6
-  landingDamage: 1
-  landingDamageRadius: 1.2
+  m_Offset: {x: -0.02020073, y: 0.0030288696}
+  m_Radius: 0.12115669

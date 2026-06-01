@@ -12,11 +12,9 @@ GameObject:
   - component: {fileID: 4796819141895374789}
   - component: {fileID: 5001806973483262455}
   - component: {fileID: 6181075265237384533}
-  - component: {fileID: 9106061024404809406}
-  - component: {fileID: 3854895436850853500}
-  - component: {fileID: 2747934677843833141}
-  - component: {fileID: 7124500896722204535}
-  - component: {fileID: 662106604726331630}
+  - component: {fileID: 7461499116865369174}
+  - component: {fileID: -4777466896519235178}
+  - component: {fileID: -2795165557261392862}
   m_Layer: 6
   m_Name: BossMonstro
   m_TagString: Enemy
@@ -188,7 +186,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &9106061024404809406
+--- !u!114 &7461499116865369174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,82 +195,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5809399360321488385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 760428ae547c655488935201c1030db0, type: 3}
+  m_Script: {fileID: 11500000, guid: f3cf6d38ff5937b4c984ae1b56bde093, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Attack_MonstroSpit
-  minRange: 0
-  maxRange: 5
-  projectilePrefab: {fileID: 960703002302910434, guid: 9641b9e50c273124591ae077b627b775, type: 3}
-  projectileCount: 8
-  spawnOffset: {x: 0, y: 0.8, z: 0}
-  minSpeed: 3
-  maxSpeed: 5
-  spreadAngle: 30
---- !u!114 &3854895436850853500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5809399360321488385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bff809cd48f95c42bd64e759a57b0cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Boss
-  stats: {fileID: 11400000, guid: 89454ce9902bb7d40b61a400ede665a5, type: 2}
-  spriteRenderer: {fileID: 0}
-  phases:
-  - phaseName: Phase 1
-    healthThreshold: 1
-    actionCooldown: 0.3
-    allowedAttacks:
-    - {fileID: 7124500896722204535}
-    - {fileID: 9106061024404809406}
-  - phaseName: Phase 2
-    healthThreshold: 0.5
-    actionCooldown: 0.3
-    allowedAttacks:
-    - {fileID: 9106061024404809406}
-    - {fileID: 7124500896722204535}
-    - {fileID: 2747934677843833141}
---- !u!114 &2747934677843833141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5809399360321488385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b104086c9d03dcf44ba0496e29c9e489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MonstroHighJumpAttack
-  minRange: 0
-  maxRange: 5
-  trackingTime: 1
-  lockInTime: 0.6
-  projectilePrefab: {fileID: 960703002302910434, guid: 9641b9e50c273124591ae077b627b775, type: 3}
-  landingDamage: 1
-  landingDamageRadius: 1.5
-  bumpKnockbackForce: 15
---- !u!114 &7124500896722204535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5809399360321488385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f0f895b685bcca40a2643cd006734e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MonstroHopAttack
-  minRange: 0
-  maxRange: 5
-  hopForce: 6
-  airTime: 0.5
---- !u!95 &662106604726331630
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  details: {fileID: 11400000, guid: 1f3cedf31d1b8464cb0228d16a86021e, type: 2}
+--- !u!95 &-4777466896519235178
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -294,3 +221,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-2795165557261392862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809399360321488385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c78d7626ef3223c48a47c27f28110ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAnimator

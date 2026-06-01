@@ -58,7 +58,7 @@ public class MinimapUI : MonoBehaviour {
             visitedRoomIndices.Add(currentRoom.GetRoomIndex());
         }
 
-        var spawnedCells = MapGenerator.instance.getSpawnedCells;
+        var spawnedCells = MapGenerator.Instance.getSpawnedCells;
 
         for (int i = 0; i < 100; i++) {
             Cell cellData = spawnedCells.FirstOrDefault(c => c.Index == i);

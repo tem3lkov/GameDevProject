@@ -101,10 +101,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3744531766532219035}
   - component: {fileID: 834878772621842108}
-  - component: {fileID: 5692021411736089670}
+  - component: {fileID: 2347427834973948551}
   - component: {fileID: 9172049017095761150}
-  - component: {fileID: 9052474797898227604}
-  - component: {fileID: 5284024851552842133}
+  - component: {fileID: 5020771655392733193}
+  - component: {fileID: 1370846063351521203}
   m_Layer: 6
   m_Name: EnemyChaser
   m_TagString: Enemy
@@ -122,10 +122,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 71.95, y: 46.59, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9210348238922363155}
+  - {fileID: 2733127764501718257}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &834878772621842108
@@ -155,8 +156,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &5692021411736089670
-BoxCollider2D:
+--- !u!58 &2347427834973948551
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -189,18 +190,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.3}
-    newSize: {x: 0.32, y: 0.3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.32, y: 0.3}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.0023892722, y: 0.004065196}
+  m_Radius: 0.072397865
 --- !u!212 &9172049017095761150
 SpriteRenderer:
   serializedVersion: 2
@@ -260,7 +251,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
---- !u!114 &9052474797898227604
+--- !u!114 &5020771655392733193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,13 +260,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6635692401108958368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8d3bf363474064bad38a7b7043fec2, type: 3}
+  m_Script: {fileID: 11500000, guid: f3cf6d38ff5937b4c984ae1b56bde093, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicEnemy
-  stats: {fileID: 11400000, guid: fbc299d12fc324141b8b9baab9218398, type: 2}
-  spriteRenderer: {fileID: 9172049017095761150}
-  allAttacks: []
---- !u!114 &5284024851552842133
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  details: {fileID: 11400000, guid: 3ee5031769f183f4e8566a828e0d4837, type: 2}
+--- !u!114 &1370846063351521203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,6 +273,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 6635692401108958368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7548c895fc3ec2744b75383921f01eea, type: 3}
+  m_Script: {fileID: 11500000, guid: 90beefe34532adc459b30a201eafccc9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChaserMovement
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement_AStar
+  pathUpdateInterval: 0.5
+  nextWaypointDistance: 0.45
+--- !u!1 &7504280038519552770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2733127764501718257}
+  m_Layer: 6
+  m_Name: EnemyAnimator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2733127764501718257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7504280038519552770}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3744531766532219035}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

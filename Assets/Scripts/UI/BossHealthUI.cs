@@ -7,13 +7,13 @@ public class BossHealthUI : MonoBehaviour {
     public Image healthFillImage;
 
     private void OnEnable() {
-        Boss.OnBossHealthUpdatedUI += UpdateHealthBar;
-        Boss.OnBossFightActiveUI += ToggleHealthBar;
+        EnemyController.OnBossHealthUpdatedUI += UpdateHealthBar;
+        EnemyController.OnBossFightActiveUI += ToggleHealthBar;
     }
 
     private void OnDisable() {
-        Boss.OnBossHealthUpdatedUI -= UpdateHealthBar;
-        Boss.OnBossFightActiveUI -= ToggleHealthBar;
+        EnemyController.OnBossHealthUpdatedUI -= UpdateHealthBar;
+        EnemyController.OnBossFightActiveUI -= ToggleHealthBar;
     }
 
     private void Start() {

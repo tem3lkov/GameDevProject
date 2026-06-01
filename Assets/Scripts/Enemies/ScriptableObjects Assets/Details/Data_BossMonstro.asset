@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a462398e19c4aa4dbfd74d12e82a1db, type: 3}
+  m_Name: Data_BossMonstro
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDetailsSO
+  enemyName: Monstro
+  isBoss: 1
+  maxHealth: 150
+  damageToPlayer: 1
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 768
+  defaultMovement: 1
+  phases:
+  - {fileID: 11400000, guid: 70ea4d56de0dd104fa768ca993fbd085, type: 2}
+  - {fileID: 11400000, guid: 070f5234535e7b2418c1a8fd270a6fc9, type: 2}
