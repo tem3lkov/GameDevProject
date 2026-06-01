@@ -102,9 +102,8 @@ GameObject:
   - component: {fileID: 5714669204628573450}
   - component: {fileID: 831748049260689269}
   - component: {fileID: 1229829099188903033}
-  - component: {fileID: 5450329511487846576}
-  - component: {fileID: 1250670529337911595}
-  - component: {fileID: 8015449457676305435}
+  - component: {fileID: 364120953954107839}
+  - component: {fileID: 162383974910697794}
   m_Layer: 7
   m_Name: EnemyFlyer
   m_TagString: Enemy
@@ -214,8 +213,8 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
---- !u!61 &5450329511487846576
-BoxCollider2D:
+--- !u!70 &364120953954107839
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -248,19 +247,10 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.00090026855, y: 0.0017986298}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.6097412, y: 0.84531784}
-  m_EdgeRadius: 0
---- !u!114 &1250670529337911595
+  m_Offset: {x: 0.014369965, y: -0.0272789}
+  m_Size: {x: 0.28446198, y: 0.5}
+  m_Direction: 0
+--- !u!114 &162383974910697794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,27 +259,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3594578055589213504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8d3bf363474064bad38a7b7043fec2, type: 3}
+  m_Script: {fileID: 11500000, guid: f3cf6d38ff5937b4c984ae1b56bde093, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicEnemy
-  stats: {fileID: 11400000, guid: 4f29c7704f3171540ba17a8938b30ce9, type: 2}
-  spriteRenderer: {fileID: 1229829099188903033}
-  allAttacks:
-  - {fileID: 8015449457676305435}
---- !u!114 &8015449457676305435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3594578055589213504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ed022a9d05c47a408e2642105b97f13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TurretAttack
-  minRange: 0
-  maxRange: 20
-  projectilePrefab: {fileID: 960703002302910434, guid: 9641b9e50c273124591ae077b627b775, type: 3}
-  projectileSpeed: 5
-  damage: 2
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  details: {fileID: 11400000, guid: b26d17da9a6f3284d9f02ad8074cf334, type: 2}

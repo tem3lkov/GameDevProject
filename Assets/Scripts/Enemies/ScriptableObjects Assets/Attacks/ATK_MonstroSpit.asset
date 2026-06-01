@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3724b1ffb0aad5546b14f49e71e3704b, type: 3}
+  m_Name: ATK_MonstroSpit
+  m_EditorClassIdentifier: Assembly-CSharp::AttackSO_Spit
+  attackName: Monstro Spit
+  minRange: 0
+  maxRange: 10
+  cooldownTime: 1
+  projectilePrefab: {fileID: 960703002302910434, guid: 9641b9e50c273124591ae077b627b775, type: 3}
+  projectileCount: 8
+  spawnOffset: {x: 0, y: 0.8, z: 0}
+  minSpeed: 3
+  maxSpeed: 5
+  spreadAngle: 30
