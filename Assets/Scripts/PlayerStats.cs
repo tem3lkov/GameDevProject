@@ -5,11 +5,10 @@ using System.Collections;
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private float speed = 0;
-    [SerializeField] private float health = 0;
     [SerializeField] private float damage = 0;
     [SerializeField] private float tearsROF = 0;
     public static event Action<float> OnSpeedChanged;
-    public static event Action<float> OnHealthChanged;
+    public static event Action<int,int> OnHealthChanged;
     public static event Action<float> OnDamageChanged;
     public static event Action<float> OnTearsROFChanged;
 
@@ -26,7 +25,7 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         AddSpeed(200f);
-        AddHealth(3f);
+        AddHealth(3, 0);
         AddDamage(2f);
         AddTearsROF(2f);
     }
@@ -34,7 +33,7 @@ public class PlayerStats : MonoBehaviour
     private void AddStats(PassiveStats boost)
     {
         AddSpeed(boost.speed);
-        AddHealth(boost.health);
+        AddHealth(boost.health, boost.blueHealth);
         AddDamage(boost.damage);
         AddTearsROF(boost.tearsROF);
     }
@@ -44,11 +43,10 @@ public class PlayerStats : MonoBehaviour
         speed += newSpeed;
         OnSpeedChanged?.Invoke(speed);
     }
-    private void AddHealth(float newHealth)
+    private void AddHealth(int newHealth, int newBlueHealth)
     {
-        if (newHealth == 0) return;
-        health += newHealth;
-        OnHealthChanged?.Invoke(health);
+        if (newHealth == 0 && newBlueHealth == 0) return;
+        OnHealthChanged?.Invoke(newHealth, newBlueHealth);
     }
     private void AddDamage(float newDamage)
     {

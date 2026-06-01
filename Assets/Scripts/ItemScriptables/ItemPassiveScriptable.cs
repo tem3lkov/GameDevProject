@@ -4,7 +4,8 @@ using System;
 public class PassiveStats : EventArgs
 {
     public float speed = 0f;
-    public float health = 0f;
+    public int health = 0;
+    public int blueHealth = 0;
     public float damage = 0f;
     public float tearsROF = 0f;
 }
@@ -28,7 +29,10 @@ public class ItemPassiveScriptable : ItemScriptable
                 stats.speed = amount;
                 break;
             case StatType.Health:
-                stats.health = amount;
+                stats.health = (int)amount;
+                break;
+            case StatType.BlueHealth:
+                stats.blueHealth = (int)amount;
                 break;
             case StatType.Damage:
                 stats.damage = amount;

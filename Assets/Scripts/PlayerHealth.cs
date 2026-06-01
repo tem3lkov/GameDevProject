@@ -16,6 +16,12 @@ public class PlayerHealth : MonoBehaviour, IDamageable {
 
     public static event Action<int, int, int> OnHealthChanged;
 
+    private void OnEnable() {
+        PlayerStats.OnHealthChanged += Heal;
+    }
+    private void OnDisable() {
+        PlayerStats.OnHealthChanged -= Heal;
+    }
     private void Start() {
         if (spriteRenderer == null) spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         UpdateHealthUI();
@@ -45,6 +51,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable {
         UpdateHealthUI();
 
         if (globalCurrentRedHalves <= 0) Die();
+    }
+
+    public void Heal(int red, int blue) {
+        //TODO
     }
 
     public bool HealRed(int amountInHalves) {

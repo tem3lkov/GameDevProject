@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public enum StatType { Health, Speed, Damage, FireRate }
+public enum StatType { Health, BlueHealth, Speed, Damage, FireRate }
 
 public class Item : MonoBehaviour
 {
