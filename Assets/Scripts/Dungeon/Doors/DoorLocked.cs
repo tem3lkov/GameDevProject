@@ -16,7 +16,7 @@ public class DoorLocked : Door
         return base.TryOpen();
     }
     protected override void ForceOpen(Room room) {
-        if (room.GetRoomIndex() != currentRoomIndex) return;
+        if (room.GetRoomType() != RoomType.Item) return;
         unlocked = true;
         OpenDoor();
     }
