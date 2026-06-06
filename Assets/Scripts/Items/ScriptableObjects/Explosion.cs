@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Explosion : MonoBehaviour
 {
@@ -7,6 +8,58 @@ public class Explosion : MonoBehaviour
     public float explosionDamage;
     public float explosionDelay;
     [SerializeField] private Transform aoeIndicator;
+
+    [Header("Tilemap Drops")]
+    [Tooltip("Drag your Blue Stone Tile asset from the Project window here")]
+    public TileBase blueStoneTile;
+    [Tooltip("Drag your Blue Health Item Prefab here")]
+    public GameObject blueHealthPrefab;
+
+    private void DestroyTilesInRadius(Tilemap map)
+    {
+        Vector3Int centerCell = map.WorldToCell(transform.position);
+        float currentCellSize = map.layoutGrid.cellSize.x;
+        int cellRadius = Mathf.CeilToInt(explosionRadius / currentCellSize);
+
+        for (int x = -cellRadius; x <= cellRadius; x++)
+        {
+            for (int y = -cellRadius; y <= cellRadius; y++)
+            {
+                Vector3Int checkPos = new Vector3Int(centerCell.x + x, centerCell.y + y, 0);
+
+                if (map.HasTile(checkPos))
+                {
+                    Vector3 tileWorldPos = map.GetCellCenterWorld(checkPos);
+                    if (Vector2.Distance(tileWorldPos, transform.position) <= explosionRadius)
+                    {
+                        // 1. IDENTIFY THE TILE: Get the specific tile we are about to destroy
+                        TileBase hitTile = map.GetTile(checkPos);
+
+                        // 2. CHECK IT: Is it the Blue Stone?
+                        if (hitTile == blueStoneTile)
+                        {
+                            // Spawn the blue health exactly where the rock was!
+                            if (blueHealthPrefab != null)
+                            {
+                                Instantiate(blueHealthPrefab, tileWorldPos, Quaternion.identity);
+                            }
+                        }
+
+                        // 3. Delete the rock!
+                        map.SetTile(checkPos, null);
+
+                        UpdatePathfindingGrid(tileWorldPos);
+                    }
+                }
+            }
+        }
+    }
+
+    private void UpdatePathfindingGrid(Vector3 clearedPosition)
+    {
+        AStarGrid roomGrid = GetComponentInParent<AStarGrid>();
+        if (roomGrid != null) roomGrid.InitializeGrid();
+    }
 
     public void TriggerExplode()
     {
@@ -54,6 +107,12 @@ public class Explosion : MonoBehaviour
             if (destr != null)
             {
                 destr.UponDestruction();
+            }
+
+            if (hit.TryGetComponent(out TilemapCollider2D tilemapCollider))
+            {
+                Tilemap rockMap = tilemapCollider.GetComponent<Tilemap>();
+                DestroyTilesInRadius(rockMap);
             }
         }
         Destroy(gameObject);

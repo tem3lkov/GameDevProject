@@ -69,12 +69,16 @@ PrefabInstance:
       value: Bomb
       objectReference: {fileID: 0}
     - target: {fileID: 8726811850126146071, guid: e33777eb8b3332f4fa69ab170f0bdf1a, type: 3}
+      propertyPath: blueStoneTile
+      value: 
+      objectReference: {fileID: 11400000, guid: b34001f9b69fd49449e6f5bc76a71ac6, type: 2}
+    - target: {fileID: 8726811850126146071, guid: e33777eb8b3332f4fa69ab170f0bdf1a, type: 3}
       propertyPath: explosionDelay
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8726811850126146071, guid: e33777eb8b3332f4fa69ab170f0bdf1a, type: 3}
       propertyPath: explosionRadius
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
