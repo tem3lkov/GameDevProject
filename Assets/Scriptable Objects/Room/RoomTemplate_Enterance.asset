@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9eeb603531d9a048a65bc51778ad890, type: 3}
   m_Name: RoomTemplate_Enterance
   m_EditorClassIdentifier: Assembly-CSharp::RoomTemplateSO
-  roomType: 0
-  roomPrefabVariants: []
+  roomType: 5
+  roomPrefabVariants:
+  - {fileID: 7035528657868956926, guid: 3b81a8b996ede3740b020bdafa7050ef, type: 3}

@@ -1,10 +1,16 @@
 using UnityEngine;
+using TMPro;
 
 [RequireComponent(typeof(Room))]
 public class ShopLogic : MonoBehaviour
 {
     private Room roomLogic;
     private bool hasSpawned = false;
+
+    [Header("Shop Setup")]
+    public GameObject priceTextPrefab;
+
+    // Notice we completely removed the manual left/center/right prices!
 
     private void Awake() => roomLogic = GetComponent<Room>();
 
@@ -20,11 +26,30 @@ public class ShopLogic : MonoBehaviour
         Vector2 leftPos = center + new Vector2(-2f, 0f);
         Vector2 rightPos = center + new Vector2(2f, 0f);
 
-        bool forPurchase = true;
-        ItemManager.Instance.SpawnRandomItem(leftPos, forPurchase);
-        ItemManager.Instance.SpawnRandomItem(center, forPurchase);
-        ItemManager.Instance.SpawnRandomItem(rightPos, forPurchase);
+        SpawnShopItem(leftPos);
+        SpawnShopItem(center);
+        SpawnShopItem(rightPos);
 
-        Debug.Log("Shop items spawned!");
+        Debug.Log("Shop items and dynamic prices spawned!");
+    }
+
+    private void SpawnShopItem(Vector2 position)
+    {
+        Item spawnedItem = ItemManager.Instance.SpawnRandomItem(position, true);
+
+        if (priceTextPrefab != null && spawnedItem != null)
+        {
+            GameObject textObj = Instantiate(priceTextPrefab, position, Quaternion.identity);
+
+            textObj.transform.SetParent(spawnedItem.transform);
+
+            textObj.transform.localPosition = new Vector3(0f, -0.7f, 0f);
+
+            if (textObj.TryGetComponent(out TextMeshPro textMesh))
+            {
+                int cost = spawnedItem.GetInventoryItemData().itemPrice;
+                textMesh.text = cost.ToString() + "¢";
+            }
+        }
     }
 }

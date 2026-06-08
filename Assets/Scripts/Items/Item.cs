@@ -7,6 +7,7 @@ public enum StatType { Health, BlueHealth, Speed, Damage, FireRate }
 public class Item : MonoBehaviour
 {
     protected ItemScriptable data;
+    protected bool isForPurchase;
     [SerializeField] protected SpriteRenderer spriteRenderer;
     [SerializeField] protected Collider2D col;
     protected bool recentlyDropped = false;
@@ -41,7 +42,8 @@ public class Item : MonoBehaviour
     {
         data = itemData;
         SetItemSprite(data.itemSprite);
-        // TODO make it purchaseable if needed
+
+        isForPurchase = forPurchase;
     }
     protected virtual void SetItemSprite(Sprite item)
     {
@@ -63,9 +65,24 @@ public class Item : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             if (isCollected) return;
+
+            // --- SHOP LOGIC CHECK ---
+            if (isForPurchase)
+            {
+                // NOTE: Here is where you check the player's coin count against data.itemPrice
+                // if (PlayerInventory.Coins < data.itemPrice) 
+                // {
+                //     Debug.Log("Not enough coins!");
+                //     return; // Stops the player from picking it up
+                // }
+                // PlayerInventory.RemoveCoins(data.itemPrice);
+            }
+
             isCollected = true;
             data.OnPickup(collision.gameObject);
             Debug.Log("Item collected: " + data.itemName);
+
+            // This destroys the item AND the child text!
             Destroy(gameObject);
         }
     }

@@ -449,3 +449,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70875272eee5d0e41b935bba2a340494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopLogic
+  priceTextPrefab: {fileID: 6239797635149761230, guid: fba49134333b3a14fa1278cfbb486de7, type: 3}

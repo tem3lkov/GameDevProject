@@ -276,5 +276,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95035a6c9f18e78459bf09be3e08acbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement_HoverNearSpawn
-  wanderRadius: 1.5
-  changeDirectionInterval: 0.5
+  wanderRadius: 3.5
+  changeDirectionInterval: 0.6
