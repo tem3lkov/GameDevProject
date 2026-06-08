@@ -1,6 +1,17 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+
+public static class GridEventManager
+{
+    public static event Action<Vector3, float> OnEnvironmentChanged;
+
+    public static void TriggerEnvironmentChanged(Vector3 position, float radius)
+    {
+        OnEnvironmentChanged?.Invoke(position, radius);
+    }
+}
 
 public class AStarGrid : MonoBehaviour
 {
@@ -109,5 +120,40 @@ public class AStarGrid : MonoBehaviour
             }
         }
         return neighbors;
+    }
+
+    private void OnEnable()
+    {
+        GridEventManager.OnEnvironmentChanged += UpdateNodesInArea;
+    }
+
+    private void OnDisable()
+    {
+        GridEventManager.OnEnvironmentChanged -= UpdateNodesInArea;
+    }
+
+    private void UpdateNodesInArea(Vector3 centerWorldPos, float radius)
+    {
+        Vector3Int centerCell = aStarTilemap.WorldToCell(centerWorldPos);
+        int cellRadius = Mathf.CeilToInt(radius / cellSize.x);
+
+        for (int x = -cellRadius; x <= cellRadius; x++)
+        {
+            for (int y = -cellRadius; y <= cellRadius; y++)
+            {
+                Vector3Int checkPos = new Vector3Int(centerCell.x + x, centerCell.y + y, 0);
+                Node nodeToUpdate = GetNode(checkPos);
+
+                if (nodeToUpdate != null)
+                {
+                    bool isWalkable = aStarTilemap.HasTile(checkPos);
+                    if (isWalkable)
+                    {
+                        isWalkable = !Physics2D.OverlapCircle(nodeToUpdate.worldPosition, nodeRadius, unwalkableMask);
+                    }
+                    nodeToUpdate.isWalkable = isWalkable;
+                }
+            }
+        }
     }
 }

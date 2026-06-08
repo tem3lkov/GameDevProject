@@ -16,6 +16,6 @@ MonoBehaviour:
   minRange: 0
   maxRange: 10
   cooldownTime: 1
-  projectilePrefab: {fileID: 960703002302910434, guid: 9641b9e50c273124591ae077b627b775, type: 3}
+  projectilePrefab: {fileID: 960703002302910434, guid: 8948fbd55ec482240a62bf450ea252cf, type: 3}
   projectileSpeed: 5
   damage: 2

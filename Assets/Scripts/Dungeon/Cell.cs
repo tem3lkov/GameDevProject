@@ -6,7 +6,8 @@ public enum RoomType
     Item,
     Shop,
     Secret,
-    Boss
+    Boss,
+    Enterance
 }
 
 public class Cell : MonoBehaviour

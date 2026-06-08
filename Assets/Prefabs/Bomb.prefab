@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: explosionRadius
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8726811850126146071, guid: e33777eb8b3332f4fa69ab170f0bdf1a, type: 3}
+      propertyPath: destructibleTileLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

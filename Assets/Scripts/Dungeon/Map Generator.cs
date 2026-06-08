@@ -125,6 +125,10 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
     {
         foreach (Cell cell in spawnedCells)
         {
+            if (cell.Index == 45)
+            {
+                cell.SetRoomType(RoomType.Enterance);
+            }
             if (cell.Index == bossRoomIndex)
             {
                 cell.SetSprite(bossSprite);

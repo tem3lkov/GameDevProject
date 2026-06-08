@@ -18,10 +18,10 @@ TagManager:
   - Obstacle
   - Wall
   - PlayerProjectile
+  - EnemyFlyingProjectile
   - EnemyProjectile
   - JumpingEnemy
   - Door
-  - 
   - 
   - 
   - 

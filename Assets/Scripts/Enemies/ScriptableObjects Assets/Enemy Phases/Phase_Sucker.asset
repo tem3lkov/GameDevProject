@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ec13adad49caa34990685027a3b1fcd, type: 3}
-  m_Name: Phase_Jumper
+  m_Name: Phase_Sucker
   m_EditorClassIdentifier: Assembly-CSharp::BossPhaseSO
   phaseName: Phase 1
   healthThreshold: 1
   movementSpeed: 4
   timeBetweenAttacks: 1
-  allowedAttacks:
-  - {fileID: 11400000, guid: ecc36cfc18cd25644b8a5b4d7dfc4163, type: 2}
+  allowedAttacks: []

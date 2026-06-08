@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5714669204628573450}
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5126624621124245427, guid: 3082e22c71a66214996b777fcd05a243, type: 3}
+  m_Sprite: {fileID: 8538798364844830298, guid: ec2ecc520da4e5e43b4a9728d5c28ee4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,8 +105,9 @@ GameObject:
   - component: {fileID: 364120953954107839}
   - component: {fileID: 162383974910697794}
   - component: {fileID: -6756949391087761393}
+  - component: {fileID: 504870205527997492}
   m_Layer: 7
-  m_Name: EnemyFlyer
+  m_Name: EnemySmallSucker
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,7 +210,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.21, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -248,8 +249,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.014369965, y: -0.0272789}
-  m_Size: {x: 0.28446198, y: 0.5}
+  m_Offset: {x: -0.0033302307, y: -0.024410248}
+  m_Size: {x: 0.31102753, y: 0.34420776}
   m_Direction: 0
 --- !u!114 &162383974910697794
 MonoBehaviour:
@@ -263,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cf6d38ff5937b4c984ae1b56bde093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  details: {fileID: 11400000, guid: b26d17da9a6f3284d9f02ad8074cf334, type: 2}
+  details: {fileID: 11400000, guid: 17bae26c9fd31c3459bbde88522e1ec8, type: 2}
 --- !u!114 &-6756949391087761393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,3 +279,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement_HoverNearSpawn
   wanderRadius: 1.5
   changeDirectionInterval: 0.5
+--- !u!114 &504870205527997492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594578055589213504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0acb3c29adeda2e41ae459e7131a30ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement_HomingFly

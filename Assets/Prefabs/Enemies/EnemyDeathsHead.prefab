@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5126624621124245427, guid: 3082e22c71a66214996b777fcd05a243, type: 3}
+  m_Sprite: {fileID: -5427616520241590758, guid: c230c290938c7864bbb035faf754648d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,9 +104,9 @@ GameObject:
   - component: {fileID: 1229829099188903033}
   - component: {fileID: 364120953954107839}
   - component: {fileID: 162383974910697794}
-  - component: {fileID: -6756949391087761393}
+  - component: {fileID: 3620947886666918965}
   m_Layer: 7
-  m_Name: EnemyFlyer
+  m_Name: EnemyDeathsHead
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,8 +248,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.014369965, y: -0.0272789}
-  m_Size: {x: 0.28446198, y: 0.5}
+  m_Offset: {x: 0.0007209778, y: -0.03883171}
+  m_Size: {x: 1.0048904, y: 1.0574074}
   m_Direction: 0
 --- !u!114 &162383974910697794
 MonoBehaviour:
@@ -263,8 +263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cf6d38ff5937b4c984ae1b56bde093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  details: {fileID: 11400000, guid: b26d17da9a6f3284d9f02ad8074cf334, type: 2}
---- !u!114 &-6756949391087761393
+  details: {fileID: 11400000, guid: 6d6f209b780abd4499069c4df8600b75, type: 2}
+--- !u!114 &3620947886666918965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,8 +273,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3594578055589213504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95035a6c9f18e78459bf09be3e08acbe, type: 3}
+  m_Script: {fileID: 11500000, guid: 865cd6a1b5a875a4090ab8895ebbb046, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement_HoverNearSpawn
-  wanderRadius: 1.5
-  changeDirectionInterval: 0.5
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement_BouncingFly

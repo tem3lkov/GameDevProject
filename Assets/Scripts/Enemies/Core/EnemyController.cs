@@ -6,17 +6,16 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class EnemyController : MonoBehaviour, IDamageable
 {
+    [Header("Enemy Data")]
     public EnemyDetailsSO details;
 
     public Transform Target { get; private set; }
     public Rigidbody2D Rb { get; private set; }
     public EnemyAnimator Anim { get; private set; }
-
+    public SpriteRenderer SpriteRend { get; private set; }
     public bool IsAttacking { get; set; } = false;
 
     public event Action<EnemyController> OnDeath;
-
-    // Global UI Events for Bosses
     public static event Action<float> OnBossHealthUpdatedUI;
     public static event Action<bool> OnBossFightActiveUI;
 
@@ -28,6 +27,8 @@ public class EnemyController : MonoBehaviour, IDamageable
     {
         Rb = GetComponent<Rigidbody2D>();
         Anim = GetComponentInChildren<EnemyAnimator>();
+        SpriteRend = GetComponentInChildren<SpriteRenderer>();
+
         currentHealth = details.maxHealth;
     }
 
@@ -36,7 +37,15 @@ public class EnemyController : MonoBehaviour, IDamageable
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null) Target = player.transform;
 
-        System.Array.Sort(details.phases, (a, b) => b.healthThreshold.CompareTo(a.healthThreshold));
+        if (details.phases != null && details.phases.Length > 0)
+        {
+            Array.Sort(details.phases, (a, b) => b.healthThreshold.CompareTo(a.healthThreshold));
+
+            nextAttackTime = Time.time + details.phases[0].timeBetweenAttacks;
+        } else
+        {
+            nextAttackTime = Time.time + 1f;
+        }
 
         if (details.isBoss)
         {
@@ -45,26 +54,32 @@ public class EnemyController : MonoBehaviour, IDamageable
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player") && collision.gameObject.TryGetComponent(out IDamageable hit))
-        {
-            hit.TakeDamage(details.damageToPlayer);
-        }
-    }
-
     private void Update()
     {
+        HandleSpriteFlipping();
+
         if (Target == null || IsAttacking) return;
         HandleAttacks();
     }
 
+    private void HandleSpriteFlipping()
+    {
+        if (SpriteRend == null) return;
+
+        if (Rb.linearVelocity.x > 0.1f)
+        {
+            SpriteRend.flipX = false;
+        } else if (Rb.linearVelocity.x < -0.1f)
+        {
+            SpriteRend.flipX = true;
+        }
+    }
+
     private void HandleAttacks()
     {
-        if (details.phases.Length == 0 || Time.time < nextAttackTime) return;
+        if (details.phases == null || details.phases.Length == 0 || Time.time < nextAttackTime) return;
 
         BossPhaseSO activePhase = details.phases[currentPhaseIndex];
-
         List<EnemyAttackSO> validAttacks = new List<EnemyAttackSO>();
 
         foreach (var attack in activePhase.allowedAttacks)
@@ -85,9 +100,11 @@ public class EnemyController : MonoBehaviour, IDamageable
     private IEnumerator RunAttackSequence(EnemyAttackSO attackToRun)
     {
         IsAttacking = true;
+
         yield return StartCoroutine(attackToRun.ExecuteAttack(this));
 
         IsAttacking = false;
+
         nextAttackTime = Time.time + attackToRun.cooldownTime + details.phases[currentPhaseIndex].timeBetweenAttacks;
     }
 
@@ -98,12 +115,13 @@ public class EnemyController : MonoBehaviour, IDamageable
         if (details.isBoss) OnBossHealthUpdatedUI?.Invoke(currentHealth / details.maxHealth);
 
         CheckPhaseTransition();
+
         if (currentHealth <= 0) Die();
     }
 
     private void CheckPhaseTransition()
     {
-        if (currentPhaseIndex >= details.phases.Length - 1) return;
+        if (details.phases == null || currentPhaseIndex >= details.phases.Length - 1) return;
 
         float healthPercent = currentHealth / details.maxHealth;
         if (healthPercent <= details.phases[currentPhaseIndex + 1].healthThreshold)
@@ -116,8 +134,32 @@ public class EnemyController : MonoBehaviour, IDamageable
     public void Die()
     {
         if (details.isBoss) OnBossFightActiveUI?.Invoke(false);
+
         StopAllCoroutines();
+
         OnDeath?.Invoke(this);
+
         Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        DealContactDamage(collision.gameObject);
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        DealContactDamage(collision.gameObject);
+    }
+
+    private void DealContactDamage(GameObject hitObject)
+    {
+        if (hitObject.CompareTag("Player"))
+        {
+            if (hitObject.TryGetComponent(out IDamageable playerHit))
+            {
+                playerHit.TakeDamage(details.damageToPlayer);
+            }
+        }
     }
 }

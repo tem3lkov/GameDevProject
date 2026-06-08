@@ -103,4 +103,9 @@ public class RoomEncounter : MonoBehaviour
             else door.EncounterUnlock();
         }
     }
+    public void RegisterNewEnemy(EnemyController newEnemy)
+    {
+        activeEnemies.Add(newEnemy);
+        newEnemy.OnDeath += HandleEnemyDeath;
+    }
 }
