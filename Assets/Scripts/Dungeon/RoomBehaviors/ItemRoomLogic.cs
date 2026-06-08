@@ -18,7 +18,8 @@ public class ItemRoomLogic : MonoBehaviour
 
         Vector2 spawnPosition = transform.position;
 
-        ItemManager.Instance.SpawnRandomNonResourceItem(spawnPosition);
+        bool forPurchase = false;
+        ItemManager.Instance.SpawnRandomNonResourceItem(spawnPosition, forPurchase);
 
         Debug.Log("Treasure Room item spawned!");
     }

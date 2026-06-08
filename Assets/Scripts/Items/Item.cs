@@ -9,7 +9,7 @@ public class Item : MonoBehaviour
     protected ItemScriptable data;
     [SerializeField] protected SpriteRenderer spriteRenderer;
     [SerializeField] protected Collider2D col;
-    protected bool canBePickedUp = true;
+    protected bool recentlyDropped = false;
     protected bool isCollected = false;
 
     private void Awake()
@@ -27,20 +27,21 @@ public class Item : MonoBehaviour
 
     protected IEnumerator PickupDelayCoroutine(float delay)
     {
-        canBePickedUp = false;
+        recentlyDropped = true;
         col.enabled = false;
 
         yield return new WaitForSeconds(delay);
 
-        canBePickedUp = true;
+        recentlyDropped = false;
         col.enabled = true;
     }
 
     
-    public virtual void Initialize(ItemScriptable itemData)
+    public virtual void Initialize(ItemScriptable itemData, bool forPurchase)
     {
         data = itemData;
         SetItemSprite(data.itemSprite);
+        // TODO make it purchaseable if needed
     }
     protected virtual void SetItemSprite(Sprite item)
     {
@@ -57,7 +58,7 @@ public class Item : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!canBePickedUp) return;
+        if (recentlyDropped || !data.PickUpable()) return;
 
         if (collision.CompareTag("Player"))
         {

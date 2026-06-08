@@ -20,9 +20,10 @@ public class ShopLogic : MonoBehaviour
         Vector2 leftPos = center + new Vector2(-2f, 0f);
         Vector2 rightPos = center + new Vector2(2f, 0f);
 
-        ItemManager.Instance.SpawnRandomItem(leftPos);
-        ItemManager.Instance.SpawnRandomItem(center);
-        ItemManager.Instance.SpawnRandomItem(rightPos);
+        bool forPurchase = true;
+        ItemManager.Instance.SpawnRandomItem(leftPos, forPurchase);
+        ItemManager.Instance.SpawnRandomItem(center, forPurchase);
+        ItemManager.Instance.SpawnRandomItem(rightPos, forPurchase);
 
         Debug.Log("Shop items spawned!");
     }

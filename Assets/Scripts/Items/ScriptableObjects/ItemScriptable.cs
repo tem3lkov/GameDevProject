@@ -8,4 +8,5 @@ public abstract class ItemScriptable : ScriptableObject
     public Sprite itemSprite;
     public abstract void OnPickup(GameObject player);
     public abstract void Activate(GameObject player);
+    public virtual bool PickUpable() { return true; }
 }

@@ -8,65 +8,65 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
     [SerializeField] private ItemScriptable[] coins = new ItemScriptable[3];
     [SerializeField] private ItemScriptable[] resources;
 
-    public Item SpawnRandomItem(Vector2 position)
+    public Item SpawnRandomItem(Vector2 position, bool forPurchase)
     {
         int randomIndex = Random.Range(0, passiveItems.Length + activeItems.Length + resources.Length);
 
         if (randomIndex < passiveItems.Length)
         {
-            return SpawnRandomPassiveItem(position);
+            return SpawnRandomPassiveItem(position, forPurchase);
         }
         else if (randomIndex < passiveItems.Length + activeItems.Length)
         {
-            return SpawnRandomActiveItem(position);
+            return SpawnRandomActiveItem(position, forPurchase);
         }
         else
         {
-            return SpawnRandomResource(position);
+            return SpawnRandomResource(position, forPurchase);
         }
     }
-    public Item SpawnRandomNonResourceItem(Vector2 position)
+    public Item SpawnRandomNonResourceItem(Vector2 position, bool forPurchase)
     {
         int randomIndex = Random.Range(0, passiveItems.Length + activeItems.Length);
 
         if (randomIndex < passiveItems.Length)
         {
-            return SpawnRandomPassiveItem(position);
+            return SpawnRandomPassiveItem(position, forPurchase);
         }
         else
         {
-            return SpawnRandomActiveItem(position);
+            return SpawnRandomActiveItem(position, forPurchase);
         }
     }
-    public Item SpawnRandomPassiveItem(Vector2 position)
+    public Item SpawnRandomPassiveItem(Vector2 position, bool forPurchase)
     {
         int randomIndex = Random.Range(0, passiveItems.Length);
         ItemScriptable randomItemScriptable = passiveItems[randomIndex];
 
         Item newItem = Instantiate(itemPrefab);
-        newItem.Initialize(randomItemScriptable);
+        newItem.Initialize(randomItemScriptable, forPurchase);
         newItem.transform.position = position;
 
         return newItem;
     }
-    public Item SpawnRandomActiveItem(Vector2 position)
+    public Item SpawnRandomActiveItem(Vector2 position, bool forPurchase)
     {
         int randomIndex = Random.Range(0, activeItems.Length);
         ItemScriptable randomItemScriptable = activeItems[randomIndex];
 
         Item newItem = Instantiate(itemPrefab);
-        newItem.Initialize(randomItemScriptable);
+        newItem.Initialize(randomItemScriptable, forPurchase);
         newItem.transform.position = position;
 
         return newItem;
     }
-    public Item SpawnRandomResource(Vector2 position)
+    public Item SpawnRandomResource(Vector2 position, bool forPurchase)
     {
         int randomIndex = Random.Range(0, resources.Length);
         ItemScriptable randomItemScriptable = resources[randomIndex];
 
         Item newItem = Instantiate(itemPrefab);
-        newItem.Initialize(randomItemScriptable);
+        newItem.Initialize(randomItemScriptable, forPurchase);
         newItem.transform.position = position;
 
         return newItem;
@@ -92,7 +92,8 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
         ItemScriptable coinToSpawn = coins[coinIndex];        
         
         var newCoin = Instantiate(itemPrefab, position, Quaternion.identity);
-        newCoin.Initialize(coinToSpawn);
+        bool forPurchase = false;
+        newCoin.Initialize(coinToSpawn, forPurchase);
 
         return newCoin;
     }
