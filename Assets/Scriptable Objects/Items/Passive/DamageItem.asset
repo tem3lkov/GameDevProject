@@ -16,5 +16,5 @@ MonoBehaviour:
   description: Gives +2 Damage
   itemPrice: 10
   itemSprite: {fileID: -3071654554719319277, guid: 5047a33505dfeb5428442a002c3399b8, type: 3}
-  statToModify: 2
+  statToModify: 3
   amount: 2

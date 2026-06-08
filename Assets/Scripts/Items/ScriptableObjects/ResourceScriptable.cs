@@ -8,7 +8,7 @@ public class ResourceScriptable : ItemScriptable
 
     public override void OnPickup(GameObject player)
     {
-        PlayerInventory.instance.AddResource(resourceType, amount);
+        PlayerInventory.Instance.AddResource(resourceType, amount);
     }
     public override void Activate(GameObject player) {}
 }

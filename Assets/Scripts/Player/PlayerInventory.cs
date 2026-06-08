@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public enum ResourceType { Coin, Key, Bomb }
-public class PlayerInventory : MonoBehaviour
+public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
 {
     [SerializeField] private int coins = 0;
     [SerializeField] private int keys = 0;
@@ -13,20 +13,6 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private GameObject itemPrefab;
     private float cooldownTimer = 0f;
     
-    public static PlayerInventory instance;
-
-    private void Awake() {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-    }
-
     private void Update()
     {
         cooldownTimer -= Time.deltaTime;
@@ -71,8 +57,9 @@ public class PlayerInventory : MonoBehaviour
 
         Item dropped = Instantiate(itemPrefab, transform.position, Quaternion.identity).GetComponent<Item>();
 
+        bool forPurchase = false;
         dropped.SetPickupDelay(2f);
-        dropped.Initialize(currentItem);
+        dropped.Initialize(currentItem, forPurchase);
         currentItem = null;
     }
 

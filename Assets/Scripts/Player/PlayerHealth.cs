@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerHealth : MonoBehaviour, IDamageable {
+public class PlayerHealth : SingletonMonoBehaviour<PlayerHealth>, IDamageable {
     [Header("Global Health Memory")]
     public static int globalMaxRedHalves = 6;
     public static int globalCurrentRedHalves = 6;
@@ -54,15 +54,20 @@ public class PlayerHealth : MonoBehaviour, IDamageable {
     }
 
     public void Heal(int red, int blue) {
-        //TODO
+        if (red > 0) HealRed(red);
+        if (blue > 0) AddBlue(blue);    
     }
 
     public bool HealRed(int amountInHalves) {
-        if (globalCurrentRedHalves >= globalMaxRedHalves) return false; 
+        if (!IsHealable(amountInHalves)) return false; 
 
         globalCurrentRedHalves = Mathf.Min(globalCurrentRedHalves + amountInHalves, globalMaxRedHalves);
         UpdateHealthUI();
         return true;
+    }
+
+    public bool IsHealable(int amountInHalves) {
+        return globalCurrentRedHalves + amountInHalves <= globalMaxRedHalves;
     }
 
     public void AddBlue(int amountInHalves) {

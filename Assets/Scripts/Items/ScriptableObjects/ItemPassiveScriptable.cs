@@ -18,7 +18,16 @@ public class ItemPassiveScriptable : ItemScriptable
 
     public override void OnPickup(GameObject player)
     {
+        if (!PickUpable()) return;
         Activate(player);
+    }
+    public override bool PickUpable()
+    {
+        if (statToModify == StatType.Health)
+        {
+            return PlayerHealth.Instance.IsHealable((int)amount);
+        }
+        return true;
     }
     public override void Activate(GameObject player)
     {
