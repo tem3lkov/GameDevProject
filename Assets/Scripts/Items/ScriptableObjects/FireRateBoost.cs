@@ -8,6 +8,6 @@ public class FireRateBoostItem : ItemActiveScriptable
 
     public override void Activate(GameObject player)
     {
-        player.GetComponent<PlayerStats>().ApplyFireRateBoost(multiplier, duration);
+        player.GetComponent<PlayerCombat>().ApplyFireRateBoost(multiplier, duration);
     }
 }

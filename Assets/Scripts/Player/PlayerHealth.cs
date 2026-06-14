@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : SingletonMonoBehaviour<PlayerHealth>, IDamageable {
     [Header("Global Health Memory")]
-    public static int globalMaxRedHalves = 6;
-    public static int globalCurrentRedHalves = 6;
-    public static int globalCurrentBlueHalves = 0;
+    [SerializeField] private static int globalMaxRedHalves = 6;
+    [SerializeField] private static int globalCurrentRedHalves = 6;
+    [SerializeField] private static int globalCurrentBlueHalves = 0;
 
     [Header("Visuals")]
     public SpriteRenderer spriteRenderer;
@@ -17,10 +17,10 @@ public class PlayerHealth : SingletonMonoBehaviour<PlayerHealth>, IDamageable {
     public static event Action<int, int, int> OnHealthChanged;
 
     private void OnEnable() {
-        PlayerStats.OnHealthChanged += Heal;
+        ItemPassiveScriptable.OnStatsChanged += Heal;
     }
     private void OnDisable() {
-        PlayerStats.OnHealthChanged -= Heal;
+        ItemPassiveScriptable.OnStatsChanged -= Heal;
     }
     private void Start() {
         if (spriteRenderer == null) spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -53,9 +53,14 @@ public class PlayerHealth : SingletonMonoBehaviour<PlayerHealth>, IDamageable {
         if (globalCurrentRedHalves <= 0) Die();
     }
 
-    public void Heal(int red, int blue) {
-        if (red > 0) HealRed(red);
-        if (blue > 0) AddBlue(blue);    
+    public void Heal(PassiveStats statChanges) {
+        if (statChanges.health > 0) HealRed(statChanges.health);
+        if (statChanges.blueHealth > 0) AddBlue(statChanges.blueHealth);    
+        if (statChanges.maxHealth > 0) { AddMaxHealth(statChanges.maxHealth); HealRed(statChanges.maxHealth); }
+    }
+
+    public bool IsHealable(int amountInHalves) {
+        return globalCurrentRedHalves + amountInHalves <= globalMaxRedHalves;
     }
 
     public bool HealRed(int amountInHalves) {
@@ -65,13 +70,12 @@ public class PlayerHealth : SingletonMonoBehaviour<PlayerHealth>, IDamageable {
         UpdateHealthUI();
         return true;
     }
-
-    public bool IsHealable(int amountInHalves) {
-        return globalCurrentRedHalves + amountInHalves <= globalMaxRedHalves;
-    }
-
     public void AddBlue(int amountInHalves) {
         globalCurrentBlueHalves += amountInHalves;
+        UpdateHealthUI();
+    }
+    public void AddMaxHealth(int amountInHalves) {
+        globalMaxRedHalves = Mathf.Max(1, globalMaxRedHalves + amountInHalves);
         UpdateHealthUI();
     }
 

@@ -1,6 +1,7 @@
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerCombat : MonoBehaviour {
     [Header("Audio")]
@@ -8,15 +9,16 @@ public class PlayerCombat : MonoBehaviour {
     public AudioClip shootSound;
 
     [Header("Combat Settings")]
-    public GameObject projectilePrefab;
-    public float projectileSpeed = 8f;
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private float projectileSpeed = 8f;
+    [SerializeField] private float projectileLifetime = 0.5f;
 
     [Header("Isaac Mechanics")]
     public bool inheritPlayerMomentum = true;
     public float momentumMultiplier = 0.5f;
 
-    private float currentDamage;
-    private float currentTearsROF;
+    [SerializeField] private float currentDamage = 2.5f;
+    [SerializeField] private float currentTearsROF = 3f;
 
     private float nextFireTime;
     private Rigidbody2D rb;
@@ -28,21 +30,51 @@ public class PlayerCombat : MonoBehaviour {
     }
 
     private void OnEnable() {
-        PlayerStats.OnDamageChanged += UpdateDamage;
-        PlayerStats.OnTearsROFChanged += UpdateTearsROF;
+        ItemPassiveScriptable.OnStatsChanged += UpdateTears;
     }
-
     private void OnDisable() {
-        PlayerStats.OnDamageChanged -= UpdateDamage;
-        PlayerStats.OnTearsROFChanged -= UpdateTearsROF;
+        ItemPassiveScriptable.OnStatsChanged -= UpdateTears;
     }
 
-    private void UpdateDamage(float newDamage) {
-        currentDamage = newDamage;
+    private void UpdateTears(PassiveStats newStats) {
+        if (newStats.damage > 0) UpdateDamage(newStats.damage);
+        if (newStats.tearsROF > 0) UpdateTearsROF(newStats.tearsROF);
+        if (newStats.tearsLifetime > 0) UpdateProjectileLifetime(newStats.tearsLifetime);
     }
 
-    private void UpdateTearsROF(float newTears) {
-        currentTearsROF = Mathf.Max(0.1f, newTears);
+    private void UpdateDamage(float addDamage) {
+        currentDamage += addDamage;
+    }
+    private void UpdateTearsROF(float addROF) {
+        currentTearsROF = Mathf.Max(0.1f, currentTearsROF + addROF);
+    }
+    private void UpdateProjectileLifetime(float addLifetime) {
+        projectileLifetime = Mathf.Max(0.1f, projectileLifetime + addLifetime); //??? behaviour when too low
+    }
+        
+    public void ApplyFireRateBoost(float multiplier, float duration)
+    {
+        StartCoroutine(FireRateBoostCoroutine(multiplier, duration));
+    }
+    private IEnumerator FireRateBoostCoroutine(float multiplier, float duration)
+    {
+        currentTearsROF *= multiplier;
+        yield return new WaitForSeconds(duration);
+
+        currentTearsROF /= multiplier;
+    }
+
+    public void ApplyDamageBoost(float multiplier, float duration)
+    {
+        StartCoroutine(DamageBoostCoroutine(multiplier, duration));
+    }
+
+    private IEnumerator DamageBoostCoroutine(float multiplier, float duration)
+    {
+        currentDamage *= multiplier;
+        yield return new WaitForSeconds(duration);
+
+        currentDamage /= multiplier;
     }
 
     private void Update() {
@@ -78,6 +110,7 @@ public class PlayerCombat : MonoBehaviour {
 
         if (tearObj.TryGetComponent<Projectile>(out Projectile proj)) {
             proj.damage = currentDamage;
+            proj.lifetime = projectileLifetime;
         }
 
         if (tearObj.TryGetComponent<Rigidbody2D>(out Rigidbody2D projRb)) {

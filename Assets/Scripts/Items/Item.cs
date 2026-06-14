@@ -2,8 +2,6 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public enum StatType { Health, BlueHealth, Speed, Damage, FireRate }
-
 public class Item : MonoBehaviour
 {
     protected ItemScriptable data;
@@ -66,16 +64,15 @@ public class Item : MonoBehaviour
         {
             if (isCollected) return;
 
-            // --- SHOP LOGIC CHECK ---
             if (isForPurchase)
             {
-                // NOTE: Here is where you check the player's coin count against data.itemPrice
-                // if (PlayerInventory.Coins < data.itemPrice) 
-                // {
-                //     Debug.Log("Not enough coins!");
-                //     return; // Stops the player from picking it up
-                // }
-                // PlayerInventory.RemoveCoins(data.itemPrice);
+                if (PlayerInventory.Instance.GetResourceCount(ResourceType.Coin) < data.itemPrice) 
+                {
+                    Debug.Log("Not enough coins!");
+                    return;
+                }
+                PlayerInventory.Instance.AddResource(ResourceType.Coin, -data.itemPrice);
+                Debug.Log("Spent "+ data.itemPrice + " coins. " + PlayerInventory.Instance.GetResourceCount(ResourceType.Coin) + " coins in pocket.");
             }
 
             isCollected = true;

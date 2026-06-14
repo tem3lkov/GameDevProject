@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3196880917142600014}
   - component: {fileID: 1536515064406700318}
   - component: {fileID: 3256209675560166803}
-  - component: {fileID: 2470142304638617473}
   - component: {fileID: 1888023737797443070}
   - component: {fileID: 367350066853561245}
   - component: {fileID: 390712832396434974}
@@ -40,6 +39,7 @@ Transform:
   m_Children:
   - {fileID: 1260169515381857071}
   - {fileID: 4185003381448060226}
+  - {fileID: 3785719757291828862}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3196880917142600014
@@ -54,6 +54,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f8d5f45618ce641a0d67313da443a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  speed: 240
+  speedMultiplier: 1
 --- !u!114 &1536515064406700318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,24 +84,8 @@ MonoBehaviour:
   coins: 0
   keys: 1
   bombs: 3
-  bombData: {fileID: 11400000, guid: 67f387fbe904dbf48b38f93e65f61b84, type: 2}
+  bombData: {fileID: 1413780478982905650, guid: 62163f6315b25b94d9b081b16126cb47, type: 3}
   itemPrefab: {fileID: 5188331097645824666, guid: 0831c3c1c5e2f4743b4faddfb23cdeaa, type: 3}
---- !u!114 &2470142304638617473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2634598196910287518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f45ee7915e865489e8b7bfc060fb64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  speed: 150
-  health: 6
-  damage: 2.5
-  tearsROF: 4
 --- !u!114 &1888023737797443070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,9 +102,12 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: 529ce23b6ac288d4f8cd934f395c5373, type: 3}
   projectilePrefab: {fileID: 960703002302910434, guid: f7c84337aecdde34695e7ca06a2c4d6c, type: 3}
   projectileSpeed: 8
+  projectileLifetime: 0.6
   inheritPlayerMomentum: 1
   momentumMultiplier: 0.5
-  firePoint: {fileID: 0}
+  currentDamage: 2.5
+  currentTearsROF: 3
+  firePoint: {fileID: 3785719757291828862}
 --- !u!61 &367350066853561245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -153,7 +142,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00092315674, y: -0.12685394}
+  m_Offset: {x: -0.0048065186, y: -0.12328911}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -163,7 +152,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.3017273, y: 0.092308044}
+  m_Size: {x: 0.4649353, y: 0.43281174}
   m_EdgeRadius: 0
 --- !u!50 &390712832396434974
 Rigidbody2D:
@@ -500,3 +489,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &5736541989463030733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3785719757291828862}
+  m_Layer: 3
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3785719757291828862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5736541989463030733}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.002, y: 0.051, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6843945369307570833}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

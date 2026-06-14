@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c46bddc913d068a4a9cce07a9ee4a5e9, type: 3}
-  m_Name: SoulHeart2
+  m_Name: HealthRed2
   m_EditorClassIdentifier: Assembly-CSharp::ItemPassiveScriptable
-  itemName: Soul Health Item
-  description: Gives +1 Soul Heart
+  itemName: Health Item 2
+  description: Heals +1 Heart
   itemPrice: 10
-  itemSprite: {fileID: -3070754088246351452, guid: 38357267172d209458bd1300fbc97c57, type: 3}
-  statToModify: 1
+  itemSprite: {fileID: -3498432853690404133, guid: 3ea6323f04359fd4a8d26d477a57db38, type: 3}
+  statToModify: 0
   amount: 2

@@ -9,7 +9,7 @@ public class TankBoost : ItemActiveScriptable
 
     public override void Activate(GameObject player)
     {
-        player.GetComponent<PlayerStats>().ApplyDamageBoost(damageMultiplier, duration);
-        player.GetComponent<PlayerStats>().ApplySpeedBoost(speedMultiplier, duration);
+        player.GetComponent<PlayerCombat>().ApplyDamageBoost(damageMultiplier, duration);
+        player.GetComponent<PlayerController>().ApplySpeedBoost(speedMultiplier, duration);
     }
 }

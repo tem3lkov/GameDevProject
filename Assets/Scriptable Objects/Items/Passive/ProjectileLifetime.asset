@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c46bddc913d068a4a9cce07a9ee4a5e9, type: 3}
-  m_Name: FirerateItem
+  m_Name: ProjectileLifetime
   m_EditorClassIdentifier: Assembly-CSharp::ItemPassiveScriptable
-  itemName: Fire Rate Item
-  description: Gives +1 Fire Rate
+  itemName: Projectile Lifetime
+  description: Increases tear lifetime by 0.2s
   itemPrice: 10
-  itemSprite: {fileID: 7982870186975561163, guid: 5047a33505dfeb5428442a002c3399b8, type: 3}
-  statToModify: 5
-  amount: 1
+  itemSprite: {fileID: -496699622808494045, guid: 5047a33505dfeb5428442a002c3399b8, type: 3}
+  statToModify: 6
+  amount: 0.2

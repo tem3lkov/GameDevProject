@@ -1,13 +1,17 @@
 using UnityEngine;
 using System;
 
+public enum StatType { Health, BlueHealth, MaxHealth, Speed, Damage, FireRate, ProjectileLifetime }
+
 public class PassiveStats : EventArgs
 {
-    public float speed = 0f;
     public int health = 0;
     public int blueHealth = 0;
+    public int maxHealth = 0;
+    public float speed = 0f;
     public float damage = 0f;
     public float tearsROF = 0f;
+    public float tearsLifetime = 0f;
 }
 [CreateAssetMenu(fileName = "New Passive Item", menuName = "Scriptable Objects/Item/Passive Item")]
 public class ItemPassiveScriptable : ItemScriptable
@@ -48,6 +52,12 @@ public class ItemPassiveScriptable : ItemScriptable
                 break;
             case StatType.FireRate:
                 stats.tearsROF = amount;
+                break;
+            case StatType.ProjectileLifetime:
+                stats.tearsLifetime = amount;
+                break;
+            case StatType.MaxHealth:
+                stats.maxHealth = (int)amount;
                 break;
         }
         OnStatsChanged?.Invoke(stats);
