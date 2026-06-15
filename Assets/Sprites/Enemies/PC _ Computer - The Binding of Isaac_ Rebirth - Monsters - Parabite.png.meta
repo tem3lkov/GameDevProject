@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: 71608a438f5d6fb4597d6cca1b2baa41
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4783072431696214591
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_0
+  - first:
+      213: 1645866705557311452
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_1
+  - first:
+      213: -114389372853731852
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_2
+  - first:
+      213: 8821989586660289338
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_3
+  - first:
+      213: -8470255517333363534
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_4
+  - first:
+      213: -297347380498317684
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_5
+  - first:
+      213: -2485384841562947875
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_6
+  - first:
+      213: 2683531258404398108
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_7
+  - first:
+      213: 5189750570099614456
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_8
+  - first:
+      213: 3944507845038947513
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_9
+  - first:
+      213: -1519222224432784552
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_10
+  - first:
+      213: 3908197508249266025
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_11
+  - first:
+      213: 7469929152963470772
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_12
+  - first:
+      213: -2265261640136896277
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_13
+  - first:
+      213: 6861421695883180679
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_14
+  - first:
+      213: -679151004260302379
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_15
+  - first:
+      213: -8064885992679125516
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_16
+  - first:
+      213: 326789663891646413
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_17
+  - first:
+      213: -515427391052433129
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_18
+  - first:
+      213: -7428826303181346311
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_19
+  - first:
+      213: -667362552405708798
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_20
+  - first:
+      213: 1520979405003933157
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_21
+  - first:
+      213: 771438793183316533
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_22
+  - first:
+      213: 8366897278452716312
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_23
+  - first:
+      213: -266639538914023905
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_24
+  - first:
+      213: -3070967346248965181
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_25
+  - first:
+      213: 4551223377826374984
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_26
+  - first:
+      213: -6169159486014983593
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 62
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a773ae803e06240800000000000000
+      internalID: 4783072431696214591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfc26c6c0b47d610800000000000000
+      internalID: 1645866705557311452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 62
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd39f0b87b996ef0800000000000000
+      internalID: -114389372853731852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 30
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3be415c9c00e6a70800000000000000
+      internalID: 8821989586660289338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 62
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b46d8cfb7b937a80800000000000000
+      internalID: -8470255517333363534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 30
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e3182022c9fdbf0800000000000000
+      internalID: -297347380498317684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 62
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddeff7c97a3228dd0800000000000000
+      internalID: -2485384841562947875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_7
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 30
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c14e9d82671dd3520800000000000000
+      internalID: 2683531258404398108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_8
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 62
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f22ba3a5a2b50840800000000000000
+      internalID: 5189750570099614456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_9
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 30
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bcb9457cf4bdb630800000000000000
+      internalID: 3944507845038947513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_10
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 62
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b1ec1af63aaeae0800000000000000
+      internalID: -1519222224432784552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_11
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 30
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967a34f5de4bc3630800000000000000
+      internalID: 3908197508249266025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 62
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b5e8bbbcf48aa760800000000000000
+      internalID: 7469929152963470772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_13
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 30
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be052584a8c2090e0800000000000000
+      internalID: -2265261640136896277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_14
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 62
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a7645ddaaa83f50800000000000000
+      internalID: 6861421695883180679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_15
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 30
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1073a82cb2396f0800000000000000
+      internalID: -679151004260302379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_16
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 62
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd46545be4c31090800000000000000
+      internalID: -8064885992679125516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_17
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 30
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7e788c77df88400800000000000000
+      internalID: 326789663891646413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_18
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 62
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71930d8c485d8d8f0800000000000000
+      internalID: -515427391052433129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_19
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 30
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f92ccc36d187e890800000000000000
+      internalID: -7428826303181346311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_20
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 62
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 200b57f5b4d0db6f0800000000000000
+      internalID: -667362552405708798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_21
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 30
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e5c1f9d5ba9b1510800000000000000
+      internalID: 1520979405003933157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_22
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 62
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ac5a1ce73b4ba00800000000000000
+      internalID: 771438793183316533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_23
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 30
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8135b5abeb03d1470800000000000000
+      internalID: 8366897278452716312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f16a4f780c4bc4cf0800000000000000
+      internalID: -266639538914023905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_25
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3a102287bb165d0800000000000000
+      internalID: -3070967346248965181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_26
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8456bc87c81392f30800000000000000
+      internalID: 4551223377826374984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_27
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 0
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7527851122eb26aa0800000000000000
+      internalID: -6169159486014983593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_0: 4783072431696214591
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_1: 1645866705557311452
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_10: -1519222224432784552
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_11: 3908197508249266025
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_12: 7469929152963470772
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_13: -2265261640136896277
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_14: 6861421695883180679
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_15: -679151004260302379
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_16: -8064885992679125516
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_17: 326789663891646413
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_18: -515427391052433129
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_19: -7428826303181346311
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_2: -114389372853731852
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_20: -667362552405708798
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_21: 1520979405003933157
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_22: 771438793183316533
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_23: 8366897278452716312
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_24: -266639538914023905
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_25: -3070967346248965181
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_26: 4551223377826374984
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_27: -6169159486014983593
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_3: 8821989586660289338
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_4: -8470255517333363534
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_5: -297347380498317684
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_6: -2485384841562947875
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_7: 2683531258404398108
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_8: 5189750570099614456
+      PC _ Computer - The Binding of Isaac_ Rebirth - Monsters - Parabite_9: 3944507845038947513
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

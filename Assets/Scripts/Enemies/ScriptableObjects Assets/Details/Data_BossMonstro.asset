@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Data_BossMonstro
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDetailsSO
   enemyName: Monstro
-  isBoss: 1
+  isBoss: 0
   maxHealth: 150
   damageToPlayer: 1
   obstacleMask:
     serializedVersion: 2
     m_Bits: 768
-  defaultMovement: 1
+  initialAttackDelay: 0.5
   phases:
   - {fileID: 11400000, guid: 70ea4d56de0dd104fa768ca993fbd085, type: 2}
   - {fileID: 11400000, guid: 070f5234535e7b2418c1a8fd270a6fc9, type: 2}

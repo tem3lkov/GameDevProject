@@ -1,0 +1,1014 @@
+fileFormatVersion: 2
+guid: 85ed999ff76978e4f8c215c64626e344
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4968360454066832717
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_0
+  - first:
+      213: 1429778711675417762
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_1
+  - first:
+      213: 5041494559111162904
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_2
+  - first:
+      213: -761300478080744183
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_3
+  - first:
+      213: 3444038035848552426
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_4
+  - first:
+      213: -1321497303153015816
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_5
+  - first:
+      213: -5269921181046443272
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_6
+  - first:
+      213: 2382555742910606597
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_7
+  - first:
+      213: -4900376306764457082
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_8
+  - first:
+      213: -8852221427788406698
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_9
+  - first:
+      213: 3285188365118460045
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_10
+  - first:
+      213: 6093149829459347759
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_11
+  - first:
+      213: -5369610583310693147
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_12
+  - first:
+      213: -639585044518183068
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_13
+  - first:
+      213: -778806665015947782
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_14
+  - first:
+      213: 6579392545103115604
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_15
+  - first:
+      213: 701297445273741671
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_16
+  - first:
+      213: -2734458220892987105
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_17
+  - first:
+      213: -4868303768994673687
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_18
+  - first:
+      213: -5372409162427981308
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_19
+  - first:
+      213: 8865698425121994024
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_20
+  - first:
+      213: -5234179288768756494
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_21
+  - first:
+      213: -8408458042952314489
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_22
+  - first:
+      213: -7984834580981022086
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_23
+  - first:
+      213: -4264621737577057020
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_24
+  - first:
+      213: -3939242184068674425
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_25
+  - first:
+      213: 2688623576841317088
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_26
+  - first:
+      213: 8972228499786717430
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_27
+  - first:
+      213: -4380529397823445130
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_28
+  - first:
+      213: 3675454847861418590
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_29
+  - first:
+      213: 5358174766569101255
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_30
+  - first:
+      213: -3601016524019900776
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_31
+  - first:
+      213: -1483347402530756606
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_32
+  - first:
+      213: -2257667600217964200
+    second: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 728
+        width: 41
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba7f339d76dc0bb0800000000000000
+      internalID: -4968360454066832717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 677
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a434d8b92897d310800000000000000
+      internalID: 1429778711675417762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 646
+        width: 78
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ca2ec279cf6f540800000000000000
+      internalID: 5041494559111162904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 674
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90589acaf315f65f0800000000000000
+      internalID: -761300478080744183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 650
+        width: 76
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aefdfa7a85eabcf20800000000000000
+      internalID: 3444038035848552426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_5
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 672
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f38de1543919ade0800000000000000
+      internalID: -1321497303153015816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 615
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f27b696b9a7dd6b0800000000000000
+      internalID: -5269921181046443272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 603
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50de0c923d9801120800000000000000
+      internalID: 2382555742910606597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 572
+        width: 45
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b509956bd5efbb0800000000000000
+      internalID: -4900376306764457082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_9
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 499
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65022933387962580800000000000000
+      internalID: -8852221427788406698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 496
+        width: 74
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80d1239965579d20800000000000000
+      internalID: 3285188365118460045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_11
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 518
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f29082cac773f8450800000000000000
+      internalID: 6093149829459347759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_12
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 524
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec8697bf9f4b75b0800000000000000
+      internalID: -5369610583310693147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_13
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 459
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f57d96accbf17f0800000000000000
+      internalID: -639585044518183068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_14
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 456
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afd8407e67f1135f0800000000000000
+      internalID: -778806665015947782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_15
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 373
+        width: 74
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45579b029a2be4b50800000000000000
+      internalID: 6579392545103115604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_16
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 395
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7692e639f428bb900800000000000000
+      internalID: 701297445273741671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_17
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 336
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11e6826cb04d0ad0800000000000000
+      internalID: -2734458220892987105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 250
+        width: 74
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb8066f38f407cb0800000000000000
+      internalID: -4868303768994673687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_19
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 272
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4022d6db45e5175b0800000000000000
+      internalID: -5372409162427981308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_20
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 253
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 825f223ceb9490b70800000000000000
+      internalID: 8865698425121994024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_21
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 278
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f44b323ba57c57b0800000000000000
+      internalID: -5234179288768756494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_22
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 213
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7811d09b5f72f4b80800000000000000
+      internalID: -8408458042952314489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_23
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 210
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a720f5a014b203190800000000000000
+      internalID: -7984834580981022086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_24
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 65
+        width: 136
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4057f46ef1501d4c0800000000000000
+      internalID: -4264621737577057020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_25
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 54
+        width: 131
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c4a56ca100559c0800000000000000
+      internalID: -3939242184068674425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_26
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 11
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eaed50f5e8ef4520800000000000000
+      internalID: 2688623576841317088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_27
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 35
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f85c6d9842c38c70800000000000000
+      internalID: 8972228499786717430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_28
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 9
+        width: 88
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677e392c8bb3533c0800000000000000
+      internalID: -4380529397823445130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_29
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 15
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5a64c2f5b6d10330800000000000000
+      internalID: 3675454847861418590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_30
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 16
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c710d5bf8f0c5a40800000000000000
+      internalID: 5358174766569101255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_31
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 11
+        width: 100
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e5b77ec8e960ec0800000000000000
+      internalID: -3601016524019900776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_32
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 12
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208e7a185671a6be0800000000000000
+      internalID: -1483347402530756606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_33
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 12
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 851891c77472ba0e0800000000000000
+      internalID: -2257667600217964200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_0: -4968360454066832717
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_1: 1429778711675417762
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_10: 3285188365118460045
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_11: 6093149829459347759
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_12: -5369610583310693147
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_13: -639585044518183068
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_14: -778806665015947782
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_15: 6579392545103115604
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_16: 701297445273741671
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_17: -2734458220892987105
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_18: -4868303768994673687
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_19: -5372409162427981308
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_2: 5041494559111162904
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_20: 8865698425121994024
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_21: -5234179288768756494
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_22: -8408458042952314489
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_23: -7984834580981022086
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_24: -4264621737577057020
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_25: -3939242184068674425
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_26: 2688623576841317088
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_27: 8972228499786717430
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_28: -4380529397823445130
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_29: 3675454847861418590
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_3: -761300478080744183
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_30: 5358174766569101255
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_31: -3601016524019900776
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_32: -1483347402530756606
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_33: -2257667600217964200
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_4: 3444038035848552426
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_5: -1321497303153015816
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_6: -5269921181046443272
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_7: 2382555742910606597
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_8: -4900376306764457082
+      PC _ Computer - The Binding of Isaac_ Rebirth - Bosses - Fistula & Teratoma_9: -8852221427788406698
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

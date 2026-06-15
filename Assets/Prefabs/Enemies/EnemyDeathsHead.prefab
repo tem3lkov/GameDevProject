@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 364120953954107839}
   - component: {fileID: 162383974910697794}
   - component: {fileID: 3620947886666918965}
+  - component: {fileID: 3419826188881935649}
   m_Layer: 7
   m_Name: EnemyDeathsHead
   m_TagString: Enemy
@@ -248,9 +249,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0007209778, y: -0.03883171}
-  m_Size: {x: 1.0048904, y: 1.0574074}
-  m_Direction: 0
+  m_Offset: {x: 0.0007209159, y: -0.51987594}
+  m_Size: {x: 1.0048906, y: 0.095322624}
+  m_Direction: 1
 --- !u!114 &162383974910697794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,3 +277,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865cd6a1b5a875a4090ab8895ebbb046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement_BouncingFly
+--- !u!58 &3419826188881935649
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594578055589213504}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 7ba1777d683836a469dd521df926f407, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5

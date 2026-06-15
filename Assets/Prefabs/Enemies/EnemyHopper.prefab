@@ -104,8 +104,9 @@ GameObject:
   - component: {fileID: 5961407020338194072}
   - component: {fileID: 4670140684548198471}
   - component: {fileID: 4884537957175668073}
+  - component: {fileID: 8586907604032777801}
   m_Layer: 12
-  m_Name: EnemyJumper
+  m_Name: EnemyHopper
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,9 +226,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cf6d38ff5937b4c984ae1b56bde093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  details: {fileID: 11400000, guid: 21ee5fe3c9e2dd94e93bcaec00c2f5e7, type: 2}
+  details: {fileID: 11400000, guid: b7443b1f994da884ea7f1983bc6c5c63, type: 2}
 --- !u!58 &4884537957175668073
 CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3513645816983278822}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 7ba1777d683836a469dd521df926f407, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.013969421, y: -0.021644592}
+  m_Radius: 0.28635788
+--- !u!70 &8586907604032777801
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -260,5 +297,6 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.015832305, y: 0.0012819767}
-  m_Radius: 0.1883303
+  m_Offset: {x: -0.018865861, y: -0.2909313}
+  m_Size: {x: 0.43402207, y: 0.044797424}
+  m_Direction: 1

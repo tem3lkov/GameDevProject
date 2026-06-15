@@ -16,8 +16,18 @@ public class EnemyMovement_AStar : MonoBehaviour
 
     private float nextPathUpdateTime;
     private AStarGrid myRoomGrid;
+    private Vector2 feetOffset;
 
-    private void Awake() => brain = GetComponent<EnemyController>();
+    private void Awake()
+    {
+        brain = GetComponent<EnemyController>();
+
+        CapsuleCollider2D feetCollider = GetComponent<CapsuleCollider2D>();
+        if (feetCollider != null)
+        {
+            feetOffset = feetCollider.offset * (Vector2)transform.localScale;
+        }
+    }
 
     private void Start()
     {
@@ -44,7 +54,12 @@ public class EnemyMovement_AStar : MonoBehaviour
 
     private void CalculatePath()
     {
-        currentPath = AStarPathfinder.FindPath(myRoomGrid, transform.position, brain.Target.position);
+        Vector2 myFeetPos = (Vector2)transform.position + feetOffset;
+
+        // Target the player's pivot directly, NOT by adding the enemy's feetOffset
+        Vector2 targetPos = (Vector2)brain.Target.position;
+
+        currentPath = AStarPathfinder.FindPath(myRoomGrid, myFeetPos, targetPos);
         currentWaypointIndex = 0;
     }
 
@@ -58,10 +73,13 @@ public class EnemyMovement_AStar : MonoBehaviour
 
         Vector2 targetWaypoint = currentPath[currentWaypointIndex];
         float currentSpeed = brain.details.phases[0].movementSpeed;
-        Vector2 direction = (targetWaypoint - (Vector2)transform.position).normalized;
+
+        Vector2 myFeetPos = (Vector2)transform.position + feetOffset;
+
+        Vector2 direction = (targetWaypoint - myFeetPos).normalized;
         brain.Rb.linearVelocity = direction * currentSpeed;
 
-        if (Vector2.Distance(transform.position, targetWaypoint) < nextWaypointDistance)
+        if (Vector2.Distance(myFeetPos, targetWaypoint) < nextWaypointDistance)
         {
             currentWaypointIndex++;
         }

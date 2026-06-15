@@ -103,10 +103,11 @@ GameObject:
   - component: {fileID: 831748049260689269}
   - component: {fileID: 1229829099188903033}
   - component: {fileID: 364120953954107839}
+  - component: {fileID: 3670050870915039336}
   - component: {fileID: 162383974910697794}
-  - component: {fileID: 3620947886666918965}
   - component: {fileID: -7447749954222100519}
   - component: {fileID: 5663812120891132401}
+  - component: {fileID: 2067221463733548864}
   m_Layer: 7
   m_Name: EnemyBoomFly
   m_TagString: Enemy
@@ -250,9 +251,45 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0017089844, y: -0.14522934}
-  m_Size: {x: 0.8009033, y: 0.8009033}
-  m_Direction: 0
+  m_Offset: {x: -0.0017090159, y: -0.5131462}
+  m_Size: {x: 0.80090344, y: 0.065070875}
+  m_Direction: 1
+--- !u!58 &3670050870915039336
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594578055589213504}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 7ba1777d683836a469dd521df926f407, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.07042694}
+  m_Radius: 0.42957306
 --- !u!114 &162383974910697794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,18 +303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   details: {fileID: 11400000, guid: 6d6f209b780abd4499069c4df8600b75, type: 2}
---- !u!114 &3620947886666918965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3594578055589213504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865cd6a1b5a875a4090ab8895ebbb046, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement_BouncingFly
 --- !u!114 &-7447749954222100519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,3 +328,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a053ff81c52f9ea458b0a5c6798f4b06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DieOnPlayerContact
+--- !u!114 &2067221463733548864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594578055589213504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf50534514492574da4d4b0b074ac15f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement_Bounce

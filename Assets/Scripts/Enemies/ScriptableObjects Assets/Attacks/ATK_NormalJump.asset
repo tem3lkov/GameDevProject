@@ -15,8 +15,12 @@ MonoBehaviour:
   attackName: Normal Jump
   minRange: 0
   maxRange: 10
-  cooldownTime: 1
+  cooldownTime: 0
   hopForce: 6
   airTime: 0.5
   landingDamageRadius: 1.5
   landingDamage: 1
+  defaultLayer: GroundEnemy
+  flyingLayer: FlyingEnemy
+  prepColor: {r: 1, g: 0, b: 0, a: 1}
+  airColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.6}

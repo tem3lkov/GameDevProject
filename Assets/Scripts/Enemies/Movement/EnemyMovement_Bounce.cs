@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(EnemyController))]
-public class EnemyMovement_BouncingFly : MonoBehaviour
+public class EnemyMovement_Bounce : MonoBehaviour
 {
     private EnemyController brain;
     private Vector2 currentDirection;
@@ -14,18 +14,16 @@ public class EnemyMovement_BouncingFly : MonoBehaviour
         if (brain.details.phases != null && brain.details.phases.Length > 0)
         {
             speed = brain.details.phases[0].movementSpeed;
-        }
-        else
+        } else
         {
-            speed = 3f; // Safe fallback
+            speed = 3f;
         }
 
         float randomX = Random.Range(0, 2) == 0 ? 1f : -1f;
         float randomY = Random.Range(0, 2) == 0 ? 1f : -1f;
-        
+
         currentDirection = new Vector2(randomX, randomY).normalized;
 
-        // 3. Kickstart the movement
         brain.Rb.linearVelocity = currentDirection * speed;
     }
 
@@ -45,10 +43,12 @@ public class EnemyMovement_BouncingFly : MonoBehaviour
         if (collision.contactCount > 0)
         {
             Vector2 surfaceNormal = collision.GetContact(0).normal;
-            
-            currentDirection = Vector2.Reflect(currentDirection, surfaceNormal);
 
-            brain.Rb.linearVelocity = currentDirection * speed;
+            if (Vector2.Dot(currentDirection, surfaceNormal) < 0)
+            {
+                currentDirection = Vector2.Reflect(currentDirection, surfaceNormal);
+                brain.Rb.linearVelocity = currentDirection * speed;
+            }
         }
     }
 }

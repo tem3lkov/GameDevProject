@@ -13,8 +13,6 @@ public class Explosion : MonoBehaviour
     [Header("Tilemap Drops")]
     [Tooltip("Drag your Blue Stone Tile asset from the Project window here")]
     public TileBase blueStoneTile;
-    [Tooltip("Drag your Blue Health Item Prefab here")]
-    public GameObject blueHealthPrefab;
 
     [Tooltip("Set this to the layer your destructible rocks are on! (e.g., Obstacle)")]
     public LayerMask destructibleTileLayer;
@@ -54,13 +52,11 @@ public class Explosion : MonoBehaviour
 
         foreach (var hit in hits)
         {
-            // Damage enemies/player
             if (hit.TryGetComponent(out IDamageable dmg))
             {
                 dmg.TakeDamage(explosionDamage);
             }
 
-            // Destroy basic destructible objects (like pots)
             if (hit.TryGetComponent(out IDestructible destr))
             {
                 destr.UponDestruction();
@@ -98,9 +94,12 @@ public class Explosion : MonoBehaviour
                     {
                         TileBase hitTile = map.GetTile(checkPos);
 
-                        if (hitTile == blueStoneTile && blueHealthPrefab != null)
+                        if (hitTile == blueStoneTile)
                         {
-                            Instantiate(blueHealthPrefab, tileWorldPos, Quaternion.identity);
+                            if (ItemManager.Instance != null)
+                            {
+                                ItemManager.Instance.SpawnRandomResource(tileWorldPos, false);
+                            }
                         }
 
                         map.SetTile(checkPos, null);

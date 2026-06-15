@@ -14,6 +14,10 @@ public class BossEncounter : RoomEncounter
 
     public static int currentFloor = 1;
 
+    private float currentGenerationMaxHealth = 0f;
+    private int lastEnemyCount = 0;
+    private bool isBossFightActive = false;
+
     protected override void StartEncounter()
     {
         if (roomLogic.IsInCombat() || hasClearedEncounter) return;
@@ -30,6 +34,46 @@ public class BossEncounter : RoomEncounter
         }
 
         SpawnEnemies();
+
+        EnemyController.TriggerBossUIActive(true);
+        isBossFightActive = true;
+        lastEnemyCount = activeEnemies.Count;
+        CalculateGenerationMaxHealth();
+    }
+
+    private void Update()
+    {
+        if (!isBossFightActive || activeEnemies.Count == 0) return;
+
+        if (activeEnemies.Count > lastEnemyCount)
+        {
+            CalculateGenerationMaxHealth();
+        }
+
+        lastEnemyCount = activeEnemies.Count;
+
+        float currentTotalHealth = 0f;
+        foreach (var enemy in activeEnemies)
+        {
+            if (enemy != null) currentTotalHealth += enemy.GetCurrentHealth();
+        }
+
+        if (currentGenerationMaxHealth > 0)
+        {
+            EnemyController.TriggerBossUIUpdate(currentTotalHealth / currentGenerationMaxHealth);
+        }
+    }
+
+    private void CalculateGenerationMaxHealth()
+    {
+        currentGenerationMaxHealth = 0f;
+        foreach (var enemy in activeEnemies)
+        {
+            if (enemy != null && enemy.details != null)
+            {
+                currentGenerationMaxHealth += enemy.details.maxHealth;
+            }
+        }
     }
 
     protected override void SpawnEnemies()
@@ -43,13 +87,16 @@ public class BossEncounter : RoomEncounter
         Transform spawnPos = bossSpawnPoint != null ? bossSpawnPoint : transform;
 
         EnemyController spawnedBoss = Instantiate(bossToSpawn, spawnPos.position, Quaternion.identity, transform);
-        spawnedBoss.OnDeath += HandleEnemyDeath;
-        activeEnemies.Add(spawnedBoss);
+
+        RegisterNewEnemy(spawnedBoss);
     }
 
     protected override void EndEncounter()
     {
         base.EndEncounter();
+
+        isBossFightActive = false;
+        EnemyController.TriggerBossUIActive(false);
 
         GameManager.Instance.ChangeState(GameState.levelCompleted);
 

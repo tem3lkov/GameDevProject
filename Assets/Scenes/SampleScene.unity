@@ -379,7 +379,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ef9f6fa5009b5f041bdd0b55f27567dc, type: 2}
   - {fileID: 11400000, guid: b9b7f237e36812343b0f505d29c6df38, type: 2}
   - {fileID: 11400000, guid: ad5e1ef8bc239b54fb41ad94d625778e, type: 2}
-  resources: []
+  resources:
+  - {fileID: 11400000, guid: 225a78c14ab875d4f8a3447c871a5b3f, type: 2}
+  - {fileID: 11400000, guid: ef9f6fa5009b5f041bdd0b55f27567dc, type: 2}
+  - {fileID: 11400000, guid: b9b7f237e36812343b0f505d29c6df38, type: 2}
+  - {fileID: 11400000, guid: ad5e1ef8bc239b54fb41ad94d625778e, type: 2}
+  - {fileID: 11400000, guid: 617b91a7af467c74d899b272ba247f4f, type: 2}
+  - {fileID: 11400000, guid: 794f98947a198284f8cfca32795d037d, type: 2}
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 768
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,7 +1063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1075412218
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1671,7 +1680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2037280406
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1703,7 +1712,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 367350066853561245, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
       propertyPath: m_Size.x
-      value: 0.6053314
+      value: 0.32843018
       objectReference: {fileID: 0}
     - target: {fileID: 367350066853561245, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
       propertyPath: m_Size.y
@@ -1711,7 +1720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 367350066853561245, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
       propertyPath: m_Offset.x
-      value: 0.003074646
+      value: 0.007270813
       objectReference: {fileID: 0}
     - target: {fileID: 367350066853561245, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
       propertyPath: m_Offset.y

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a462398e19c4aa4dbfd74d12e82a1db, type: 3}
-  m_Name: Data_Jumper
+  m_Name: Data_FistulaMedium
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDetailsSO
-  enemyName: Jumper
+  enemyName: Fistula Medium
   isBoss: 0
-  maxHealth: 9
+  maxHealth: 40
   damageToPlayer: 1
   obstacleMask:
     serializedVersion: 2
     m_Bits: 768
-  defaultMovement: 0
+  initialAttackDelay: 0.3
   phases:
-  - {fileID: 11400000, guid: 46bb4a8b97fd54b4999d69022885ab59, type: 2}
+  - {fileID: 11400000, guid: 3f052d0139ac32e42be09d79db70b0a9, type: 2}

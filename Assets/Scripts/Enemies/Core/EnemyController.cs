@@ -40,18 +40,9 @@ public class EnemyController : MonoBehaviour, IDamageable
         if (details.phases != null && details.phases.Length > 0)
         {
             Array.Sort(details.phases, (a, b) => b.healthThreshold.CompareTo(a.healthThreshold));
-
-            nextAttackTime = Time.time + details.phases[0].timeBetweenAttacks;
-        } else
-        {
-            nextAttackTime = Time.time + 1f;
         }
 
-        if (details.isBoss)
-        {
-            OnBossFightActiveUI?.Invoke(true);
-            OnBossHealthUpdatedUI?.Invoke(1f);
-        }
+        nextAttackTime = Time.time + details.initialAttackDelay;
     }
 
     private void Update()
@@ -73,6 +64,17 @@ public class EnemyController : MonoBehaviour, IDamageable
         {
             SpriteRend.flipX = true;
         }
+    }
+    public float GetCurrentHealth() => currentHealth;
+
+    public static void TriggerBossUIUpdate(float percent)
+    {
+        OnBossHealthUpdatedUI?.Invoke(percent);
+    }
+
+    public static void TriggerBossUIActive(bool isActive)
+    {
+        OnBossFightActiveUI?.Invoke(isActive);
     }
 
     private void HandleAttacks()
@@ -112,8 +114,6 @@ public class EnemyController : MonoBehaviour, IDamageable
     {
         currentHealth -= amount;
 
-        if (details.isBoss) OnBossHealthUpdatedUI?.Invoke(currentHealth / details.maxHealth);
-
         CheckPhaseTransition();
 
         if (currentHealth <= 0) Die();
@@ -133,8 +133,6 @@ public class EnemyController : MonoBehaviour, IDamageable
 
     public void Die()
     {
-        if (details.isBoss) OnBossFightActiveUI?.Invoke(false);
-
         StopAllCoroutines();
 
         OnDeath?.Invoke(this);
@@ -142,7 +140,7 @@ public class EnemyController : MonoBehaviour, IDamageable
         Destroy(gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         DealContactDamage(collision.gameObject);
     }

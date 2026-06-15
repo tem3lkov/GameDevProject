@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-    public static class AStarPathfinder
+public static class AStarPathfinder
 {
     public static List<Vector2> FindPath(AStarGrid grid, Vector3 startPos, Vector3 targetPos)
     {
