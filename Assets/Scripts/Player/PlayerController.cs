@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D playerBody;
-    private float speed;
+    [SerializeField] private float speed = 200f;
+    [SerializeField] private float speedMultiplier = 1f;
 
     private void Awake()
     {
@@ -12,18 +14,31 @@ public class PlayerController : MonoBehaviour
     }
     private void OnEnable()
     {
-        PlayerStats.OnSpeedChanged += UpdateSpeed;
+        ItemPassiveScriptable.OnStatsChanged += UpdateSpeed;
         RoomManager.OnMapGenerated += SpawnPlayer;
     }
-
     private void OnDisable()
     {
-        PlayerStats.OnSpeedChanged -= UpdateSpeed;
+        ItemPassiveScriptable.OnStatsChanged -= UpdateSpeed;
         RoomManager.OnMapGenerated -= SpawnPlayer;
     }
-    private void UpdateSpeed(float newSpeed)
+
+    private void UpdateSpeed(PassiveStats statChanges)
     {
-        speed = newSpeed;
+        if (statChanges.speed > 0) speed += statChanges.speed;
+    }    
+    public void ApplySpeedBoost(float multiplier, float duration)
+    {
+        StartCoroutine(SpeedBoostCoroutine(multiplier, duration));
+    }
+
+    private IEnumerator SpeedBoostCoroutine(float multiplier, float duration)
+    {
+        speedMultiplier *= multiplier;
+        
+        yield return new WaitForSeconds(duration);
+
+        speedMultiplier /= multiplier;
     }
 
     private void SpawnPlayer(Vector2 startPos)
@@ -54,7 +69,7 @@ public class PlayerController : MonoBehaviour
             playerBody.linearVelocity += Vector2.right;
         }
         playerBody.linearVelocity = playerBody.linearVelocity.normalized;
-        playerBody.linearVelocity *= speed * Time.fixedDeltaTime;
+        playerBody.linearVelocity *= speed * speedMultiplier * Time.fixedDeltaTime;
     }
 
 }
