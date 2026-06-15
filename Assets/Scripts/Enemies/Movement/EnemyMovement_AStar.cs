@@ -56,7 +56,6 @@ public class EnemyMovement_AStar : MonoBehaviour
     {
         Vector2 myFeetPos = (Vector2)transform.position + feetOffset;
 
-        // Target the player's pivot directly, NOT by adding the enemy's feetOffset
         Vector2 targetPos = (Vector2)brain.Target.position;
 
         currentPath = AStarPathfinder.FindPath(myRoomGrid, myFeetPos, targetPos);
