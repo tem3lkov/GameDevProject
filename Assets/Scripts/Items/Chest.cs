@@ -65,7 +65,7 @@ public class Chest : MonoBehaviour
 
         if (chestType == ChestType.Normal)
         {
-            int resourceCount = Random.Range(1, 4);
+            int resourceCount = RunRNG.Range(1, 4);
             for (int i = 0; i < resourceCount; i++)
             {
                 Vector2 randomOffset = Random.insideUnitCircle * 1.6f;

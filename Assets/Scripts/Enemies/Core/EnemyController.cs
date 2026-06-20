@@ -100,7 +100,7 @@ public class EnemyController : MonoBehaviour, IDamageable
 
         if (validAttacks.Count > 0)
         {
-            EnemyAttackSO chosenAttack = validAttacks[UnityEngine.Random.Range(0, validAttacks.Count)];
+            EnemyAttackSO chosenAttack = validAttacks[RunRNG.Range(0, validAttacks.Count)];
             StartCoroutine(RunAttackSequence(chosenAttack));
         }
     }

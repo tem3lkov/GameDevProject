@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
-using System.Collections;
-using UnityEngine.SceneManagement; // Added for Scene Loading
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public enum GameState
 {
@@ -25,18 +25,40 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public static event Action<GameState> OnGameStateChanged;
 
     [Header("Level Progression")]
-    public static int currentLevel = 1;
+    public int currentLevel = 1;
     public int maxLevels = 3;
     public static event Action<int> OnLevelChanged;
 
+    [Header("Run Information")]
+    [Tooltip("Leave at 0 to generate a random seed. Enter a number to play a specific seed!")]
+    public int customPlayerSeed = 0;
+
     private RunData CurrentRun = new();
+
+    public int GetCurrentSeed()
+    {
+        return CurrentRun.runSeed;
+    }
 
     protected override void Awake()
     {
         base.Awake();
-
         transform.SetParent(null);
         DontDestroyOnLoad(gameObject);
+
+        if (customPlayerSeed != 0)
+        {
+            CurrentRun.runSeed = customPlayerSeed;
+        } else
+        {
+            CurrentRun.runSeed = UnityEngine.Random.Range(int.MinValue, int.MaxValue);
+        }
+
+        int floorSeed = CurrentRun.runSeed + currentLevel;
+
+        UnityEngine.Random.InitState(floorSeed);
+
+        RunRNG.InitializeSeed((uint)Mathf.Abs(floorSeed));
     }
 
     private void Start()
@@ -44,12 +66,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         ChangeState(GameState.gameStarted);
     }
 
-    
-    private void OnEnable() {
+    private void OnEnable()
+    {
         SceneManager.sceneLoaded += OnSceneLoaded;
         Room.OnRoomEnteredGlobal += OnRoomEntered;
     }
-    private void OnDisable() {
+    private void OnDisable()
+    {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         Room.OnRoomEnteredGlobal -= OnRoomEntered;
     }
@@ -59,8 +82,14 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         if (currentState != GameState.gameStarted)
         {
             LoadRunData();
+
+            int floorSeed = CurrentRun.runSeed + currentLevel;
+            RunRNG.InitializeSeed((uint)floorSeed);
+
+            Debug.Log($"[Seeded Run] Initialized Level {currentLevel} with Floor Seed: {floorSeed}");
         }
     }
+
     private void OnRoomEntered(Room room)
     {
         SaveRunData();
@@ -82,6 +111,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         switch (state)
         {
             case GameState.gameStarted:
+                Debug.Log($"[Seeded Run] Started new run with Master Seed: {CurrentRun.runSeed}");
+                SaveRunData();
+                Time.timeScale = 1f;
+                break;
+
             case GameState.playingLevel:
                 SaveRunData();
                 Time.timeScale = 1f;
@@ -102,9 +136,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
                 break;
 
             case GameState.gameWon:
-                // FIX: Big console log when you beat the last level
                 Debug.Log("🏆 CONGRATULATIONS! YOU ESCAPED THE DUNGEON! 🏆");
-                Time.timeScale = 0f; // Stops the game
+                Time.timeScale = 0f;
                 break;
 
             case GameState.restartGame:
@@ -120,18 +153,20 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         {
             currentLevel++;
             OnLevelChanged?.Invoke(currentLevel);
-
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         } else
         {
             ChangeState(GameState.gameWon);
         }
     }
+
     public void ResetGame()
     {
         currentLevel = 1;
+        customPlayerSeed = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
     public void SaveRunData()
     {
         CurrentRun.maxHealth = PlayerHealth.Instance.globalMaxRedHalves;
@@ -144,13 +179,15 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
         if (PlayerInventory.Instance.GetActiveItem() != null)
             CurrentRun.activeItemID = PlayerInventory.Instance.GetActiveItem().itemName;
-        CurrentRun.passiveItemIDs = PlayerInventory.Instance.GetPassiveItemNames();
 
-        Debug.Log("Save successful");
+        CurrentRun.passiveItemIDs = PlayerInventory.Instance.GetPassiveItemNames();
     }
 
     public void LoadRunData()
     {
+        GameManager.Instance.currentLevel = CurrentRun.currentLevel;
+        GameManager.Instance.customPlayerSeed = CurrentRun.runSeed;
+
         PlayerHealth.Instance.SetMaxHP(CurrentRun.maxHealth);
         PlayerHealth.Instance.SetRedHP(CurrentRun.redHealth);
         PlayerHealth.Instance.SetBlueHP(CurrentRun.blueHealth);
@@ -159,10 +196,9 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         PlayerInventory.Instance.SetKeys(CurrentRun.keys);
         PlayerInventory.Instance.SetCoins(CurrentRun.coins);
 
-        if (CurrentRun.activeItemID != "")
+        if (!string.IsNullOrEmpty(CurrentRun.activeItemID))
             PlayerInventory.Instance.SetActiveItem(CurrentRun.activeItemID);
-        PlayerInventory.Instance.SetPassiveItems(CurrentRun.passiveItemIDs);
 
-        Debug.Log("Load successful");
+        PlayerInventory.Instance.SetPassiveItems(CurrentRun.passiveItemIDs);
     }
 }

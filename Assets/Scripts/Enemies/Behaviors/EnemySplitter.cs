@@ -44,7 +44,7 @@ public class EnemySplitter : MonoBehaviour
             new Vector2(1, -1).normalized  
         };
 
-        int startIndex = Random.Range(0, 4);
+        int startIndex = RunRNG.Range(0, 4);
 
         for (int i = 0; i < spawnCount; i++)
         {

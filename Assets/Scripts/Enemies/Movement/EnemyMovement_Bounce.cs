@@ -17,8 +17,8 @@ public class EnemyMovement_Bounce : MonoBehaviour
             currentDirection = new Vector2(signX, signY).normalized;
         } else
         {
-            float randomX = Random.Range(0, 2) == 0 ? 1f : -1f;
-            float randomY = Random.Range(0, 2) == 0 ? 1f : -1f;
+            float randomX = RunRNG.Range(0, 2) == 0 ? 1f : -1f;
+            float randomY = RunRNG.Range(0, 2) == 0 ? 1f : -1f;
             currentDirection = new Vector2(randomX, randomY).normalized;
         }
     }

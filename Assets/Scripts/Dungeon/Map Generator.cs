@@ -31,15 +31,20 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
     [SerializeField] private Sprite secretSprite;
     [SerializeField] private Sprite bossSprite;
 
+    private System.Random mapRng;
+
     private void Start()
     {
         cellSize = 0.16f;
         spawnedCells = new List<Cell>();
 
-        int level = GameManager.currentLevel;
+        int level = GameManager.Instance.currentLevel;
 
         minRoomCount = 3 + (level * 3);
         maxRoomCount = minRoomCount + 2;
+
+        int floorSeed = GameManager.Instance.GetCurrentSeed() + level;
+        mapRng = new System.Random(floorSeed);
 
         SetupFloor();
     }
@@ -168,7 +173,7 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
     {
         if (endRooms.Count == 0) return -1;
 
-        int randomRoom = UnityEngine.Random.Range(0, endRooms.Count);
+        int randomRoom = mapRng.Next(0, endRooms.Count);
         int roomIndex = endRooms[randomRoom];
 
         endRooms.RemoveAt(randomRoom);
@@ -181,8 +186,8 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
 
         for (int attempt = 0; attempt < maxAttempts; attempt++)
         {
-            int x = UnityEngine.Random.Range(1, 10);
-            int y = UnityEngine.Random.Range(2, 10);
+            int x = mapRng.Next(1, 10);
+            int y = mapRng.Next(2, 10);
 
             int index = (y * 10) + x;
 
@@ -225,7 +230,7 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
 
     private bool VisitCell(int index)
     {
-        if (floorCells[index] != 0 || GetNeighbourCount(index) > 1 || floorCellsCount > maxRoomCount || UnityEngine.Random.value < 0.5f)
+        if (floorCells[index] != 0 || GetNeighbourCount(index) > 1 || floorCellsCount > maxRoomCount || mapRng.NextDouble() < 0.5)
             return false;
 
         cellQueue.Enqueue(index);

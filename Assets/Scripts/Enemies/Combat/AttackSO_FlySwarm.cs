@@ -15,7 +15,7 @@ public class AttackSO_FlySwarm : EnemyAttackSO
         int fLayerIndex = LayerMask.NameToLayer(flyingLayer);
         if (fLayerIndex != -1) enemy.gameObject.layer = fLayerIndex;
 
-        float randomOffset = Random.Range(0f, 100f);
+        float randomOffset = RunRNG.Range(0f, 100f);
 
         while (true)
         {

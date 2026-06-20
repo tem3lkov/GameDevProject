@@ -30,12 +30,12 @@ namespace TMPro.Examples
                     // TextMesh Pro Implementation     
                     //go.transform.localScale = new Vector3(2, 2, 2);
                     GameObject go = new GameObject(); //"NPC " + i);
-                    go.transform.position = new Vector3(Random.Range(-95f, 95f), 0.5f, Random.Range(-95f, 95f));
+                    go.transform.position = new Vector3(RunRNG.Range(-95f, 95f), 0.5f, RunRNG.Range(-95f, 95f));
 
                     //go.transform.position = new Vector3(0, 1.01f, 0);
                     //go.renderer.castShadows = false;
                     //go.renderer.receiveShadows = false;
-                    //go.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+                    //go.transform.rotation = Quaternion.Euler(0, RunRNG.Range(0, 360), 0);
 
                     TextMeshPro textMeshPro = go.AddComponent<TextMeshPro>();
                     //textMeshPro.FontAsset = Resources.Load("Fonts & Materials/LiberationSans SDF", typeof(TextMeshProFont)) as TextMeshProFont;
@@ -55,7 +55,7 @@ namespace TMPro.Examples
                 {
                     // TextMesh Implementation
                     GameObject go = new GameObject(); //"NPC " + i);
-                    go.transform.position = new Vector3(Random.Range(-95f, 95f), 0.5f, Random.Range(-95f, 95f));
+                    go.transform.position = new Vector3(RunRNG.Range(-95f, 95f), 0.5f, RunRNG.Range(-95f, 95f));
 
                     //go.transform.position = new Vector3(0, 1.01f, 0);
 

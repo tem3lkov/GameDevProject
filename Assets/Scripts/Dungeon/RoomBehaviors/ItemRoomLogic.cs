@@ -5,7 +5,6 @@ public class ItemRoomLogic : MonoBehaviour
 {
     private Room roomLogic;
     private bool hasSpawned = false;
-
     private void Awake() => roomLogic = GetComponent<Room>();
 
     private void OnEnable() => roomLogic.OnPlayerFirstEnteredRoom += SpawnPedestalItem;
@@ -19,6 +18,7 @@ public class ItemRoomLogic : MonoBehaviour
         Vector2 spawnPosition = transform.position;
 
         bool forPurchase = false;
+
         ItemManager.Instance.SpawnRandomNonResourceItem(spawnPosition, forPurchase);
 
         Debug.Log("Treasure Room item spawned!");

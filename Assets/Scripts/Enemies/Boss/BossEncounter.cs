@@ -88,20 +88,20 @@ public class BossEncounter : RoomEncounter
     {
         EnemyController bossToSpawn = null;
 
-        if (GameManager.currentLevel == 1 && floorOneBossPrefab != null)
+        if (GameManager.Instance.currentLevel == 1 && floorOneBossPrefab != null)
         {
             bossToSpawn = floorOneBossPrefab;
-        } else if (GameManager.currentLevel == 2 && floorTwoBossPrefab != null)
+        } else if (GameManager.Instance.currentLevel == 2 && floorTwoBossPrefab != null)
         {
             bossToSpawn = floorTwoBossPrefab;
-        } else if (GameManager.currentLevel == 3 && floorThreeBossPrefab != null)
+        } else if (GameManager.Instance.currentLevel == 3 && floorThreeBossPrefab != null)
         {
             bossToSpawn = floorThreeBossPrefab;
         }
 
         if (bossToSpawn == null && randomBossPool != null && randomBossPool.Length > 0)
         {
-            bossToSpawn = randomBossPool[Random.Range(0, randomBossPool.Length)];
+            bossToSpawn = randomBossPool[RunRNG.Range(0, randomBossPool.Length)];
         }
 
         if (bossToSpawn == null)

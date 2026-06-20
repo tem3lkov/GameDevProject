@@ -66,7 +66,7 @@ public class RoomEncounter : MonoBehaviour
 
         foreach (Transform spawnPoint in spawnPoints)
         {
-            EnemyController randomEnemy = enemyPrefabsToSpawn[Random.Range(0, enemyPrefabsToSpawn.Length)];
+            EnemyController randomEnemy = enemyPrefabsToSpawn[RunRNG.Range(0, enemyPrefabsToSpawn.Length)];
             EnemyController spawnedEnemy = Instantiate(randomEnemy, spawnPoint.position, Quaternion.identity, transform);
 
             RegisterNewEnemy(spawnedEnemy);

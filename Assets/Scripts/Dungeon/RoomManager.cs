@@ -59,7 +59,7 @@ public class RoomManager : SingletonMonoBehaviour<RoomManager>
                 continue;
             }
 
-            int randomVariantIndex = UnityEngine.Random.Range(0, template.roomPrefabVariants.Length);
+            int randomVariantIndex = RunRNG.Range(0, template.roomPrefabVariants.Length);
             GameObject selectedPrefabVariant = template.roomPrefabVariants[randomVariantIndex];
 
             // Calculate position

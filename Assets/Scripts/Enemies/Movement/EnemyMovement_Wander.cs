@@ -32,7 +32,7 @@ public class EnemyMovement_Wander : MonoBehaviour
     private void PickNewDirection()
     {
         moveDirection = Random.insideUnitCircle.normalized;
-        changeDirTimer = Random.Range(minChangeTime, maxChangeTime);
+        changeDirTimer = RunRNG.Range(minChangeTime, maxChangeTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

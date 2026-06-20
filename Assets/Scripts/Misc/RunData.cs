@@ -4,6 +4,9 @@ using System.Collections.Generic;
 [System.Serializable]
 public class RunData
 {
+    public int runSeed;
+    public int currentLevel;
+
     public int maxHealth;
     public int redHealth;
     public int blueHealth;
@@ -14,8 +17,4 @@ public class RunData
 
     public string activeItemID;
     public List<string> passiveItemIDs = new();
-
-    //room matrix or something of the like
-    //public int currentRoom;
-
 }

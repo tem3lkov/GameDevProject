@@ -25,7 +25,7 @@ public class EnemyMovement_AStar : MonoBehaviour
 
     private void Start()
     {
-        nextPathUpdateTime = Time.time + Random.Range(0f, pathUpdateInterval);
+        nextPathUpdateTime = Time.time + RunRNG.Range(0f, pathUpdateInterval);
         myRoomGrid = GetComponentInParent<AStarGrid>();
     }
 

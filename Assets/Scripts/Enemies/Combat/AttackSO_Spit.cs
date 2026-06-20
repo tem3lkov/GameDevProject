@@ -30,14 +30,14 @@ public class AttackSO_Spit : EnemyAttackSO
 
             for (int i = 0; i < projectileCount; i++)
             {
-                float randomAngle = Random.Range(-spreadAngle, spreadAngle);
+                float randomAngle = RunRNG.Range(-spreadAngle, spreadAngle);
                 Vector2 finalDir = Quaternion.Euler(0, 0, randomAngle) * dirToPlayer;
                 Vector3 finalSpawnPos = mouthPos + (Vector3)(finalDir * 1.0f);
 
                 GameObject tear = Instantiate(projectilePrefab, finalSpawnPos, Quaternion.identity);
                 if (tear.TryGetComponent(out Rigidbody2D rb))
                 {
-                    rb.linearVelocity = finalDir * Random.Range(minSpeed, maxSpeed);
+                    rb.linearVelocity = finalDir * RunRNG.Range(minSpeed, maxSpeed);
                 }
             }
         }

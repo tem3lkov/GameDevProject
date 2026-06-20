@@ -26,7 +26,7 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
 
     public Item SpawnRandomItem(Vector2 position, bool forPurchase)
     {
-        int randomIndex = Random.Range(0, passiveItems.Length + activeItems.Length + resources.Length);
+        int randomIndex = RunRNG.Range(0, passiveItems.Length + activeItems.Length + resources.Length);
 
         if (randomIndex < passiveItems.Length) return SpawnRandomPassiveItem(position, forPurchase);
         else if (randomIndex < passiveItems.Length + activeItems.Length) return SpawnRandomActiveItem(position, forPurchase);
@@ -57,7 +57,7 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
 
     public Item SpawnRandomNonResourceItem(Vector2 position, bool forPurchase)
     {
-        int randomIndex = Random.Range(0, passiveItems.Length + activeItems.Length);
+        int randomIndex = RunRNG.Range(0, passiveItems.Length + activeItems.Length);
 
         if (randomIndex < passiveItems.Length) return SpawnRandomPassiveItem(position, forPurchase);
         else return SpawnRandomActiveItem(position, forPurchase);
@@ -65,7 +65,7 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
 
     public Item SpawnRandomPassiveItem(Vector2 position, bool forPurchase)
     {
-        int randomIndex = Random.Range(0, passiveItems.Length);
+        int randomIndex = RunRNG.Range(0, passiveItems.Length);
         ItemScriptable randomItemScriptable = passiveItems[randomIndex];
 
         Item newItem = Instantiate(itemPrefab);
@@ -77,7 +77,7 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
 
     public Item SpawnRandomActiveItem(Vector2 position, bool forPurchase)
     {
-        int randomIndex = Random.Range(0, activeItems.Length);
+        int randomIndex = RunRNG.Range(0, activeItems.Length);
         ItemScriptable randomItemScriptable = activeItems[randomIndex];
 
         Item newItem = Instantiate(itemPrefab);
@@ -89,7 +89,7 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
 
     public Item SpawnRandomResource(Vector2 position, bool forPurchase)
     {
-        int randomIndex = Random.Range(0, resources.Length);
+        int randomIndex = RunRNG.Range(0, resources.Length);
         ItemScriptable randomItemScriptable = resources[randomIndex];
 
         Item newItem = Instantiate(itemPrefab);
@@ -102,7 +102,7 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
 
     public Item SpawnCoin(Vector2 position)
     {
-        int chosenCoin = Random.Range(1, 10);
+        int chosenCoin = RunRNG.Range(1, 10);
         int coinIndex;
         switch (chosenCoin)
         {
@@ -130,7 +130,7 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
     {
         Vector2 dropPosition = FindSafeDropPosition(roomCenter);
 
-        int roll = Random.Range(0, 100);
+        int roll = RunRNG.Range(0, 100);
 
         if (roll < resourceChance)
         {
