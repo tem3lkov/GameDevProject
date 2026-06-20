@@ -22,7 +22,7 @@ public class Room : MonoBehaviour
 
     private int roomIndex;
     private RoomType roomType;
-    public event Action OnPlayerEnteredRoom;
+    public event Action OnPlayerFirstEnteredRoom;
     private bool hasBeenEntered = false;
     private bool inCombat = false;
 
@@ -149,7 +149,7 @@ public class Room : MonoBehaviour
 
         hasBeenEntered = true;
 
-        OnPlayerEnteredRoom?.Invoke();
+        OnPlayerFirstEnteredRoom?.Invoke();
     }
 
     public void EnterCombat()

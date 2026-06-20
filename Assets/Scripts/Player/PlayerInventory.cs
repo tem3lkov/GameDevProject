@@ -1,18 +1,56 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public enum ResourceType { Coin, Key, Bomb }
 public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
 {
-    [SerializeField] private int coins = 0;
-    [SerializeField] private int keys = 0;
-    [SerializeField] private int bombs = 0;
-    [SerializeField] private Explosion bombData;
+    [field: SerializeField] public int coins { get; private set; } = 0;
+    [field: SerializeField] public int keys { get; private set; } = 1;
+    [field: SerializeField] public int bombs { get; private set; } = 3;
     private int maxResources = 99;
+    [SerializeField] private Explosion bombData;
     private ItemActiveScriptable currentItem;
-    [SerializeField] private GameObject itemPrefab;
+    private List<string> passiveItems = new();
     private float cooldownTimer = 0f;
-    
+
+    public ItemActiveScriptable GetActiveItem()
+    {
+        return currentItem;
+    }
+    public List<string> GetPassiveItemNames()
+    {
+        return passiveItems;
+    }
+    public void SetActiveItem(string itemName)
+    {
+        foreach (ItemScriptable item in ItemManager.Instance.GetActiveItems())
+        {
+            if (item.itemName == itemName)
+            {
+                item.OnPickup(gameObject);
+                Debug.Log("Loaded active item "+itemName);
+                break;
+            }
+        }
+    }
+    public void SetPassiveItems(List<string> itemNames)
+    {
+        ItemManager.Instance.GetPassiveItems();
+        foreach (string name in itemNames)
+        {
+            foreach (ItemScriptable item in ItemManager.Instance.GetPassiveItems())
+            {
+                if (item.itemName == name)
+                {
+                    item.OnPickup(gameObject);
+                    Debug.Log("Loaded passive item "+name);
+                    break;
+                }
+            }
+        }
+    }
+
     private void Update()
     {
         cooldownTimer -= Time.deltaTime;
@@ -55,7 +93,7 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
     {
         if (currentItem == null) return;
 
-        Item dropped = Instantiate(itemPrefab, transform.position, Quaternion.identity).GetComponent<Item>();
+        Item dropped = Instantiate(ItemManager.Instance.GetItemPrefab(), transform.position, Quaternion.identity).GetComponent<Item>();
 
         bool forPurchase = false;
         dropped.SetPickupDelay(2f);
@@ -63,6 +101,18 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
         currentItem = null;
     }
 
+    public void SetBombs(int amount)
+    {
+        bombs = amount;
+    }
+    public void SetKeys(int amount)
+    {
+        keys = amount;
+    }
+    public void SetCoins(int amount)
+    {
+        coins = amount;
+    }
     public void AddResource(ResourceType type, int amount)
     {
         switch (type)
@@ -79,19 +129,9 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
         }
     }
 
-    public int GetResourceCount(ResourceType type)
-    {
-        return type switch
-        {
-            ResourceType.Coin => coins,
-            ResourceType.Key => keys,
-            ResourceType.Bomb => bombs,
-            _ => 0
-        };
-    }
     private void TryExplodeBomb()
     {
-        if (GetResourceCount(ResourceType.Bomb) <= 0)
+        if (bombs <= 0)
             return;
             
         AddResource(ResourceType.Bomb, -1);

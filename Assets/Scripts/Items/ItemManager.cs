@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class ItemManager : SingletonMonoBehaviour<ItemManager>
 {
@@ -12,6 +13,10 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
     [Tooltip("Walls and Obstacle Layer")]
     [SerializeField] private LayerMask obstacleMask;
 
+    public Item GetItemPrefab() => itemPrefab;
+    public ItemScriptable[] GetPassiveItems() => passiveItems;
+    public ItemScriptable[] GetActiveItems() => activeItems;
+
     public Item SpawnRandomItem(Vector2 position, bool forPurchase)
     {
         int randomIndex = Random.Range(0, passiveItems.Length + activeItems.Length + resources.Length);
@@ -19,6 +24,28 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
         if (randomIndex < passiveItems.Length) return SpawnRandomPassiveItem(position, forPurchase);
         else if (randomIndex < passiveItems.Length + activeItems.Length) return SpawnRandomActiveItem(position, forPurchase);
         else return SpawnRandomResource(position, forPurchase);
+    }
+
+    public Item SpawnShopItem(Vector2 position, GameObject priceTextPrefab)
+    {
+        Item spawnedItem = SpawnRandomNonResourceItem(position, true);
+
+        if (priceTextPrefab != null && spawnedItem != null)
+        {
+            GameObject textObj = Instantiate(priceTextPrefab, position, Quaternion.identity);
+
+            textObj.transform.SetParent(spawnedItem.transform);
+
+            textObj.transform.localPosition = new Vector3(0f, -0.7f, 0f);
+
+            if (textObj.TryGetComponent(out TextMeshPro textMesh))
+            {
+                int cost = spawnedItem.GetInventoryItemData().itemPrice;
+                textMesh.text = cost.ToString() + "¢";
+            }
+        }
+
+        return spawnedItem;
     }
 
     public Item SpawnRandomNonResourceItem(Vector2 position, bool forPurchase)

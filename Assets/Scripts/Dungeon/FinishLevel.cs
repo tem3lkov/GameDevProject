@@ -25,6 +25,7 @@ public class FinishLevel : MonoBehaviour {
 
     private IEnumerator DropPlayerRoutine(GameObject player) {
         Debug.Log("Player entered trapdoor! Hopping in...");
+        GameManager.Instance.SaveRunData();
 
         if (player.TryGetComponent<Rigidbody2D>(out Rigidbody2D playerRb)) {
             playerRb.linearVelocity = Vector2.zero;

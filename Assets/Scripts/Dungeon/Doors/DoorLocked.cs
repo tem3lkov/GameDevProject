@@ -26,7 +26,7 @@ public class DoorLocked : Door
 
     public bool TryUnlock()
     {
-        if (PlayerInventory.Instance.GetResourceCount(ResourceType.Key) <= 0) 
+        if (PlayerInventory.Instance.keys <= 0) 
             return false;
 
         PlayerInventory.Instance.AddResource(ResourceType.Key, -1);
