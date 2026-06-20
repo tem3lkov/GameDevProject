@@ -35,7 +35,7 @@ public class Chest : MonoBehaviour
     {
         if (chestType == ChestType.Golden)
         {
-            if (PlayerInventory.Instance.GetResourceCount(ResourceType.Key) > 0)
+            if (PlayerInventory.Instance.keys > 0)
             {
                 PlayerInventory.Instance.AddResource(ResourceType.Key, -1);
                 Debug.Log("Golden Chest opened! -1 Key.");
