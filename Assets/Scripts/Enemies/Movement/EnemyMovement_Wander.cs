@@ -13,33 +13,25 @@ public class EnemyMovement_Wander : MonoBehaviour
 
     private void Awake() => brain = GetComponent<EnemyController>();
 
-    private void Start()
-    {
-        PickNewDirection();
-    }
+    private void Start() => PickNewDirection();
 
     private void FixedUpdate()
     {
-        if (brain.IsAttacking || brain.details.phases.Length == 0)
+        if (brain.IsAttacking || brain.details.phases == null || brain.details.phases.Length == 0)
         {
             brain.Rb.linearVelocity = Vector2.MoveTowards(brain.Rb.linearVelocity, Vector2.zero, 15f * Time.deltaTime);
             return;
         }
 
         changeDirTimer -= Time.deltaTime;
-        if (changeDirTimer <= 0f)
-        {
-            PickNewDirection();
-        }
+        if (changeDirTimer <= 0f) PickNewDirection();
 
-        float speed = brain.details.phases[0].movementSpeed;
-        brain.Rb.linearVelocity = moveDirection * speed;
+        brain.Rb.linearVelocity = moveDirection * brain.GetCurrentSpeed();
     }
 
     private void PickNewDirection()
     {
         moveDirection = Random.insideUnitCircle.normalized;
-
         changeDirTimer = Random.Range(minChangeTime, maxChangeTime);
     }
 

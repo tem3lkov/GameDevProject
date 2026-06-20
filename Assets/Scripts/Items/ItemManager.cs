@@ -2,7 +2,14 @@ using UnityEngine;
 
 public class ItemManager : SingletonMonoBehaviour<ItemManager>
 {
+    [Header("Prefabs")]
     [SerializeField] private Item itemPrefab;
+    [Tooltip("Prefab for the Normal Chest")]
+    [SerializeField] private GameObject normalChestPrefab;
+    [Tooltip("Prefab for the Golden/Locked Chest")]
+    [SerializeField] private GameObject goldenChestPrefab;
+
+    [Header("Item Pools")]
     [SerializeField] private ItemScriptable[] passiveItems;
     [SerializeField] private ItemScriptable[] activeItems;
     [SerializeField] private ItemScriptable[] coins = new ItemScriptable[3];
@@ -92,6 +99,24 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
         return newCoin;
     }
 
+    public void SpawnRoomClearReward(Vector2 roomCenter, int resourceChance, int normalChestChance, int lockedChestChance)
+    {
+        Vector2 dropPosition = FindSafeDropPosition(roomCenter);
+
+        int roll = Random.Range(0, 100);
+
+        if (roll < resourceChance)
+        {
+            SpawnRandomResource(dropPosition, false);
+        } else if (roll < resourceChance + normalChestChance)
+        {
+            if (normalChestPrefab != null) Instantiate(normalChestPrefab, dropPosition, Quaternion.identity);
+        } else if (roll < resourceChance + normalChestChance + lockedChestChance)
+        {
+            if (goldenChestPrefab != null) Instantiate(goldenChestPrefab, dropPosition, Quaternion.identity);
+        }
+    }
+
     private Vector2 FindSafeDropPosition(Vector2 targetPos)
     {
         if (Physics2D.OverlapCircle(targetPos, 0.3f, obstacleMask) == null)
@@ -100,7 +125,7 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
         float searchRadius = 0.5f;
         for (int i = 0; i < 10; i++)
         {
-            for (int angle = 0; angle < 360; angle += 45) 
+            for (int angle = 0; angle < 360; angle += 45)
             {
                 float rad = angle * Mathf.Deg2Rad;
                 Vector2 offset = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)) * searchRadius;

@@ -4,17 +4,22 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SpitAttack", menuName = "Enemy Data/Attacks/Monstro Spit")]
 public class AttackSO_Spit : EnemyAttackSO
 {
+    [Header("Spit Settings")]
     public GameObject projectilePrefab;
     public int projectileCount = 8;
     public Vector3 spawnOffset = new Vector3(0, 0.8f, 0);
     public float minSpeed = 3f, maxSpeed = 5f, spreadAngle = 30f;
+
+    [Header("Timings")]
+    public float windupTime = 0.2f;
+    public float recoveryTime = 0.5f;
 
     public override IEnumerator ExecuteAttack(EnemyController enemy)
     {
         enemy.Rb.linearVelocity = Vector2.zero;
 
         if (enemy.Anim != null) enemy.Anim.PlayAnimation("Spit");
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(windupTime);
 
         if (enemy.Target == null) yield break;
 
@@ -35,12 +40,9 @@ public class AttackSO_Spit : EnemyAttackSO
                     rb.linearVelocity = finalDir * Random.Range(minSpeed, maxSpeed);
                 }
             }
-        } else
-        {
-            Debug.LogWarning($"{enemy.name} tried to spit, but projectilePrefab is missing in the Inspector!");
         }
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(recoveryTime);
         if (enemy.Anim != null) enemy.Anim.PlayAnimation("Idle");
     }
 }

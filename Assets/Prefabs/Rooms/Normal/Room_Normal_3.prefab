@@ -3634,7 +3634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035528657868956926, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
       propertyPath: m_Name
-      value: Room_Normal_1
+      value: Room_Normal_3
       objectReference: {fileID: 0}
     - target: {fileID: 7120607597629030868, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
       propertyPath: m_Layer
@@ -4961,6 +4961,12 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 7086304096109572356}
   - {fileID: 7254578421642145181}
+  spawnCenter: {fileID: 7476628826688082980}
+  normalChestPrefab: {fileID: 6292958629527430351, guid: b1056f784146af843a770299e8db7a6f, type: 3}
+  goldenChestPrefab: {fileID: 6292958629527430351, guid: 8acd2a4ada8d9274c85ecc5760db58a3, type: 3}
+  resourceDropChance: 50
+  normalChestChance: 40
+  lockedChestChance: 10
 --- !u!114 &992318191030363432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4976,7 +4982,7 @@ MonoBehaviour:
   aStarTilemap: {fileID: 7148021435263500688}
   unwalkableMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
 --- !u!4 &7086304096109572356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3684270814902793462, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
@@ -4990,5 +4996,10 @@ Tilemap:
 --- !u!4 &7254578421642145181 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3880911479304530031, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
+  m_PrefabInstance: {fileID: 5870077965099795954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7476628826688082980 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3942029015542354390, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
   m_PrefabInstance: {fileID: 5870077965099795954}
   m_PrefabAsset: {fileID: 0}

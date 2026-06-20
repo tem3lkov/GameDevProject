@@ -10,7 +10,6 @@ public class AttackSO_MonstroJump : EnemyAttackSO
     public override IEnumerator ExecuteAttack(EnemyController enemy)
     {
         enemy.Rb.linearVelocity = Vector2.zero;
-
         if (enemy.Anim != null) enemy.Anim.PlayAnimation("Prep");
         yield return new WaitForSeconds(0.2f);
 
@@ -25,7 +24,6 @@ public class AttackSO_MonstroJump : EnemyAttackSO
             enemy.Rb.AddForce(dir * hopForce, ForceMode2D.Impulse);
 
             yield return new WaitForSeconds(airTime);
-
             enemy.Rb.linearDamping = originalDamping;
         } else
         {
@@ -33,7 +31,6 @@ public class AttackSO_MonstroJump : EnemyAttackSO
         }
 
         enemy.Rb.linearVelocity = Vector2.zero;
-
         if (enemy.Anim != null) enemy.Anim.PlayAnimation("Land");
         yield return new WaitForSeconds(0.2f);
         if (enemy.Anim != null) enemy.Anim.PlayAnimation("Idle");

@@ -19,5 +19,6 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 768
+  initialAttackDelay: 0.7
   phases:
   - {fileID: 11400000, guid: 17b9ef7038ead7c4e85df0f115ece433, type: 2}

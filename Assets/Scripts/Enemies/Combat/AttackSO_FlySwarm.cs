@@ -5,23 +5,15 @@ using UnityEngine;
 public class AttackSO_FlySwarm : EnemyAttackSO
 {
     [Header("Fly Movement")]
-    [Tooltip("Колко бързо се приближава към играча")]
     public float forwardSpeed = 1.5f;
-    [Tooltip("Скоростта на въртене в кръг")]
     public float circleSpeed = 5f;
-    [Tooltip("Колко са широки кръговете")]
     public float circleSize = 2f;
-
-    [Header("Layer Setup")]
     public string flyingLayer = "FlyingEnemy";
 
     public override IEnumerator ExecuteAttack(EnemyController enemy)
     {
-        // Слагаме мухата на летящ слой, за да не се блъска в камъни
         int fLayerIndex = LayerMask.NameToLayer(flyingLayer);
         if (fLayerIndex != -1) enemy.gameObject.layer = fLayerIndex;
-
-        if (enemy.Anim != null) enemy.Anim.PlayAnimation("Move");
 
         float randomOffset = Random.Range(0f, 100f);
 

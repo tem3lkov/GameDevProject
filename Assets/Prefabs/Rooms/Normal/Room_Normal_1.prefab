@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9078164083274327305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7267675407680191868}
+  m_Layer: 0
+  m_Name: SpawnPoint_Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7267675407680191868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9078164083274327305}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.31, y: -1.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4152982134500980063}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5870077965099795954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4949,7 +4980,10 @@ PrefabInstance:
     - {fileID: 1688964903153278921, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
     - {fileID: 4968326795206135438, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
     - {fileID: 6767362216389235511, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7553926296005669037, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 7267675407680191868}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7035528657868956926, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
       insertIndex: -1
@@ -4982,6 +5016,12 @@ MonoBehaviour:
   - {fileID: 4486753316929933370}
   - {fileID: 7254578421642145181}
   - {fileID: 7086304096109572356}
+  spawnCenter: {fileID: 7267675407680191868}
+  normalChestPrefab: {fileID: 6292958629527430351, guid: b1056f784146af843a770299e8db7a6f, type: 3}
+  goldenChestPrefab: {fileID: 6292958629527430351, guid: 8acd2a4ada8d9274c85ecc5760db58a3, type: 3}
+  resourceDropChance: 50
+  normalChestChance: 40
+  lockedChestChance: 10
 --- !u!114 &992318191030363432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4997,7 +5037,12 @@ MonoBehaviour:
   aStarTilemap: {fileID: 7148021435263500688}
   unwalkableMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
+--- !u!4 &4152982134500980063 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7553926296005669037, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
+  m_PrefabInstance: {fileID: 5870077965099795954}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4486753316929933370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8012627835761268168, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}

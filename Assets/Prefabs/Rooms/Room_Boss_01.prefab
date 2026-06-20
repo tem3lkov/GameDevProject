@@ -2522,9 +2522,18 @@ MonoBehaviour:
   enemyPrefabsToSpawn: []
   spawnPoints:
   - {fileID: 804765766956506685}
+  spawnCenter: {fileID: 804765766956506685}
+  normalChestPrefab: {fileID: 6292958629527430351, guid: b1056f784146af843a770299e8db7a6f, type: 3}
+  goldenChestPrefab: {fileID: 6292958629527430351, guid: 8acd2a4ada8d9274c85ecc5760db58a3, type: 3}
+  resourceDropChance: 0
+  normalChestChance: 0
+  lockedChestChance: 0
   floorOneBossPrefab: {fileID: 7461499116865369174, guid: 206e71f553ac2b64e8eeed7c83d980f5, type: 3}
+  floorTwoBossPrefab: {fileID: 162383974910697794, guid: 24106a584a8c74b409f8e38a9760ea3f, type: 3}
+  floorThreeBossPrefab: {fileID: 0}
   randomBossPool:
   - {fileID: 7461499116865369174, guid: 206e71f553ac2b64e8eeed7c83d980f5, type: 3}
+  - {fileID: 162383974910697794, guid: 24106a584a8c74b409f8e38a9760ea3f, type: 3}
   bossSpawnPoint: {fileID: 804765766956506685}
   trapdoorPrefab: {fileID: 8206568770470944981, guid: fbcf4c10778c2dc4da38680360b04575, type: 3}
-  trapdoorSpawnPoint: {fileID: 1968147581075407867}
+  spawnPoint_Trapdoor: {fileID: 1968147581075407867}

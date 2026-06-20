@@ -31,22 +31,17 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
     [SerializeField] private Sprite secretSprite;
     [SerializeField] private Sprite bossSprite;
 
-    private void Start() 
+    private void Start()
     {
-        minRoomCount = 6;
-        maxRoomCount = 10;
         cellSize = 0.16f;
         spawnedCells = new List<Cell>();
 
-        SetupFloor();    
-    }
-    
-    private void Update()
-    {
-        //if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        //{
-        //    SetupFloor();
-        //}
+        int level = GameManager.currentLevel;
+
+        minRoomCount = 3 + (level * 3);
+        maxRoomCount = minRoomCount + 2;
+
+        SetupFloor();
     }
 
     private void SetupFloor()
@@ -63,7 +58,7 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
 
         cellQueue = new Queue<int>();
         endRooms = new List<int>();
-    
+
         VisitCell(45);
 
         GenerateFloor();
@@ -71,7 +66,7 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
 
     private void GenerateFloor()
     {
-        while(cellQueue.Count > 0)
+        while (cellQueue.Count > 0)
         {
             int index = cellQueue.Dequeue();
             int x = index % 10;
@@ -95,12 +90,12 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
         }
         SetupSpecialRooms();
     }
-    
+
     private void SetupSpecialRooms()
     {
         bossRoomIndex = endRooms.Count > 0 ? endRooms[endRooms.Count - 1] : -1;
 
-        if(bossRoomIndex != -1)
+        if (bossRoomIndex != -1)
         {
             endRooms.RemoveAt(endRooms.Count - 1);
         }
@@ -133,18 +128,15 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
             {
                 cell.SetSprite(bossSprite);
                 cell.SetRoomType(RoomType.Boss);
-            }
-            else if (cell.Index == itemRoomIndex)
+            } else if (cell.Index == itemRoomIndex)
             {
                 cell.SetSprite(itemSprite);
                 cell.SetRoomType(RoomType.Item);
-            }
-            else if (cell.Index == shopRoomIndex)
+            } else if (cell.Index == shopRoomIndex)
             {
                 cell.SetSprite(shopSprite);
                 cell.SetRoomType(RoomType.Shop);
-            }
-            else if (cell.Index == secretRoomIndex)
+            } else if (cell.Index == secretRoomIndex)
             {
                 cell.SetSprite(secretSprite);
                 cell.SetRoomType(RoomType.Secret);
@@ -156,13 +148,14 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
     {
         return floorCells[index - 10] + floorCells[index + 10] + floorCells[index - 1] + floorCells[index + 1];
     }
+
     private void SpawnRoom(int index)
     {
         int x = index % 10;
         int y = index / 10;
 
         Vector2 pos = new Vector2(x * cellSize, y * cellSize);
-        
+
         Cell newCell = Instantiate(cellPrefab, pos, Quaternion.identity);
         newCell.Index = index;
         newCell.SetRoomType(RoomType.Normal);
@@ -201,7 +194,7 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
             int neighbours = GetNeighbourCount(index);
 
             int requiredNeighbours = 3;
-            
+
             if (attempt > 400) requiredNeighbours = 1;
             else if (attempt > 200) requiredNeighbours = 2;
 
@@ -216,15 +209,15 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
 
     private bool IsCellEligibleForSecretRoom(int index)
     {
-        if (floorCells[index] != 0) 
+        if (floorCells[index] != 0)
             return false;
 
-        if (index - 10 < 0 || index + 10 >= floorCells.Length) 
+        if (index - 10 < 0 || index + 10 >= floorCells.Length)
             return false;
-            
-        bool isNextToBoss = (index - 1 == bossRoomIndex) || 
-                            (index + 1 == bossRoomIndex) || 
-                            (index - 10 == bossRoomIndex) || 
+
+        bool isNextToBoss = (index - 1 == bossRoomIndex) ||
+                            (index + 1 == bossRoomIndex) ||
+                            (index - 10 == bossRoomIndex) ||
                             (index + 10 == bossRoomIndex);
 
         return !isNextToBoss;
@@ -234,7 +227,7 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
     {
         if (floorCells[index] != 0 || GetNeighbourCount(index) > 1 || floorCellsCount > maxRoomCount || UnityEngine.Random.value < 0.5f)
             return false;
-        
+
         cellQueue.Enqueue(index);
         floorCells[index] = 1;
         floorCellsCount++;
@@ -243,8 +236,4 @@ public class MapGenerator : SingletonMonoBehaviour<MapGenerator>
 
         return true;
     }
-
-    
-
 }
-

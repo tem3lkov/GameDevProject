@@ -3,16 +3,24 @@ using System.Collections.Generic;
 
 public class BossEncounter : RoomEncounter
 {
-    [Header("Boss Settings")]
+    [Header("Specific Floor Bosses (Optional)")]
+    [Tooltip("If assigned, this boss will always spawn on Floor 1. If empty, a random boss is picked.")]
     public EnemyController floorOneBossPrefab;
+    [Tooltip("If assigned, this boss will always spawn on Floor 2. If empty, a random boss is picked.")]
+    public EnemyController floorTwoBossPrefab;
+    [Tooltip("If assigned, this boss will always spawn on Floor 3. If empty, a random boss is picked.")]
+    public EnemyController floorThreeBossPrefab;
+
+    [Header("Random Boss Pool")]
+    [Tooltip("Bosses placed here can be randomly picked for any floor that doesn't have a specific boss assigned.")]
     public EnemyController[] randomBossPool;
     public Transform bossSpawnPoint;
 
-    [Header("Room Rewards")]
+    [Header("Boss Specific Spawns")]
     public GameObject trapdoorPrefab;
-    public Transform trapdoorSpawnPoint;
-
-    public static int currentFloor = 1;
+    public Transform spawnPoint_Trapdoor;
+    [Tooltip("The exact center where the boss item should spawn")]
+    public Transform spawnCenter;
 
     private float currentGenerationMaxHealth = 0f;
     private int lastEnemyCount = 0;
@@ -78,11 +86,29 @@ public class BossEncounter : RoomEncounter
 
     protected override void SpawnEnemies()
     {
-        EnemyController bossToSpawn = (currentFloor == 1 && floorOneBossPrefab != null)
-            ? floorOneBossPrefab
-            : randomBossPool[Random.Range(0, randomBossPool.Length)];
+        EnemyController bossToSpawn = null;
 
-        if (bossToSpawn == null) return;
+        if (GameManager.currentLevel == 1 && floorOneBossPrefab != null)
+        {
+            bossToSpawn = floorOneBossPrefab;
+        } else if (GameManager.currentLevel == 2 && floorTwoBossPrefab != null)
+        {
+            bossToSpawn = floorTwoBossPrefab;
+        } else if (GameManager.currentLevel == 3 && floorThreeBossPrefab != null)
+        {
+            bossToSpawn = floorThreeBossPrefab;
+        }
+
+        if (bossToSpawn == null && randomBossPool != null && randomBossPool.Length > 0)
+        {
+            bossToSpawn = randomBossPool[Random.Range(0, randomBossPool.Length)];
+        }
+
+        if (bossToSpawn == null)
+        {
+            Debug.LogWarning("BossEncounter tried to spawn a boss, but no prefabs were assigned in the Inspector!");
+            return;
+        }
 
         Transform spawnPos = bossSpawnPoint != null ? bossSpawnPoint : transform;
 
@@ -100,9 +126,21 @@ public class BossEncounter : RoomEncounter
 
         GameManager.Instance.ChangeState(GameState.levelCompleted);
 
-        if (trapdoorPrefab != null && trapdoorSpawnPoint != null)
+        if (trapdoorPrefab != null && spawnPoint_Trapdoor != null)
         {
-            Instantiate(trapdoorPrefab, trapdoorSpawnPoint.position, Quaternion.identity, transform);
+            Instantiate(trapdoorPrefab, spawnPoint_Trapdoor.position, Quaternion.identity, transform);
+        }
+    }
+
+    protected override void SpawnClearReward()
+    {
+        Vector2 dropPosition = spawnCenter != null ? spawnCenter.position : transform.position;
+
+        Item bossItem = ItemManager.Instance.SpawnRandomNonResourceItem(dropPosition, false);
+
+        if (bossItem != null)
+        {
+            bossItem.transform.position = dropPosition;
         }
     }
 }

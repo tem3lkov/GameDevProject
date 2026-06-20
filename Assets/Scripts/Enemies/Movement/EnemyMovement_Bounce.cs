@@ -5,26 +5,22 @@ public class EnemyMovement_Bounce : MonoBehaviour
 {
     private EnemyController brain;
     private Vector2 currentDirection;
-    private float speed;
 
     private void Awake() => brain = GetComponent<EnemyController>();
 
     private void Start()
     {
-        if (brain.details.phases != null && brain.details.phases.Length > 0)
+        if (brain.Rb.linearVelocity.magnitude > 0.1f)
         {
-            speed = brain.details.phases[0].movementSpeed;
+            float signX = brain.Rb.linearVelocity.x >= 0 ? 1f : -1f;
+            float signY = brain.Rb.linearVelocity.y >= 0 ? 1f : -1f;
+            currentDirection = new Vector2(signX, signY).normalized;
         } else
         {
-            speed = 3f;
+            float randomX = Random.Range(0, 2) == 0 ? 1f : -1f;
+            float randomY = Random.Range(0, 2) == 0 ? 1f : -1f;
+            currentDirection = new Vector2(randomX, randomY).normalized;
         }
-
-        float randomX = Random.Range(0, 2) == 0 ? 1f : -1f;
-        float randomY = Random.Range(0, 2) == 0 ? 1f : -1f;
-
-        currentDirection = new Vector2(randomX, randomY).normalized;
-
-        brain.Rb.linearVelocity = currentDirection * speed;
     }
 
     private void FixedUpdate()
@@ -35,20 +31,40 @@ public class EnemyMovement_Bounce : MonoBehaviour
             return;
         }
 
-        brain.Rb.linearVelocity = currentDirection * speed;
+        brain.Rb.linearVelocity = currentDirection * brain.GetCurrentSpeed();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.contactCount > 0)
-        {
-            Vector2 surfaceNormal = collision.GetContact(0).normal;
+        if ((brain.details.obstacleMask.value & (1 << collision.gameObject.layer)) == 0) return;
 
-            if (Vector2.Dot(currentDirection, surfaceNormal) < 0)
+        bool flippedX = false;
+        bool flippedY = false;
+
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            Vector2 normal = contact.normal;
+
+            if (Mathf.Abs(normal.x) > Mathf.Abs(normal.y))
             {
-                currentDirection = Vector2.Reflect(currentDirection, surfaceNormal);
-                brain.Rb.linearVelocity = currentDirection * speed;
+                if (!flippedX)
+                {
+                    currentDirection.x = Mathf.Sign(normal.x);
+                    flippedX = true;
+                }
+            }
+            else
+            {
+                if (!flippedY)
+                {
+                    currentDirection.y = Mathf.Sign(normal.y);
+                    flippedY = true;
+                }
             }
         }
+
+        currentDirection.Normalize();
+
+        brain.Rb.linearVelocity = currentDirection * brain.GetCurrentSpeed();
     }
 }

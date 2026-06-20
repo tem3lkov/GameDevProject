@@ -1,5 +1,6 @@
-using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 [RequireComponent(typeof(Room))]
 public class RoomEncounter : MonoBehaviour
@@ -7,6 +8,14 @@ public class RoomEncounter : MonoBehaviour
     [Header("Encounter Settings")]
     [SerializeField] private EnemyController[] enemyPrefabsToSpawn;
     [SerializeField] private List<Transform> spawnPoints;
+
+    [Header("Reward Probabilities (Should sum to 100)")]
+    [Tooltip("Percentage chance to drop a resource (Coin, Bomb, Key)")]
+    [SerializeField][Range(0, 100)] private int resourceDropChance = 50;
+    [Tooltip("Percentage chance to drop a Normal Chest")]
+    [SerializeField][Range(0, 100)] private int normalChestChance = 40;
+    [Tooltip("Percentage chance to drop a Locked Chest")]
+    [SerializeField][Range(0, 100)] private int lockedChestChance = 10;
 
     protected Room roomLogic;
     protected List<EnemyController> activeEnemies = new List<EnemyController>();
@@ -38,7 +47,6 @@ public class RoomEncounter : MonoBehaviour
 
         doorsInRoom = GetComponentsInChildren<Door>();
 
-        Debug.Log("Locking doors and spawning enemies!");
         roomLogic.EnterCombat();
         SetDoorsLocked(true);
 
@@ -59,19 +67,34 @@ public class RoomEncounter : MonoBehaviour
         foreach (Transform spawnPoint in spawnPoints)
         {
             EnemyController randomEnemy = enemyPrefabsToSpawn[Random.Range(0, enemyPrefabsToSpawn.Length)];
-
             EnemyController spawnedEnemy = Instantiate(randomEnemy, spawnPoint.position, Quaternion.identity, transform);
 
-            spawnedEnemy.OnDeath += HandleEnemyDeath;
-            activeEnemies.Add(spawnedEnemy);
+            RegisterNewEnemy(spawnedEnemy);
         }
     }
+
+    public void RegisterNewEnemy(EnemyController enemy)
+    {
+        if (!activeEnemies.Contains(enemy))
+        {
+            enemy.OnDeath += HandleEnemyDeath;
+            activeEnemies.Add(enemy);
+        }
+    }
+
     protected virtual void HandleEnemyDeath(EnemyController deadEnemy)
     {
         deadEnemy.OnDeath -= HandleEnemyDeath;
         activeEnemies.Remove(deadEnemy);
 
-        if (activeEnemies.Count == 0)
+        StartCoroutine(CheckEncounterEndRoutine());
+    }
+
+    private System.Collections.IEnumerator CheckEncounterEndRoutine()
+    {
+        yield return new WaitForEndOfFrame();
+
+        if (activeEnemies.Count == 0 && !hasClearedEncounter)
         {
             EndEncounter();
         }
@@ -79,26 +102,35 @@ public class RoomEncounter : MonoBehaviour
 
     protected virtual void EndEncounter()
     {
-        Debug.Log("Open doors");
         hasClearedEncounter = true;
         roomLogic.ExitCombat();
         SetDoorsLocked(false);
 
-        ItemManager.Instance.SpawnCoin(transform.position);
+        SpawnClearReward();
+
         GameManager.Instance.ChangeState(GameState.playingLevel);
+    }
+
+    protected virtual void SpawnClearReward()
+    {
+        ItemManager.Instance.SpawnRoomClearReward(
+            transform.position,
+            resourceDropChance,
+            normalChestChance,
+            lockedChestChance
+        );
     }
 
     protected void SetDoorsLocked(bool isLocked)
     {
+        if (doorsInRoom == null) return;
         foreach (Door door in doorsInRoom)
         {
-            if (isLocked) door.EncounterLock();
-            else door.EncounterUnlock();
+            if (door != null)
+            {
+                if (isLocked) door.EncounterLock();
+                else door.EncounterUnlock();
+            }
         }
-    }
-    public void RegisterNewEnemy(EnemyController newEnemy)
-    {
-        activeEnemies.Add(newEnemy);
-        newEnemy.OnDeath += HandleEnemyDeath;
     }
 }

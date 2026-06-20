@@ -6,37 +6,19 @@ public class AttackSO_Melee : EnemyAttackSO
 {
     public float hitRadius = 1.8f;
     public float damage = 1f;
-    private bool actionFired = false;
+    public float windupTime = 0.2f;
+    public float recoveryTime = 0.4f;
 
     public override IEnumerator ExecuteAttack(EnemyController enemy)
     {
-        actionFired = false;
         enemy.Rb.linearVelocity = Vector2.zero;
+        yield return new WaitForSeconds(windupTime);
 
-        if (enemy.Anim != null)
+        if (enemy.Target != null && Vector2.Distance(enemy.transform.position, enemy.Target.position) <= hitRadius)
         {
-            enemy.Anim.OnAnimationActionTriggered += DoMelee;
-            enemy.Anim.PlayAnimation("Attack");
-
-            while (!actionFired) yield return null;
-
-            enemy.Anim.OnAnimationActionTriggered -= DoMelee;
-        } else
-        {
-            yield return new WaitForSeconds(0.2f);
-            DoMelee();
+            if (enemy.Target.TryGetComponent(out IDamageable hit)) hit.TakeDamage(damage);
         }
 
-        yield return new WaitForSeconds(0.4f);
-        if (enemy.Anim != null) enemy.Anim.PlayAnimation("Idle");
-
-        void DoMelee()
-        {
-            actionFired = true;
-            if (enemy.Target != null && Vector2.Distance(enemy.transform.position, enemy.Target.position) <= hitRadius)
-            {
-                if (enemy.Target.TryGetComponent(out IDamageable hit)) hit.TakeDamage(damage);
-            }
-        }
+        yield return new WaitForSeconds(recoveryTime);
     }
 }

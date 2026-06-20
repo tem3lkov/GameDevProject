@@ -11,7 +11,7 @@ public class PlayerCombat : MonoBehaviour {
     [Header("Combat Settings")]
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float projectileSpeed = 8f;
-    [SerializeField] private float projectileLifetime = 0.5f;
+    [SerializeField] private float projectileLifetime = 1f;
 
     [Header("Isaac Mechanics")]
     public bool inheritPlayerMomentum = true;

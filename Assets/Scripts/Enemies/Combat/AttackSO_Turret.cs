@@ -8,13 +8,13 @@ public class AttackSO_Turret : EnemyAttackSO
     public float projectileSpeed = 5f;
     public float damage = 1f;
 
+    public float windupTime = 0.2f;
+    public float recoveryTime = 0.5f;
+
     public override IEnumerator ExecuteAttack(EnemyController enemy)
     {
         enemy.Rb.linearVelocity = Vector2.zero;
-
-        if (enemy.Anim != null) enemy.Anim.PlayAnimation("Shoot");
-
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(windupTime);
 
         if (projectilePrefab != null && enemy.Target != null)
         {
@@ -23,12 +23,8 @@ public class AttackSO_Turret : EnemyAttackSO
 
             if (tear.TryGetComponent(out Projectile proj)) proj.damage = damage;
             if (tear.TryGetComponent(out Rigidbody2D projRb)) projRb.linearVelocity = direction * projectileSpeed;
-        } else if (projectilePrefab == null)
-        {
-            Debug.LogWarning($"{enemy.gameObject.name} tried to shoot, but Projectile Prefab is missing in the SO!");
         }
 
-        yield return new WaitForSeconds(0.5f);
-        if (enemy.Anim != null) enemy.Anim.PlayAnimation("Idle");
+        yield return new WaitForSeconds(recoveryTime);
     }
 }

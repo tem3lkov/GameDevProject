@@ -365,6 +365,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemManager
   itemPrefab: {fileID: 2701523048425264169, guid: 0831c3c1c5e2f4743b4faddfb23cdeaa, type: 3}
+  normalChestPrefab: {fileID: 6292958629527430351, guid: b1056f784146af843a770299e8db7a6f, type: 3}
+  goldenChestPrefab: {fileID: 6292958629527430351, guid: 8acd2a4ada8d9274c85ecc5760db58a3, type: 3}
   passiveItems:
   - {fileID: 11400000, guid: 3a88e31b4a8d14047aeb07fda0ce1608, type: 2}
   - {fileID: 11400000, guid: db5924dd637c89244bb94d37cda245fe, type: 2}
@@ -1228,7 +1230,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   currentState: 0
-  currentLevel: 1
   maxLevels: 3
 --- !u!1 &1254089165
 GameObject:
@@ -1681,9 +1682,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2079519982}
     m_Modifications:
+    - target: {fileID: 1888023737797443070, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
+      propertyPath: projectileLifetime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2634598196910287518, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196880917142600014, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
+      propertyPath: speed
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 6843945369307570833, guid: 3eaf28651c4294c45a462798eb665aa5, type: 3}
       propertyPath: m_LocalPosition.x

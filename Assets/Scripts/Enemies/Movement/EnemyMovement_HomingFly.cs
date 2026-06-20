@@ -15,13 +15,11 @@ public class EnemyMovement_HomingFly : MonoBehaviour
             return;
         }
 
-        float speed = brain.details.phases[0].movementSpeed;
-
         Vector2 direction = (brain.Target.position - transform.position).normalized;
 
         direction.x += Mathf.Sin(Time.time * 15f) * 0.2f;
         direction.y += Mathf.Cos(Time.time * 15f) * 0.2f;
 
-        brain.Rb.linearVelocity = direction.normalized * speed;
+        brain.Rb.linearVelocity = direction.normalized * brain.GetCurrentSpeed();
     }
 }

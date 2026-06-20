@@ -18,7 +18,7 @@ MonoBehaviour:
   damageToPlayer: 1
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 768
   initialAttackDelay: 0.3
   phases:
   - {fileID: 11400000, guid: bb4c6f18f49cb944fa5a812c774e2067, type: 2}

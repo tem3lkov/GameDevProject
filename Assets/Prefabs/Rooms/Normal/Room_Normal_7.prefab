@@ -5407,6 +5407,12 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 9075355165323282595}
   - {fileID: 3937864441109884101}
+  spawnCenter: {fileID: 9075355165323282595}
+  normalChestPrefab: {fileID: 6292958629527430351, guid: b1056f784146af843a770299e8db7a6f, type: 3}
+  goldenChestPrefab: {fileID: 6292958629527430351, guid: 8acd2a4ada8d9274c85ecc5760db58a3, type: 3}
+  resourceDropChance: 50
+  normalChestChance: 40
+  lockedChestChance: 10
 --- !u!114 &992318191030363432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5422,7 +5428,7 @@ MonoBehaviour:
   aStarTilemap: {fileID: 7148021435263500688}
   unwalkableMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
 --- !u!4 &4152982134500980063 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7553926296005669037, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoomTemplateSO
   roomType: 4
   roomPrefabVariants:
-  - {fileID: 6646403455988869909, guid: 94b9bd52d21cf484e8cf0a93f992dfbe, type: 3}
+  - {fileID: 6646403455988869909, guid: fc778edaad8b4b94a80acacb851df02c, type: 3}

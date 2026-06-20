@@ -25,7 +25,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public static event Action<GameState> OnGameStateChanged;
 
     [Header("Level Progression")]
-    public int currentLevel = 1;
+    public static int currentLevel = 1;
     public int maxLevels = 3;
     public static event Action<int> OnLevelChanged;
 
@@ -68,8 +68,9 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
                 break;
 
             case GameState.gameWon:
-                Debug.Log("Game Won! Max levels reached.");
-                Time.timeScale = 0f;
+                // FIX: Big console log when you beat the last level
+                Debug.Log("🏆 CONGRATULATIONS! YOU ESCAPED THE DUNGEON! 🏆");
+                Time.timeScale = 0f; // Stops the game
                 break;
 
             case GameState.restartGame:
@@ -91,5 +92,10 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         {
             ChangeState(GameState.gameWon);
         }
+    }
+    public void ResetGame()
+    {
+        currentLevel = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

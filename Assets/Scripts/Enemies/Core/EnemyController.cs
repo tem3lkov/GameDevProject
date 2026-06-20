@@ -53,6 +53,12 @@ public class EnemyController : MonoBehaviour, IDamageable
         HandleAttacks();
     }
 
+    public float GetCurrentSpeed()
+    {
+        if (details.phases == null || details.phases.Length == 0) return 0f;
+        return details.phases[currentPhaseIndex].movementSpeed;
+    }
+
     private void HandleSpriteFlipping()
     {
         if (SpriteRend == null) return;

@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "MonstroHighJumpAttack", menuName = "Enemy Data/Attacks/Monstro High Jump")]
-public class AttackSO_MonstroHighJump : EnemyAttackSO 
+public class AttackSO_MonstroHighJump : EnemyAttackSO
 {
     [Header("Jump Settings")]
     public float trackingTime = 1.5f;
@@ -15,18 +15,21 @@ public class AttackSO_MonstroHighJump : EnemyAttackSO
     public float landingDamageRadius = 1.5f;
     public float bumpKnockbackForce = 15f;
 
-    public override IEnumerator ExecuteAttack(EnemyController enemy) 
+    public override IEnumerator ExecuteAttack(EnemyController enemy)
     {
         if (enemy == null) yield break;
 
         enemy.Rb.linearVelocity = Vector2.zero;
         Vector3 originalScale = enemy.transform.localScale;
-        Collider2D myCollider = enemy.GetComponent<Collider2D>();
 
+        Collider2D[] allColliders = enemy.GetComponents<Collider2D>();
+
+        // 1. Windup
         if (enemy.Anim != null) enemy.Anim.PlayAnimation("Prep");
         yield return new WaitForSeconds(0.4f);
 
-        if (myCollider != null) myCollider.enabled = false;
+        foreach (Collider2D col in allColliders) col.enabled = false;
+
         if (enemy.Anim != null) enemy.Anim.PlayAnimation("Jump");
 
         float originalDamping = enemy.Rb.linearDamping;
@@ -35,7 +38,7 @@ public class AttackSO_MonstroHighJump : EnemyAttackSO
 
         float elapsed = 0;
         float shrinkDuration = 0.3f;
-        while (elapsed < shrinkDuration) 
+        while (elapsed < shrinkDuration)
         {
             elapsed += Time.deltaTime;
             enemy.transform.localScale = Vector3.Lerp(originalScale, originalScale * 0.1f, elapsed / shrinkDuration);
@@ -45,18 +48,26 @@ public class AttackSO_MonstroHighJump : EnemyAttackSO
         enemy.Rb.linearVelocity = Vector2.zero;
 
         float trackingElapsed = 0;
-        while (trackingElapsed < trackingTime) 
+        float monstroRadius = 0.6f;
+
+        while (trackingElapsed < trackingTime)
         {
             trackingElapsed += Time.deltaTime;
-            if (enemy.Target != null) 
+            if (enemy.Target != null)
             {
-                Vector2 playerPos = enemy.Target.position;
-                Vector2 desiredPos = playerPos + new Vector2(0, 1.5f);
+                Vector2 desiredPos = enemy.Target.position;
 
-                RaycastHit2D hit = Physics2D.Linecast(playerPos, desiredPos, obstacleMask);
-                if (hit.collider != null) 
+                Collider2D wallHit = Physics2D.OverlapCircle(desiredPos, monstroRadius, obstacleMask);
+
+                if (wallHit != null)
                 {
-                    desiredPos = hit.point + (hit.normal * 0.8f);
+                    Vector2 closestPointOnWall = wallHit.ClosestPoint(desiredPos);
+
+                    Vector2 pushAwayDirection = (desiredPos - closestPointOnWall).normalized;
+
+                    if (pushAwayDirection == Vector2.zero) pushAwayDirection = Vector2.down;
+
+                    desiredPos = closestPointOnWall + (pushAwayDirection * monstroRadius);
                 }
 
                 enemy.Rb.MovePosition(desiredPos);
@@ -66,21 +77,23 @@ public class AttackSO_MonstroHighJump : EnemyAttackSO
 
         yield return new WaitForSeconds(lockInTime);
 
+        // 4. Fall Down
         if (enemy.Anim != null) enemy.Anim.PlayAnimation("Land");
 
         elapsed = 0;
         float growDuration = 0.15f;
-        while (elapsed < growDuration) 
+        while (elapsed < growDuration)
         {
             elapsed += Time.deltaTime;
             enemy.transform.localScale = Vector3.Lerp(originalScale * 0.1f, originalScale, elapsed / growDuration);
             yield return null;
         }
-        enemy.transform.localScale = originalScale;
 
+        enemy.transform.localScale = originalScale;
         enemy.Rb.linearDamping = originalDamping;
         enemy.Rb.linearVelocity = Vector2.zero;
-        if (myCollider != null) myCollider.enabled = true;
+
+        foreach (Collider2D col in allColliders) col.enabled = true;
 
         HandleLandingImpact(enemy);
         SpawnRadialBurst(enemy);
@@ -89,19 +102,16 @@ public class AttackSO_MonstroHighJump : EnemyAttackSO
         if (enemy.Anim != null) enemy.Anim.PlayAnimation("Idle");
     }
 
-    private void HandleLandingImpact(EnemyController enemy) 
+    private void HandleLandingImpact(EnemyController enemy)
     {
         if (enemy.Target == null) return;
 
         float distanceToPlayer = Vector2.Distance(enemy.transform.position, enemy.Target.position);
-        if (distanceToPlayer <= landingDamageRadius) 
+        if (distanceToPlayer <= landingDamageRadius)
         {
-            if (enemy.Target.TryGetComponent<IDamageable>(out IDamageable hitTarget)) 
-            {
-                hitTarget.TakeDamage(landingDamage);
-            }
+            if (enemy.Target.TryGetComponent(out IDamageable hitTarget)) hitTarget.TakeDamage(landingDamage);
 
-            if (enemy.Target.TryGetComponent<Rigidbody2D>(out Rigidbody2D playerRb)) 
+            if (enemy.Target.TryGetComponent(out Rigidbody2D playerRb))
             {
                 Vector2 knockbackDir = (enemy.Target.position - enemy.transform.position).normalized;
                 if (knockbackDir == Vector2.zero) knockbackDir = Random.insideUnitCircle.normalized;
@@ -110,21 +120,17 @@ public class AttackSO_MonstroHighJump : EnemyAttackSO
         }
     }
 
-    private void SpawnRadialBurst(EnemyController enemy) 
+    private void SpawnRadialBurst(EnemyController enemy)
     {
         if (projectilePrefab == null) return;
 
-        for (int i = 0; i < 8; i++) 
+        for (int i = 0; i < 8; i++)
         {
-            float angle = i * 45f;
-            Vector2 dir = Quaternion.Euler(0, 0, angle) * Vector2.up;
+            Vector2 dir = Quaternion.Euler(0, 0, i * 45f) * Vector2.up;
             Vector3 spawnPos = enemy.transform.position + (Vector3)(dir * 0.2f);
 
             GameObject tear = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
-            if (tear.TryGetComponent<Rigidbody2D>(out Rigidbody2D tearRb)) 
-            {
-                tearRb.linearVelocity = dir * 6f;
-            }
+            if (tear.TryGetComponent(out Rigidbody2D tearRb)) tearRb.linearVelocity = dir * 6f;
         }
     }
 }

@@ -9,7 +9,7 @@ public class EnemySplitter : MonoBehaviour
 
     public int spawnCount = 2;
 
-    [Tooltip("With what force should they disperse at spawn")]
+    [Tooltip("With what speed should they burst out")]
     public float splitForce = 4f;
 
     private EnemyController enemyController;
@@ -37,26 +37,30 @@ public class EnemySplitter : MonoBehaviour
 
         RoomEncounter encounter = GetComponentInParent<RoomEncounter>();
 
-        float angleStep = 360f / spawnCount;
-        float randomOffset = Random.Range(0f, 360f);
+        Vector2[] diagonalDirs = new Vector2[] {
+            new Vector2(1, 1).normalized,
+            new Vector2(-1, 1).normalized, 
+            new Vector2(-1, -1).normalized,
+            new Vector2(1, -1).normalized  
+        };
+
+        int startIndex = Random.Range(0, 4);
 
         for (int i = 0; i < spawnCount; i++)
         {
-            float angle = (i * angleStep + randomOffset) * Mathf.Deg2Rad;
-            Vector2 pushDir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
-
+            Vector2 pushDir = diagonalDirs[(startIndex + i) % 4];
             Vector3 spawnPosition = transform.position + (Vector3)pushDir * 0.3f;
 
             EnemyController cloneController = Instantiate(smallerEnemyPrefab, spawnPosition, Quaternion.identity, transform.parent);
 
-            if (cloneController.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
-            {
-                rb.AddForce(pushDir * splitForce, ForceMode2D.Impulse);
-            }
-
-            if (encounter != null && cloneController != null)
+            if (encounter != null)
             {
                 encounter.RegisterNewEnemy(cloneController);
+            }
+
+            if (cloneController.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
+            {
+                rb.linearVelocity = pushDir * splitForce;
             }
         }
     }
