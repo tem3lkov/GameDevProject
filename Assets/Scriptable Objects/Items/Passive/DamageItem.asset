@@ -18,3 +18,4 @@ MonoBehaviour:
   itemSprite: {fileID: -3071654554719319277, guid: 5047a33505dfeb5428442a002c3399b8, type: 3}
   statToModify: 4
   amount: 2
+  persistent: 1

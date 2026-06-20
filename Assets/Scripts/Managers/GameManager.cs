@@ -153,6 +153,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         {
             currentLevel++;
             OnLevelChanged?.Invoke(currentLevel);
+            SaveRunData();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         } else
         {
@@ -169,6 +170,9 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     public void SaveRunData()
     {
+        CurrentRun.currentLevel = GameManager.Instance.currentLevel;
+        CurrentRun.runSeed = GameManager.Instance.customPlayerSeed;
+
         CurrentRun.maxHealth = PlayerHealth.Instance.globalMaxRedHalves;
         CurrentRun.redHealth = PlayerHealth.Instance.globalCurrentRedHalves;
         CurrentRun.blueHealth = PlayerHealth.Instance.globalCurrentBlueHalves;

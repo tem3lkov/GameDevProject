@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f8d5f45618ce641a0d67313da443a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 240
+  speed: 260
   speedMultiplier: 1
 --- !u!114 &1536515064406700318
 MonoBehaviour:
@@ -68,6 +68,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5306acea867c1b42a57f1c27e1bc6b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  <globalMaxRedHalves>k__BackingField: 6
+  <globalCurrentRedHalves>k__BackingField: 6
+  <globalCurrentBlueHalves>k__BackingField: 0
   spriteRenderer: {fileID: 7646839208693352165}
 --- !u!114 &3256209675560166803
 MonoBehaviour:
@@ -81,11 +84,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 565c8a8902f7e4541a1224aa54ac2026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
-  coins: 0
-  keys: 1
-  bombs: 3
+  <coins>k__BackingField: 0
+  <keys>k__BackingField: 1
+  <bombs>k__BackingField: 3
   bombData: {fileID: 1413780478982905650, guid: 62163f6315b25b94d9b081b16126cb47, type: 3}
-  itemPrefab: {fileID: 5188331097645824666, guid: 0831c3c1c5e2f4743b4faddfb23cdeaa, type: 3}
 --- !u!114 &1888023737797443070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,10 +104,10 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: 529ce23b6ac288d4f8cd934f395c5373, type: 3}
   projectilePrefab: {fileID: 960703002302910434, guid: f7c84337aecdde34695e7ca06a2c4d6c, type: 3}
   projectileSpeed: 8
-  projectileLifetime: 0.6
+  projectileLifetime: 1
   inheritPlayerMomentum: 1
   momentumMultiplier: 0.5
-  currentDamage: 2.5
+  currentDamage: 3.5
   currentTearsROF: 3
   firePoint: {fileID: 3785719757291828862}
 --- !u!61 &367350066853561245
