@@ -8,8 +8,8 @@ public class ItemRoomLogic : MonoBehaviour
 
     private void Awake() => roomLogic = GetComponent<Room>();
 
-    private void OnEnable() => roomLogic.OnPlayerEnteredRoom += SpawnPedestalItem;
-    private void OnDisable() => roomLogic.OnPlayerEnteredRoom -= SpawnPedestalItem;
+    private void OnEnable() => roomLogic.OnPlayerFirstEnteredRoom += SpawnPedestalItem;
+    private void OnDisable() => roomLogic.OnPlayerFirstEnteredRoom -= SpawnPedestalItem;
 
     private void SpawnPedestalItem()
     {

@@ -9,7 +9,8 @@ public class Item : MonoBehaviour
     [SerializeField] protected SpriteRenderer spriteRenderer;
     [SerializeField] protected Collider2D col;
     protected bool recentlyDropped = false;
-    protected bool isCollected = false;
+
+    public static event Action<ItemScriptable> OnItemPickedUp;
 
     private void Awake()
     {
@@ -17,6 +18,21 @@ public class Item : MonoBehaviour
             col = GetComponent<Collider2D>();
         if (spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        Collider2D[] hits = Physics2D.OverlapPointAll(transform.position);
+        foreach (var hit in hits)
+        {
+            Room room = hit.GetComponentInParent<Room>();
+
+            if (room != null)
+            {
+                transform.SetParent(room.transform);
+                break;
+            }
+        }
     }
 
     public void SetPickupDelay(float delay = 2f)
@@ -58,29 +74,22 @@ public class Item : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (recentlyDropped || !data.PickUpable()) return;
+        if (!collision.CompareTag("Player") || !collision.isTrigger || recentlyDropped) return;
 
-        if (collision.CompareTag("Player"))
+        if (isForPurchase && PlayerInventory.Instance.coins < data.itemPrice)
         {
-            if (isCollected) return;
-
-            if (isForPurchase)
-            {
-                if (PlayerInventory.Instance.GetResourceCount(ResourceType.Coin) < data.itemPrice) 
-                {
-                    Debug.Log("Not enough coins!");
-                    return;
-                }
-                PlayerInventory.Instance.AddResource(ResourceType.Coin, -data.itemPrice);
-                Debug.Log("Spent "+ data.itemPrice + " coins. " + PlayerInventory.Instance.GetResourceCount(ResourceType.Coin) + " coins in pocket.");
-            }
-
-            isCollected = true;
-            data.OnPickup(collision.gameObject);
-            Debug.Log("Item collected: " + data.itemName);
-
-            // This destroys the item AND the child text!
-            Destroy(gameObject);
+            Debug.Log("You only have " + PlayerInventory.Instance.coins + "c.");
+            return;
         }
+
+        data.OnPickup(collision.gameObject);
+
+        if (isForPurchase) PlayerInventory.Instance.AddResource(ResourceType.Coin, -data.itemPrice);
+        Debug.Log("Spent "+ (isForPurchase?data.itemPrice:0) + "c. Remaining " + 
+                  PlayerInventory.Instance.coins + "c. Item collected: " + data.itemName);            
+        OnItemPickedUp?.Invoke(data);
+
+        // This destroys the item AND the child text!
+        Destroy(gameObject);
     }
 }

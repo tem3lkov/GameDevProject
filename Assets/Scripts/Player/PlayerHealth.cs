@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : SingletonMonoBehaviour<PlayerHealth>, IDamageable {
     [Header("Global Health Memory")]
-    [SerializeField] private static int globalMaxRedHalves = 6;
-    [SerializeField] private static int globalCurrentRedHalves = 6;
-    [SerializeField] private static int globalCurrentBlueHalves = 0;
+    [field: SerializeField] public int globalMaxRedHalves { get; private set; } = 6;
+    [field: SerializeField] public int globalCurrentRedHalves { get; private set; } = 6;
+    [field: SerializeField] public int globalCurrentBlueHalves { get; private set; } = 0;
 
     [Header("Visuals")]
     public SpriteRenderer spriteRenderer;
@@ -31,6 +31,18 @@ public class PlayerHealth : SingletonMonoBehaviour<PlayerHealth>, IDamageable {
         if (invincibilityTimer > 0) invincibilityTimer -= Time.deltaTime;
     }
 
+    public void SetMaxHP(int amount)
+    {
+        globalMaxRedHalves = amount;
+    }
+    public void SetRedHP(int amount)
+    {
+        globalCurrentRedHalves = amount;
+    }
+    public void SetBlueHP(int amount)
+    {
+        globalCurrentBlueHalves = amount;
+    }
     public void TakeDamage(float amount) {
         if (invincibilityTimer > 0) return;
 

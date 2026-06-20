@@ -18,20 +18,21 @@ public class ItemPassiveScriptable : ItemScriptable
 {
     public StatType statToModify;
     public float amount;
+    [Tooltip("Saves and loads in the run data.")]
+    public bool persistent;
     public static event Action<PassiveStats> OnStatsChanged;
 
     public override void OnPickup(GameObject player)
     {
-        if (!PickUpable()) return;
-        Activate(player);
-    }
-    public override bool PickUpable()
-    {
-        if (statToModify == StatType.Health)
+        if (statToModify == StatType.Health && !PlayerHealth.Instance.IsHealable((int)amount))
         {
-            return PlayerHealth.Instance.IsHealable((int)amount);
+            return;
         }
-        return true;
+        if (persistent)
+        {
+            PlayerInventory.Instance.GetPassiveItemNames().Add(itemName);
+        }
+        Activate(player);
     }
     public override void Activate(GameObject player)
     {

@@ -30,12 +30,12 @@ public class RoomEncounter : MonoBehaviour
 
     protected virtual void OnEnable()
     {
-        roomLogic.OnPlayerEnteredRoom += StartEncounter;
+        roomLogic.OnPlayerFirstEnteredRoom += StartEncounter;
     }
 
     protected virtual void OnDisable()
     {
-        roomLogic.OnPlayerEnteredRoom -= StartEncounter;
+        roomLogic.OnPlayerFirstEnteredRoom -= StartEncounter;
     }
 
     protected virtual void StartEncounter()

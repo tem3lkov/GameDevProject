@@ -28,9 +28,9 @@ public class FinishLevel : MonoBehaviour
         }
     }
 
-    private IEnumerator DropPlayerRoutine(GameObject player)
-    {
-        Debug.Log("Player entered trapdoor! Falling in...");
+    private IEnumerator DropPlayerRoutine(GameObject player) {
+        Debug.Log("Player entered trapdoor! Hopping in...");
+        GameManager.Instance.SaveRunData();
 
         if (player.TryGetComponent(out Rigidbody2D playerRb))
         {
