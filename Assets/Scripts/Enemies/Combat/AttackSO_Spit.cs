@@ -6,9 +6,11 @@ public class AttackSO_Spit : EnemyAttackSO
 {
     [Header("Spit Settings")]
     public GameObject projectilePrefab;
-    public int projectileCount = 8;
-    public Vector3 spawnOffset = new Vector3(0, 0.8f, 0);
-    public float minSpeed = 3f, maxSpeed = 5f, spreadAngle = 30f;
+
+    public int projectileCount = 5;
+    public Vector3 spawnOffset = new Vector3(0, 0.5f, 0);
+
+    public float minSpeed = 1.5f, maxSpeed = 3f, spreadAngle = 45f;
 
     [Header("Timings")]
     public float windupTime = 0.2f;
@@ -32,7 +34,8 @@ public class AttackSO_Spit : EnemyAttackSO
             {
                 float randomAngle = RunRNG.Range(-spreadAngle, spreadAngle);
                 Vector2 finalDir = Quaternion.Euler(0, 0, randomAngle) * dirToPlayer;
-                Vector3 finalSpawnPos = mouthPos + (Vector3)(finalDir * 1.0f);
+
+                Vector3 finalSpawnPos = mouthPos;
 
                 GameObject tear = Instantiate(projectilePrefab, finalSpawnPos, Quaternion.identity);
                 if (tear.TryGetComponent(out Rigidbody2D rb))

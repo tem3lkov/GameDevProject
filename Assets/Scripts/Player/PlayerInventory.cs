@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using System;
 
 public enum ResourceType { Coin, Key, Bomb }
 public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
@@ -14,13 +15,15 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
     private List<string> passiveItems = new();
     private float cooldownTimer = 0f;
 
-    public ItemActiveScriptable GetActiveItem()
+    public static event Action<int, int, int> OnResourcesUpdated;
+    public static event Action<Sprite, bool> OnActiveItemChanged;
+    public static event Action<float> OnCooldownUpdated;
+
+    private void Start()
     {
-        return currentItem;
-    }
-    public List<string> GetPassiveItemNames()
-    {
-        return passiveItems;
+        UpdateResourceUI();
+        UpdateActiveItemUI();
+        UpdateCooldownUI();
     }
 
     public void ResetInventory()
@@ -31,6 +34,9 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
         currentItem = null;
         passiveItems.Clear();
     }
+    public ItemActiveScriptable GetActiveItem() => currentItem;
+    public List<string> GetPassiveItemNames() => passiveItems;
+
     public void SetActiveItem(string itemName)
     {
         foreach (ItemScriptable item in ItemManager.Instance.GetActiveItems())
@@ -39,13 +45,16 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
             {
                 if (!item.OnPickup(gameObject)) return;
                 Debug.Log("Loaded active item "+itemName);
+                Debug.Log("Loaded active item " + itemName);
+                UpdateActiveItemUI();
+                UpdateCooldownUI();
                 break;
             }
         }
     }
+
     public void SetPassiveItems(List<string> itemNames)
     {
-        ItemManager.Instance.GetPassiveItems();
         foreach (string name in itemNames)
         {
             foreach (ItemScriptable item in ItemManager.Instance.GetPassiveItems())
@@ -62,39 +71,40 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
 
     private void Update()
     {
-        cooldownTimer -= Time.deltaTime;
+        if (cooldownTimer > 0f)
+        {
+            cooldownTimer -= Time.deltaTime;
+            if (cooldownTimer < 0f) cooldownTimer = 0f;
+            UpdateCooldownUI();
+        }
 
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            UseItem();
-        }
-        if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            TryExplodeBomb();
-        }
+        if (Keyboard.current.spaceKey.wasPressedThisFrame) UseItem();
+        if (Keyboard.current.eKey.wasPressedThisFrame) TryExplodeBomb();
     }
+
     public void PickupActiveItem(ItemActiveScriptable newItem)
     {
-        if (currentItem != null)
-        {
-            DropCurrentItem();
-        }
+        if (currentItem != null) DropCurrentItem();
 
         currentItem = newItem;
         cooldownTimer = 0f;
+        UpdateActiveItemUI();
+        UpdateCooldownUI();
     }
+
     private void UseItem()
     {
-        if (currentItem == null) return;
-        if (cooldownTimer > 0f) return;
+        if (currentItem == null || cooldownTimer > 0f) return;
 
         currentItem.Activate(gameObject);
-
         cooldownTimer = currentItem.cooldownTime;
+
+        UpdateCooldownUI();
 
         if (currentItem.cooldownTime == 0f)
         {
             currentItem = null;
+            UpdateActiveItemUI();
         }
     }
 
@@ -103,50 +113,61 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
         if (currentItem == null) return;
 
         Item dropped = Instantiate(ItemManager.Instance.GetItemPrefab(), transform.position, Quaternion.identity).GetComponent<Item>();
-
-        bool forPurchase = false;
         dropped.SetPickupDelay(2f);
-        dropped.Initialize(currentItem, forPurchase);
+        dropped.Initialize(currentItem, false);
+
         currentItem = null;
+        UpdateActiveItemUI();
+        UpdateCooldownUI();
     }
 
-    public void SetBombs(int amount)
-    {
-        bombs = amount;
-    }
-    public void SetKeys(int amount)
-    {
-        keys = amount;
-    }
-    public void SetCoins(int amount)
-    {
-        coins = amount;
-    }
+    public void SetBombs(int amount) { bombs = amount; UpdateResourceUI(); }
+    public void SetKeys(int amount) { keys = amount; UpdateResourceUI(); }
+    public void SetCoins(int amount) { coins = amount; UpdateResourceUI(); }
+
     public void AddResource(ResourceType type, int amount)
     {
         switch (type)
         {
-            case ResourceType.Coin:
-                coins = Mathf.Min(coins + amount, maxResources);
-                break;
-            case ResourceType.Key:
-                keys = Mathf.Min(keys + amount, maxResources);
-                break;
-            case ResourceType.Bomb:
-                bombs = Mathf.Min(bombs + amount, maxResources);
-                break;
+            case ResourceType.Coin: coins = Mathf.Min(coins + amount, maxResources); break;
+            case ResourceType.Key: keys = Mathf.Min(keys + amount, maxResources); break;
+            case ResourceType.Bomb: bombs = Mathf.Min(bombs + amount, maxResources); break;
         }
+        UpdateResourceUI();
     }
 
     private void TryExplodeBomb()
     {
-        if (bombs <= 0)
-            return;
-            
+        if (bombs <= 0) return;
+
         AddResource(ResourceType.Bomb, -1);
-
-
         Explosion bombInstance = Instantiate(bombData, transform.position, Quaternion.identity);
         bombInstance.TriggerExplode();
+    }
+
+    private void UpdateResourceUI()
+    {
+        OnResourcesUpdated?.Invoke(coins, keys, bombs);
+    }
+
+    private void UpdateActiveItemUI()
+    {
+        Sprite itemIcon = currentItem != null ? currentItem.itemSprite : null;
+
+        bool hasCooldown = currentItem != null && currentItem.cooldownTime > 0f;
+
+        OnActiveItemChanged?.Invoke(itemIcon, hasCooldown);
+    }
+
+    private void UpdateCooldownUI()
+    {
+        if (currentItem == null || currentItem.cooldownTime == 0f)
+        {
+            OnCooldownUpdated?.Invoke(0f);
+            return;
+        }
+
+        float fillPct = 1f - (cooldownTimer / currentItem.cooldownTime);
+        OnCooldownUpdated?.Invoke(fillPct);
     }
 }
