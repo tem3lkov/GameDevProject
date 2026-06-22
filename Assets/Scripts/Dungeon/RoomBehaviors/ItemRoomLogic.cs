@@ -19,7 +19,7 @@ public class ItemRoomLogic : MonoBehaviour
 
         bool forPurchase = false;
 
-        ItemManager.Instance.SpawnRandomNonResourceItem(spawnPosition, forPurchase);
+        ItemManager.Instance.SpawnRandomActiveItem(spawnPosition, forPurchase);
 
         Debug.Log("Treasure Room item spawned!");
     }
