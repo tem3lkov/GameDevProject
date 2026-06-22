@@ -126,19 +126,19 @@ public class ItemManager : SingletonMonoBehaviour<ItemManager>
         return newCoin;
     }
 
-    public void SpawnRoomClearReward(Vector2 roomCenter, int resourceChance, int normalChestChance, int lockedChestChance)
+    public void SpawnRoomClearReward(Vector2 roomCenter, int resourceWeight, int normalChestWeight, int lockedChestWeight)
     {
         Vector2 dropPosition = FindSafeDropPosition(roomCenter);
 
-        int roll = RunRNG.Range(0, 100);
+        int roll = RunRNG.Range(0, resourceWeight + normalChestWeight + lockedChestWeight);
 
-        if (roll < resourceChance)
+        if (roll < resourceWeight)
         {
             SpawnRandomResource(dropPosition, false);
-        } else if (roll < resourceChance + normalChestChance)
+        } else if (roll < resourceWeight + normalChestWeight)
         {
             if (normalChestPrefab != null) Instantiate(normalChestPrefab, dropPosition, Quaternion.identity);
-        } else if (roll < resourceChance + normalChestChance + lockedChestChance)
+        } else if (roll < resourceWeight + normalChestWeight + lockedChestWeight)
         {
             if (goldenChestPrefab != null) Instantiate(goldenChestPrefab, dropPosition, Quaternion.identity);
         }

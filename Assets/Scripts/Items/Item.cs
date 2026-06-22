@@ -82,7 +82,7 @@ public class Item : MonoBehaviour
             return;
         }
 
-        data.OnPickup(collision.gameObject);
+        if (!data.OnPickup(collision.gameObject)) return;
 
         if (isForPurchase) PlayerInventory.Instance.AddResource(ResourceType.Coin, -data.itemPrice);
         Debug.Log("Spent "+ (isForPurchase?data.itemPrice:0) + "c. Remaining " + 

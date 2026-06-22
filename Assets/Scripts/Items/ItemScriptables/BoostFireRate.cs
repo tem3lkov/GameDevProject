@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Scriptable Objects/Item/Active Items/FireRateBoost")]
-public class FireRateBoostItem : ItemActiveScriptable
+[CreateAssetMenu(menuName = "Scriptable Objects/Item/Active Items/BoostFireRate")]
+public class BoostFireRate : ItemActiveScriptable
 {
     public float multiplier = 2f;
     public float duration = 10f;

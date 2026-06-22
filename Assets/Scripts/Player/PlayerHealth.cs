@@ -31,17 +31,26 @@ public class PlayerHealth : SingletonMonoBehaviour<PlayerHealth>, IDamageable {
         if (invincibilityTimer > 0) invincibilityTimer -= Time.deltaTime;
     }
 
+    public void ResetHealth() {
+        globalMaxRedHalves = 6;
+        globalCurrentRedHalves = 6;
+        globalCurrentBlueHalves = 0;
+        UpdateHealthUI();
+    }
     public void SetMaxHP(int amount)
     {
         globalMaxRedHalves = amount;
+        UpdateHealthUI();
     }
     public void SetRedHP(int amount)
     {
         globalCurrentRedHalves = amount;
+        UpdateHealthUI();
     }
     public void SetBlueHP(int amount)
     {
         globalCurrentBlueHalves = amount;
+        UpdateHealthUI();
     }
     public void TakeDamage(float amount) {
         if (invincibilityTimer > 0) return;
@@ -63,6 +72,9 @@ public class PlayerHealth : SingletonMonoBehaviour<PlayerHealth>, IDamageable {
         UpdateHealthUI();
 
         if (globalCurrentRedHalves <= 0) Die();
+    }
+    public void IncreaseInvincibility(float duration) {
+        invincibilityDuration += duration;
     }
 
     public void Heal(PassiveStats statChanges) {

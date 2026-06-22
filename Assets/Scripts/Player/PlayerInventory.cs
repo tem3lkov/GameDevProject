@@ -22,13 +22,22 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
     {
         return passiveItems;
     }
+
+    public void ResetInventory()
+    {
+        coins = 0;
+        keys = 1;
+        bombs = 3;
+        currentItem = null;
+        passiveItems.Clear();
+    }
     public void SetActiveItem(string itemName)
     {
         foreach (ItemScriptable item in ItemManager.Instance.GetActiveItems())
         {
             if (item.itemName == itemName)
             {
-                item.OnPickup(gameObject);
+                if (!item.OnPickup(gameObject)) return;
                 Debug.Log("Loaded active item "+itemName);
                 break;
             }
@@ -43,7 +52,7 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
             {
                 if (item.itemName == name)
                 {
-                    item.OnPickup(gameObject);
+                    if (!item.OnPickup(gameObject)) return;
                     Debug.Log("Loaded passive item "+name);
                     break;
                 }

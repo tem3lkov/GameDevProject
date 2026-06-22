@@ -6,9 +6,10 @@ public class ResourceScriptable : ItemScriptable
     [SerializeField] public ResourceType resourceType;
     [SerializeField] public int amount;
 
-    public override void OnPickup(GameObject player)
+    public override bool OnPickup(GameObject player)
     {
         PlayerInventory.Instance.AddResource(resourceType, amount);
+        return true;
     }
     public override void Activate(GameObject player) {}
 }

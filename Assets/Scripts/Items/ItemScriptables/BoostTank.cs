@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Scriptable Objects/Item/Active Items/TankBoost")]
-public class TankBoost : ItemActiveScriptable
+[CreateAssetMenu(menuName = "Scriptable Objects/Item/Active Items/BoostTank")]
+public class BoostTank : ItemActiveScriptable
 {
     public float damageMultiplier = 3f;
     public float speedMultiplier = 0.5f;

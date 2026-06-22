@@ -17,6 +17,14 @@ public class FinishLevel : MonoBehaviour
     private void Awake()
     {
         GetComponent<BoxCollider2D>().isTrigger = true;
+        GetComponent<BoxCollider2D>().enabled = false;
+        StartCoroutine(EnableCollider());
+    }
+
+    private IEnumerator EnableCollider()
+    {
+        yield return new WaitForSeconds(1f);
+        GetComponent<BoxCollider2D>().enabled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

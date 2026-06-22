@@ -18,7 +18,10 @@ public class PlayerCombat : MonoBehaviour {
     public float momentumMultiplier = 0.5f;
 
     [SerializeField] private float currentDamage = 2.5f;
+    [SerializeField] private float damageMultiplier = 1f;
+
     [SerializeField] private float currentTearsROF = 3f;
+    [SerializeField] private float firerateMultiplier = 1f;
 
     private float nextFireTime;
     private Rigidbody2D rb;
@@ -58,10 +61,10 @@ public class PlayerCombat : MonoBehaviour {
     }
     private IEnumerator FireRateBoostCoroutine(float multiplier, float duration)
     {
-        currentTearsROF *= multiplier;
+        firerateMultiplier *= multiplier;
         yield return new WaitForSeconds(duration);
 
-        currentTearsROF /= multiplier;
+        firerateMultiplier /= multiplier;
     }
 
     public void ApplyDamageBoost(float multiplier, float duration)
@@ -71,10 +74,10 @@ public class PlayerCombat : MonoBehaviour {
 
     private IEnumerator DamageBoostCoroutine(float multiplier, float duration)
     {
-        currentDamage *= multiplier;
+        damageMultiplier *= multiplier;
         yield return new WaitForSeconds(duration);
 
-        currentDamage /= multiplier;
+        damageMultiplier /= multiplier;
     }
 
     private void Update() {
@@ -94,7 +97,7 @@ public class PlayerCombat : MonoBehaviour {
         if (shootDirection != Vector2.zero) {
             Shoot(shootDirection);
 
-            float cooldown = 1f / currentTearsROF;
+            float cooldown = 1f / (currentTearsROF * firerateMultiplier);
             nextFireTime = Time.time + cooldown;
         }
     }
@@ -109,7 +112,7 @@ public class PlayerCombat : MonoBehaviour {
         GameObject tearObj = Instantiate(projectilePrefab, firePoint.position + new Vector3(direction.x, direction.y, 0).normalized * 0.25f, Quaternion.identity);
 
         if (tearObj.TryGetComponent<Projectile>(out Projectile proj)) {
-            proj.damage = currentDamage;
+            proj.damage = currentDamage * damageMultiplier;
             proj.lifetime = projectileLifetime;
         }
 

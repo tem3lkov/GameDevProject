@@ -9,12 +9,12 @@ public class RoomEncounter : MonoBehaviour
     [SerializeField] private EnemyController[] enemyPrefabsToSpawn;
     [SerializeField] private List<Transform> spawnPoints;
 
-    [Header("Reward Probabilities (Should sum to 100)")]
-    [Tooltip("Percentage chance to drop a resource (Coin, Bomb, Key)")]
+    [Header("Reward Weights")]
+    [Tooltip("Weight for a resource drop (Coin, Bomb, Key)")]
     [SerializeField][Range(0, 100)] private int resourceDropChance = 50;
-    [Tooltip("Percentage chance to drop a Normal Chest")]
+    [Tooltip("Weight for a Normal Chest drop")]
     [SerializeField][Range(0, 100)] private int normalChestChance = 40;
-    [Tooltip("Percentage chance to drop a Locked Chest")]
+    [Tooltip("Weight for a Locked Chest drop")]
     [SerializeField][Range(0, 100)] private int lockedChestChance = 10;
 
     protected Room roomLogic;
