@@ -62,7 +62,6 @@ public class RoomManager : SingletonMonoBehaviour<RoomManager>
             int randomVariantIndex = RunRNG.Range(0, template.roomPrefabVariants.Length);
             GameObject selectedPrefabVariant = template.roomPrefabVariants[randomVariantIndex];
 
-            // Calculate position
             var currentPosition = currentCell.transform.position;
             var convertedPosition = new Vector2(currentPosition.x * offsetX, currentPosition.y * offsetY);
 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7819f9c60c0af1b41a3b31b76d16c24d
+guid: 0cd50724d7b3fe64fa142e0d7dd573e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3565088790049698640
-    second: ContinueFullV_0
+      213: -44503259646302494
+    second: SelectArrow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ContinueFullV_0
+      name: SelectArrow_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 201
-        height: 55
+        width: 24
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0bc4c5452a2468ec0800000000000000
-      internalID: -3565088790049698640
+      spriteID: 2e66f696584e16ff0800000000000000
+      internalID: -44503259646302494
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ContinueFullV_0: -3565088790049698640
+      SelectArrow_0: -44503259646302494
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

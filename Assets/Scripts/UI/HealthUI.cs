@@ -24,7 +24,7 @@ public class HealthUI : MonoBehaviour {
 
     private void RedrawHearts(int currentRedHalves, int maxRedHalves, int currentBlueHalves) {
         int maxRedContainers = maxRedHalves / 2;
-        int totalBlueContainers = Mathf.CeilToInt(currentBlueHalves / 2f); // Round up for half blues
+        int totalBlueContainers = Mathf.CeilToInt(currentBlueHalves / 2f);
         int totalSlotsNeeded = maxRedContainers + totalBlueContainers;
 
         while (heartImages.Count < totalSlotsNeeded) {

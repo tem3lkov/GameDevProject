@@ -89,7 +89,6 @@ public class Item : MonoBehaviour
                   PlayerInventory.Instance.coins + "c. Item collected: " + data.itemName);            
         OnItemPickedUp?.Invoke(data);
 
-        // This destroys the item AND the child text!
         Destroy(gameObject);
     }
 }

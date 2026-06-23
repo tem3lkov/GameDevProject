@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerHealth : SingletonMonoBehaviour<PlayerHealth>, IDamageable {
     [Header("Global Health Memory")]
