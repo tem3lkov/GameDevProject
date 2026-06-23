@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 
+public enum ShootPattern { Standard, Triple, Plus }
+
 public class PlayerCombat : MonoBehaviour {
     [Header("Audio")]
     public AudioSource audioSource;
@@ -12,6 +14,8 @@ public class PlayerCombat : MonoBehaviour {
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float projectileSpeed = 8f;
     [SerializeField] private float projectileLifetime = 1f;
+    [SerializeField] private float projectileLifetimeMultiplier = 1f;
+    [SerializeField] private ShootPattern projectilePattern = ShootPattern.Standard;
 
     [Header("Isaac Mechanics")]
     public bool inheritPlayerMomentum = true;
@@ -52,7 +56,7 @@ public class PlayerCombat : MonoBehaviour {
         currentTearsROF = Mathf.Max(0.1f, currentTearsROF + addROF);
     }
     private void UpdateProjectileLifetime(float addLifetime) {
-        projectileLifetime = Mathf.Max(0.1f, projectileLifetime + addLifetime); //??? behaviour when too low
+        projectileLifetime = Mathf.Max(0.1f, projectileLifetime + addLifetime);
     }
         
     public void ApplyFireRateBoost(float multiplier, float duration)
@@ -79,6 +83,28 @@ public class PlayerCombat : MonoBehaviour {
 
         damageMultiplier /= multiplier;
     }
+        
+    public void SetProjectileLifetimeBoost(float multiplier)
+    {
+        projectileLifetimeMultiplier = multiplier;
+    }
+
+    public void ChangeShootPattern(ShootPattern pattern) {
+        projectilePattern = pattern;
+    }
+    public void ApplyShootPattern(ShootPattern pattern, float duration)
+    {
+        StartCoroutine(ShootPatternCoroutine(pattern, duration));
+    }
+    private IEnumerator ShootPatternCoroutine(ShootPattern newPattern, float duration)
+    {
+        projectilePattern = newPattern;
+
+        yield return new WaitForSeconds(duration);
+
+        projectilePattern = ShootPattern.Standard;
+    }
+
 
     private void Update() {
         HandleShooting();
@@ -95,7 +121,32 @@ public class PlayerCombat : MonoBehaviour {
         else if (Keyboard.current.rightArrowKey.isPressed) shootDirection = Vector2.right;
 
         if (shootDirection != Vector2.zero) {
-            Shoot(shootDirection);
+            switch (projectilePattern) {
+                case ShootPattern.Standard:
+                    Shoot(shootDirection);
+                    break;
+                case ShootPattern.Triple:
+                    Shoot(shootDirection);
+                    if (shootDirection == Vector2.up || shootDirection == Vector2.down) {
+                        Vector2 shootDirection2 = (3*shootDirection + Vector2.left).normalized;
+                        Vector2 shootDirection3 = (3*shootDirection + Vector2.right).normalized;
+                        Shoot(shootDirection2);
+                        Shoot(shootDirection3);
+                    }
+                    else {
+                        Vector2 shootDirection2 = (3*shootDirection + Vector2.up).normalized;
+                        Vector2 shootDirection3 = (3*shootDirection + Vector2.down).normalized;
+                        Shoot(shootDirection2);
+                        Shoot(shootDirection3);
+                    }
+                    break;
+                case ShootPattern.Plus:
+                    Shoot(Vector2.up);
+                    Shoot(Vector2.down);
+                    Shoot(Vector2.left);
+                    Shoot(Vector2.right);
+                    break;
+            }
 
             float cooldown = 1f / (currentTearsROF * firerateMultiplier);
             nextFireTime = Time.time + cooldown;
@@ -113,7 +164,7 @@ public class PlayerCombat : MonoBehaviour {
 
         if (tearObj.TryGetComponent<Projectile>(out Projectile proj)) {
             proj.damage = currentDamage * damageMultiplier;
-            proj.lifetime = projectileLifetime;
+            proj.lifetime = projectileLifetime * projectileLifetimeMultiplier;
         }
 
         if (tearObj.TryGetComponent<Rigidbody2D>(out Rigidbody2D projRb)) {

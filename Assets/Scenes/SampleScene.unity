@@ -710,6 +710,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ecbbf1d92c5b71f4a81bc627ce4373e7, type: 2}
   - {fileID: 11400000, guid: a110fc823c943e14aabaebd992442477, type: 2}
   - {fileID: 11400000, guid: b645d8162bbbb334bad99c86f38c34b3, type: 2}
+  - {fileID: 11400000, guid: 1bb3ea1249867f6498d1f3b48d01d8b4, type: 2}
+  - {fileID: 11400000, guid: b0abebb3246e89148bc64c58ca17ee4d, type: 2}
   coins:
   - {fileID: 11400000, guid: ef9f6fa5009b5f041bdd0b55f27567dc, type: 2}
   - {fileID: 11400000, guid: b9b7f237e36812343b0f505d29c6df38, type: 2}
@@ -1774,6 +1776,7 @@ MonoBehaviour:
   currentLevel: 1
   maxLevels: 3
   customPlayerSeed: 0
+  continueRun: 0
 --- !u!1 &1246043803
 GameObject:
   m_ObjectHideFlags: 0

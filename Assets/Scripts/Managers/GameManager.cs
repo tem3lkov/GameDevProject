@@ -33,6 +33,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     [Header("Run Information")]
     [Tooltip("Leave at 0 to generate a random seed. Enter a number to play a specific seed!")]
     public int customPlayerSeed = 0;
+    public bool continueRun = false;
 
     private RunData CurrentRun = new();
 
@@ -46,8 +47,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         base.Awake();
         transform.SetParent(null);
         DontDestroyOnLoad(gameObject);
-
-        int floorSeed = ResetSeed(customPlayerSeed);
+        
+        ResetSeed(customPlayerSeed);
     }
 
     private void Start()
@@ -66,30 +67,27 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (currentState != GameState.gameStarted)//TODO change this to make sense
+        LoadRunData();
+        if (!continueRun && currentState == GameState.gameStarted)
         {
-            LoadRunData();
-
-            int floorSeed = CurrentRun.runSeed + currentLevel;
-            RunRNG.InitializeSeed(floorSeed);
-
-            Debug.Log($"[Seeded Run] Initialized Level {currentLevel} with Floor Seed: {floorSeed}");
+            continueRun = true;
+            NewGame(customPlayerSeed);
         }
     }
     
     private void Update()
     {
-        if (Keyboard.current.jKey.wasPressedThisFrame)
+        if (Keyboard.current.uKey.wasPressedThisFrame)
         {
             Debug.Log("New Game (Reset params) (Save params and serialize)");
-            NewGame();
+            NewGame();// for retrying SAME seed do (customPlayerSeed)
         }
-        if (Keyboard.current.kKey.wasPressedThisFrame)
+        if (Keyboard.current.iKey.wasPressedThisFrame)
         {
             Debug.Log("Continue Game (Load - deserialize)");
             Continue();
         }
-        if (Keyboard.current.lKey.wasPressedThisFrame)
+        if (Keyboard.current.oKey.wasPressedThisFrame)
         {
             Debug.Log("Advance Level (Save params and serialize) (Load - deserialize)");
             AdvanceLevel();
@@ -125,7 +123,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
                 break;
 
             case GameState.gamePaused:
+                Time.timeScale = 0f;
+                break;
+
             case GameState.gameLost:
+                SaveManager.Instance.DeleteSave();
                 Time.timeScale = 0f;
                 break;
 
@@ -135,6 +137,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
             case GameState.gameWon:
                 Debug.Log("🏆 CONGRATULATIONS! YOU ESCAPED THE DUNGEON! 🏆");
+                SaveManager.Instance.DeleteSave();
                 Time.timeScale = 0f;
                 break;
 
@@ -152,6 +155,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     }
     public void Continue()
     {
+        if (!SaveManager.Instance.SaveExists())
+        {
+            Debug.Log("No save file found.");
+            return;
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void AdvanceLevel()
@@ -168,10 +176,9 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         }
     }
 
-    public void ResetGameVariables(int specificSeed = 0)
+    private void ResetGameVariables(int specificSeed = 0)
     {
         GameManager.Instance.currentLevel = 1;
-        GameManager.Instance.customPlayerSeed = 0;
         ResetSeed(specificSeed);
 
         PlayerHealth.Instance.ResetHealth();
@@ -182,20 +189,21 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         if (specificSeed != 0)
         {
-            customPlayerSeed = specificSeed;
+            GameManager.Instance.customPlayerSeed = specificSeed;
         } else
         {
-            customPlayerSeed = UnityEngine.Random.Range(int.MinValue, int.MaxValue);
+            GameManager.Instance.customPlayerSeed = UnityEngine.Random.Range(int.MinValue, int.MaxValue);
         }
 
-        int floorSeed = customPlayerSeed + currentLevel;
+        int floorSeed = GameManager.Instance.customPlayerSeed + GameManager.Instance.currentLevel;
 
-        RunRNG.InitializeSeed(floorSeed);
+        UnityEngine.Random.InitState(floorSeed);
+        RunRNG.InitializeSeed((uint)Mathf.Abs(floorSeed));
 
         return floorSeed;
     }
 
-    public void SaveRunData()
+    private void SaveRunData() // Object parameters -> CurrentRun data -> File serialization
     {
         CurrentRun.currentLevel = GameManager.Instance.currentLevel;
         CurrentRun.runSeed = GameManager.Instance.customPlayerSeed;
@@ -216,12 +224,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         SaveManager.Instance.Save(CurrentRun); // Serialize
     }
 
-    public void LoadRunData()
-    {   
+    private void LoadRunData() // File deserialization -> CurrentRun data -> Object parameters
+    {
+        if (!SaveManager.Instance.SaveExists()) return;
         CurrentRun = SaveManager.Instance.Load(); // Deserialize
 
         GameManager.Instance.currentLevel = CurrentRun.currentLevel;
-        GameManager.Instance.customPlayerSeed = CurrentRun.runSeed;
+        ResetSeed(CurrentRun.runSeed);
 
         PlayerHealth.Instance.SetMaxHP(CurrentRun.maxHealth);
         PlayerHealth.Instance.SetRedHP(CurrentRun.redHealth);

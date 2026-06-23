@@ -115,6 +115,8 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
         Item dropped = Instantiate(ItemManager.Instance.GetItemPrefab(), transform.position, Quaternion.identity).GetComponent<Item>();
         dropped.SetPickupDelay(2f);
         dropped.Initialize(currentItem, false);
+        ItemActiveScriptable activeItem = (ItemActiveScriptable)dropped.GetInventoryItemData();
+        activeItem.OnDropDown(gameObject);
 
         currentItem = null;
         UpdateActiveItemUI();

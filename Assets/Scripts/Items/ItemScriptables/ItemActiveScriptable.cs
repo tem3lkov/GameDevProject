@@ -9,4 +9,5 @@ public abstract class ItemActiveScriptable : ItemScriptable
         PlayerInventory.Instance.PickupActiveItem(this);
         return true;
     }
+    public virtual void OnDropDown(GameObject player) {}
 }
