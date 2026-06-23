@@ -134,6 +134,12 @@ public class AStarGrid : MonoBehaviour
 
     private void UpdateNodesInArea(Vector3 centerWorldPos, float radius)
     {
+        Vector3 localPos = aStarTilemap.transform.InverseTransformPoint(centerWorldPos);
+        if (!aStarTilemap.localBounds.Contains(localPos))
+        {
+            return;
+        }
+
         Vector3Int centerCell = aStarTilemap.WorldToCell(centerWorldPos);
         int cellRadius = Mathf.CeilToInt(radius / cellSize.x);
 

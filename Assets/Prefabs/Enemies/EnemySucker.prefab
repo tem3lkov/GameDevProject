@@ -326,6 +326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b6ee8f6928958469ab754f0114b35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplitOnDeath
-  smallerEnemyPrefab: {fileID: 3594578055589213504, guid: b89c6917d95cac2488d65b6dc8c899c5, type: 3}
+  smallerEnemyPrefab: {fileID: 162383974910697794, guid: b89c6917d95cac2488d65b6dc8c899c5, type: 3}
   spawnCount: 3
-  spawnRadius: 2
+  splitForce: 4

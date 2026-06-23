@@ -1449,7 +1449,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1d82fc2e0c016a048b501cd4e3445973, type: 2}
   roomTemplates:
   - {fileID: 11400000, guid: 81693ab7139a98b4691a0111b96d5108, type: 2}
-  - {fileID: 11400000, guid: a644fb9c8fbbb094495b782f1f51367d, type: 2}
+  - {fileID: 11400000, guid: 68bb907dc0dd9d74db313844904e06a7, type: 2}
   - {fileID: 11400000, guid: d2b56e69c7556e04a969a0228efa01aa, type: 2}
   - {fileID: 11400000, guid: d1918d8164375d34586c70e669fd7757, type: 2}
   - {fileID: 11400000, guid: 0dd23abed93c6f14095e8fe7d5d16ac4, type: 2}

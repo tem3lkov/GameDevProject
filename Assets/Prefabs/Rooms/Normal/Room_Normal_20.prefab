@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 9078164083274327305}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.31, y: -1.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4980,12 +4980,9 @@ PrefabInstance:
     - {fileID: 1688964903153278921, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
     - {fileID: 4968326795206135438, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
     - {fileID: 6767362216389235511, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
-    - {fileID: 3595897454455356190, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
-    - {fileID: 5748031590496033061, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
-    - {fileID: 4463365605167418388, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7553926296005669037, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
-      insertIndex: -1
+      insertIndex: 1
       addedObject: {fileID: 7267675407680191868}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7035528657868956926, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
@@ -5013,9 +5010,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomEncounter
   enemyPrefabsToSpawn:
-  - {fileID: 5020771655392733193, guid: 4583adb7951c8b443b5b451adaf1d574, type: 3}
+  - {fileID: 4670140684548198471, guid: b1b4195d40ff40341909bce2cee0ede9, type: 3}
+  - {fileID: 4670140684548198471, guid: dc9c8d04847138f4c8bd0acb7fe3a152, type: 3}
   spawnPoints:
-  - {fileID: 7267675407680191868}
+  - {fileID: 4486753316929933370}
+  - {fileID: 7254578421642145181}
+  - {fileID: 7086304096109572356}
+  spawnCenter: {fileID: 7267675407680191868}
+  normalChestPrefab: {fileID: 6292958629527430351, guid: b1056f784146af843a770299e8db7a6f, type: 3}
+  goldenChestPrefab: {fileID: 6292958629527430351, guid: 8acd2a4ada8d9274c85ecc5760db58a3, type: 3}
   resourceDropChance: 50
   normalChestChance: 40
   lockedChestChance: 10
@@ -5040,8 +5043,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7553926296005669037, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
   m_PrefabInstance: {fileID: 5870077965099795954}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &4486753316929933370 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8012627835761268168, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
+  m_PrefabInstance: {fileID: 5870077965099795954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7086304096109572356 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3684270814902793462, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
+  m_PrefabInstance: {fileID: 5870077965099795954}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1839735485 &7148021435263500688 stripped
 Tilemap:
   m_CorrespondingSourceObject: {fileID: 3622137997935068258, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
+  m_PrefabInstance: {fileID: 5870077965099795954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7254578421642145181 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3880911479304530031, guid: 0ac02cb61c391db4ea73c0a9808fc8c8, type: 3}
   m_PrefabInstance: {fileID: 5870077965099795954}
   m_PrefabAsset: {fileID: 0}

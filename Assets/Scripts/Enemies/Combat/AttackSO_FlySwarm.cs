@@ -10,6 +10,7 @@ public class AttackSO_FlySwarm : EnemyAttackSO
     public float circleSize = 2f;
     public string flyingLayer = "FlyingEnemy";
 
+    // In AttackSO_FlySwarm.cs
     public override IEnumerator ExecuteAttack(EnemyController enemy)
     {
         int fLayerIndex = LayerMask.NameToLayer(flyingLayer);
@@ -17,7 +18,7 @@ public class AttackSO_FlySwarm : EnemyAttackSO
 
         float randomOffset = RunRNG.Range(0f, 100f);
 
-        while (true)
+        while (enemy.IsAttacking && enemy.GetCurrentHealth() > 0)
         {
             if (enemy.Target != null)
             {
@@ -35,5 +36,7 @@ public class AttackSO_FlySwarm : EnemyAttackSO
 
             yield return null;
         }
+
+        enemy.Rb.linearVelocity = Vector2.zero;
     }
 }

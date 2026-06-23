@@ -14,9 +14,6 @@ public class AttackSO_FattyChase : EnemyAttackSO
 
     public override IEnumerator ExecuteAttack(EnemyController enemy)
     {
-        AStarGrid grid = enemy.GetComponentInParent<RoomEncounter>()?.GetComponentInChildren<AStarGrid>();
-        Vector2 feetOffset = enemy.GetComponent<CapsuleCollider2D>()?.offset * (Vector2)enemy.transform.localScale ?? Vector2.zero;
-
         float timer = 0f;
         float repathTimer = 0f;
         List<Vector2> currentPath = null;
@@ -27,13 +24,15 @@ public class AttackSO_FattyChase : EnemyAttackSO
             if (enemy.Target != null)
             {
                 repathTimer -= Time.deltaTime;
-                Vector2 feetPos = (Vector2)enemy.transform.position + feetOffset;
+
+                // Use the cached values directly!
+                Vector2 feetPos = (Vector2)enemy.transform.position + enemy.FeetOffset;
 
                 if (repathTimer <= 0f)
                 {
-                    if (grid != null)
+                    if (enemy.RoomGrid != null)
                     {
-                        currentPath = AStarPathfinder.FindPath(grid, feetPos, (Vector2)enemy.Target.position);
+                        currentPath = AStarPathfinder.FindPath(enemy.RoomGrid, feetPos, (Vector2)enemy.Target.position);
                         currentWaypointIndex = 0;
                     }
                     repathTimer = repathRate;

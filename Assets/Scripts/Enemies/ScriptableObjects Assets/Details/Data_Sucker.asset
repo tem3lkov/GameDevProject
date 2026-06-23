@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDetailsSO
   enemyName: Sucker
   isBoss: 0
-  maxHealth: 10
+  maxHealth: 10.5
   damageToPlayer: 1
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512
-  defaultMovement: 1
+  initialAttackDelay: 0.3
   phases:
   - {fileID: 11400000, guid: 6515422632cdf6e4f8c0f825c774effc, type: 2}

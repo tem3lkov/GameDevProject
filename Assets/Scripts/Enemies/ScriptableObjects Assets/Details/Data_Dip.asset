@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDetailsSO
   enemyName: Dip
   isBoss: 0
-  maxHealth: 4
+  maxHealth: 3.5
   damageToPlayer: 1
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512
+  initialAttackDelay: 0.3
   phases:
   - {fileID: 11400000, guid: 6c8795283cf7ebf40b5f67f05e43c462, type: 2}

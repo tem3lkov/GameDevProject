@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDetailsSO
   enemyName: Enemy
   isBoss: 0
-  maxHealth: 20
+  maxHealth: 17.5
   damageToPlayer: 1
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512
+  initialAttackDelay: 0.3
   phases:
   - {fileID: 11400000, guid: 6515422632cdf6e4f8c0f825c774effc, type: 2}
