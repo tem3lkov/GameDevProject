@@ -36,6 +36,7 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
     }
     public ItemActiveScriptable GetActiveItem() => currentItem;
     public List<string> GetPassiveItemNames() => passiveItems;
+    public float GetCooldownTimer() => cooldownTimer;
 
     public void SetActiveItem(string itemName)
     {
@@ -44,7 +45,9 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
             if (item.itemName == itemName)
             {
                 if (!item.OnPickup(gameObject)) return;
-                Debug.Log("Loaded active item "+itemName);
+
+                cooldownTimer = 0; 
+                
                 Debug.Log("Loaded active item " + itemName);
                 UpdateActiveItemUI();
                 UpdateCooldownUI();
@@ -163,9 +166,14 @@ public class PlayerInventory : SingletonMonoBehaviour<PlayerInventory>
 
     private void UpdateCooldownUI()
     {
-        if (currentItem == null || currentItem.cooldownTime == 0f)
+        if (currentItem == null)
         {
             OnCooldownUpdated?.Invoke(0f);
+            return;
+        }
+        if (currentItem.cooldownTime == 0f)
+        {
+            OnCooldownUpdated?.Invoke(1f);
             return;
         }
 

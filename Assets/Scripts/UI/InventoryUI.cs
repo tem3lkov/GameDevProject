@@ -30,8 +30,6 @@ public class InventoryUI : MonoBehaviour
         {
             UpdateUIVisibility(GameManager.Instance.currentState);
         }
-
-        if (cooldownBarContainer != null) cooldownBarContainer.SetActive(false);
     }
 
     private void OnEnable()

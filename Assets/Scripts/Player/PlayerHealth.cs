@@ -74,7 +74,7 @@ public class PlayerHealth : SingletonMonoBehaviour<PlayerHealth>, IDamageable {
         if (globalCurrentRedHalves <= 0) Die();
     }
     public void IncreaseInvincibility(float duration) {
-        invincibilityDuration += duration;
+        invincibilityTimer += duration;
     }
 
     public void Heal(PassiveStats statChanges) {
