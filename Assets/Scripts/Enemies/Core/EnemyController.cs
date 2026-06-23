@@ -23,6 +23,9 @@ public class EnemyController : MonoBehaviour, IDamageable
     private int currentPhaseIndex = 0;
     private float nextAttackTime;
 
+    public AStarGrid RoomGrid { get; private set; }
+    public Vector2 FeetOffset { get; private set; }
+
     private void Awake()
     {
         Rb = GetComponent<Rigidbody2D>();
@@ -30,6 +33,12 @@ public class EnemyController : MonoBehaviour, IDamageable
         SpriteRend = GetComponentInChildren<SpriteRenderer>();
 
         currentHealth = details.maxHealth;
+
+        RoomGrid = GetComponentInParent<RoomEncounter>()?.GetComponentInChildren<AStarGrid>();
+        if (TryGetComponent<CapsuleCollider2D>(out CapsuleCollider2D col))
+        {
+            FeetOffset = col.offset * (Vector2)transform.localScale;
+        }
     }
 
     private void Start()
@@ -130,10 +139,12 @@ public class EnemyController : MonoBehaviour, IDamageable
         if (details.phases == null || currentPhaseIndex >= details.phases.Length - 1) return;
 
         float healthPercent = currentHealth / details.maxHealth;
-        if (healthPercent <= details.phases[currentPhaseIndex + 1].healthThreshold)
+
+        while (currentPhaseIndex < details.phases.Length - 1 &&
+               healthPercent <= details.phases[currentPhaseIndex + 1].healthThreshold)
         {
             currentPhaseIndex++;
-            Debug.Log($"{details.enemyName} entered {details.phases[currentPhaseIndex].phaseName}!");
+            Debug.Log($"{details.enemyName} bypassed/entered {details.phases[currentPhaseIndex].phaseName}!");
         }
     }
 

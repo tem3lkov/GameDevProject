@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDetailsSO
   enemyName: Jumper
   isBoss: 0
-  maxHealth: 9
+  maxHealth: 7
   damageToPlayer: 1
   obstacleMask:
     serializedVersion: 2
     m_Bits: 768
+  initialAttackDelay: 0.3
   phases:
   - {fileID: 11400000, guid: 8404ed41cfacada44acc2282884bda8e, type: 2}

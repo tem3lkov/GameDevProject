@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDetailsSO
   enemyName: Chaser
   isBoss: 0
-  maxHealth: 8
+  maxHealth: 10.5
   damageToPlayer: 1
   obstacleMask:
     serializedVersion: 2
     m_Bits: 768
+  initialAttackDelay: 0.3
   phases:
   - {fileID: 11400000, guid: 427cb0d7e4150af4daf8368c8a2e919b, type: 2}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDetailsSO
   enemyName: Small Sucker
   isBoss: 0
-  maxHealth: 15
+  maxHealth: 10.5
   damageToPlayer: 1
   obstacleMask:
     serializedVersion: 2

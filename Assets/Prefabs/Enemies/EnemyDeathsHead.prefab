@@ -104,8 +104,8 @@ GameObject:
   - component: {fileID: 1229829099188903033}
   - component: {fileID: 364120953954107839}
   - component: {fileID: 162383974910697794}
-  - component: {fileID: 3620947886666918965}
   - component: {fileID: 3419826188881935649}
+  - component: {fileID: 946000812284843713}
   m_Layer: 7
   m_Name: EnemyDeathsHead
   m_TagString: Enemy
@@ -265,18 +265,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   details: {fileID: 11400000, guid: 6d6f209b780abd4499069c4df8600b75, type: 2}
---- !u!114 &3620947886666918965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3594578055589213504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865cd6a1b5a875a4090ab8895ebbb046, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement_BouncingFly
 --- !u!58 &3419826188881935649
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -313,3 +301,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &946000812284843713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594578055589213504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf50534514492574da4d4b0b074ac15f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement_Bounce
