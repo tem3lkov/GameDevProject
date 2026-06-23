@@ -122,6 +122,6 @@ public class PlayerHealth : SingletonMonoBehaviour<PlayerHealth>, IDamageable {
         globalCurrentRedHalves = 6;
         globalCurrentBlueHalves = 0;
 
-        SceneManager.LoadScene("SampleScene");
+        GameManager.Instance.ChangeState(GameState.gameLost);
     }
 }

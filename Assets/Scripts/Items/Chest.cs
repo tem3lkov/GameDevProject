@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public enum ChestType
 {
@@ -21,6 +22,15 @@ public class Chest : MonoBehaviour
         rb.gravityScale = 0f;
         rb.linearDamping = 5f;
         rb.freezeRotation = true;
+
+        GetComponent<BoxCollider2D>().enabled = false;
+        StartCoroutine(EnableCollider());
+    }
+
+    private IEnumerator EnableCollider()
+    {
+        yield return new WaitForSeconds(1f);
+        GetComponent<BoxCollider2D>().enabled = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

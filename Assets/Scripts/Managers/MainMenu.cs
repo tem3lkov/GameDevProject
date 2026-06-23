@@ -15,15 +15,13 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        GameManager GM;
-        GameManager.Instance.continueRun = false;
+        GameManager.Instance.PendingStartMode = StartMode.NewGame;
         SceneManager.LoadScene("SampleScene");
     }
 
     public void ContinueGame()
     {
-        GameManager GM;
-        GameManager.Instance.continueRun = true;
+        GameManager.Instance.PendingStartMode = StartMode.Continue;
         SceneManager.LoadScene("SampleScene");
     }
 

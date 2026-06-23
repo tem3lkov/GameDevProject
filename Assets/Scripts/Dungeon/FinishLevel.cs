@@ -72,6 +72,6 @@ public class FinishLevel : MonoBehaviour
         player.transform.localScale = Vector3.zero;
         yield return new WaitForSeconds(delayBeforeLoad);
 
-        GameManager.Instance.AdvanceLevel();
+        GameManager.Instance.ChangeState(GameState.levelAdvance);
     }
 }

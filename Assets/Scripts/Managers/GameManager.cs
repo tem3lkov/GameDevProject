@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;// TODO remove (just for testing)
+using UnityEngine.InputSystem;
 
 public enum GameState
 {
@@ -12,6 +12,7 @@ public enum GameState
     bossStage,
     engagingBoss,
     levelCompleted,
+    levelAdvance,
     gameWon,
     gameLost,
     gamePaused,
@@ -19,10 +20,18 @@ public enum GameState
     restartGame
 }
 
+public enum StartMode
+{
+    NewGame,
+    Continue,
+    AdvanceFloor
+}
+
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
     [Header("Game State")]
     public GameState currentState;
+    public StartMode PendingStartMode;
     private GameState stateBeforePause;
     public static event Action<GameState> OnGameStateChanged;
 
@@ -49,6 +58,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         transform.SetParent(null);
         DontDestroyOnLoad(gameObject);
         
+        if (SceneManager.GetActiveScene().name == "MainMenu") return;
+        
         ResetSeed(customPlayerSeed);
     }
 
@@ -68,12 +79,31 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        LoadRunData();
-        if (!continueRun && currentState == GameState.gameStarted)
+        if (SceneManager.GetActiveScene().name == "MainMenu") return;
+
+        switch (PendingStartMode)
         {
-            continueRun = true;
-            NewGame(customPlayerSeed);
+            case StartMode.NewGame:
+                ResetGameVariables(customPlayerSeed);
+                SaveRunData();
+                break;
+
+            case StartMode.Continue:
+                if (SaveManager.Instance.SaveExists()) {
+                    LoadRunData();
+                }
+                else {
+                    ResetGameVariables(customPlayerSeed);
+                    SaveRunData();
+                }
+                break;
+
+            case StartMode.AdvanceFloor:
+                LoadRunData();
+                break;
         }
+
+        GameManager.Instance.currentState = GameState.playingLevel;
     }
     
     private void Update()
@@ -126,17 +156,21 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
             case GameState.gameLost:
                 SaveManager.Instance.DeleteSave();
-                Time.timeScale = 0f;
+                SceneManager.LoadScene("MainMenu");
                 break;
 
             case GameState.levelCompleted:
                 Debug.Log("Level complete! Waiting for player to use trapdoor...");
                 break;
 
+            case GameState.levelAdvance:
+                AdvanceLevel();
+                break;
+
             case GameState.gameWon:
-                Debug.Log("🏆 CONGRATULATIONS! YOU ESCAPED THE DUNGEON! 🏆");
                 SaveManager.Instance.DeleteSave();
-                Time.timeScale = 0f;
+                Debug.Log("🏆 CONGRATULATIONS! YOU ESCAPED THE DUNGEON! 🏆");
+                SceneManager.LoadScene("MainMenu");
                 break;
 
             case GameState.restartGame:
@@ -145,28 +179,31 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         }
     }
 
-    public void NewGame(int specificSeed = 0)
+    private void NewGame(int specificSeed = 0)
     {
-        ResetGameVariables(specificSeed);
-        SaveRunData();
+        PendingStartMode = StartMode.NewGame;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public void Continue()
+    private void Continue()
     {
         if (!SaveManager.Instance.SaveExists())
         {
-            Debug.Log("No save file found.");
+            Debug.Log("No save file found. Starting a new game instead.");
+            NewGame();
             return;
         }
+        PendingStartMode = StartMode.Continue;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public void AdvanceLevel()
+    private void AdvanceLevel()
     {
         if (currentLevel < maxLevels)
         {
             currentLevel++;
             OnLevelChanged?.Invoke(currentLevel);
+
             SaveRunData();
+            PendingStartMode = StartMode.AdvanceFloor;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         } else
         {
