@@ -23,6 +23,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 {
     [Header("Game State")]
     public GameState currentState;
+    private GameState stateBeforePause;
     public static event Action<GameState> OnGameStateChanged;
 
     [Header("Level Progression")]
@@ -77,20 +78,17 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     
     private void Update()
     {
-        if (Keyboard.current.uKey.wasPressedThisFrame)
+        if (Keyboard.current.pKey.wasPressedThisFrame)
         {
-            Debug.Log("New Game (Reset params) (Save params and serialize)");
-            NewGame();// for retrying SAME seed do (customPlayerSeed)
-        }
-        if (Keyboard.current.iKey.wasPressedThisFrame)
-        {
-            Debug.Log("Continue Game (Load - deserialize)");
-            Continue();
-        }
-        if (Keyboard.current.oKey.wasPressedThisFrame)
-        {
-            Debug.Log("Advance Level (Save params and serialize) (Load - deserialize)");
-            AdvanceLevel();
+            if (currentState != GameState.gamePaused)
+            {
+                stateBeforePause = currentState;
+                ChangeState(GameState.gamePaused);
+            }
+            else
+            {
+                ChangeState(stateBeforePause);
+            }
         }
     }
 
