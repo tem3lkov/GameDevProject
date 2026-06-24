@@ -15,7 +15,6 @@ public class TooltipManager : SingletonMonoBehaviour<TooltipManager>
 
     public void Show(ItemScriptable item)
     {
-        Debug.Log("Show item tooltip");
         nameText.text = item.itemName;
         descriptionText.text = item.description;
 

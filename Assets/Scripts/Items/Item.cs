@@ -1,8 +1,9 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using UnityEngine.EventSystems;
 
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     protected ItemScriptable data;
     protected bool isForPurchase;
@@ -33,6 +34,18 @@ public class Item : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (data != null)
+        {
+            TooltipManager.Instance.Show(data);
+        }
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        TooltipManager.Instance.Hide();
     }
 
     public void SetPickupDelay(float delay = 2f)
@@ -88,6 +101,7 @@ public class Item : MonoBehaviour
         Debug.Log("Spent "+ (isForPurchase?data.itemPrice:0) + "c. Remaining " + 
                   PlayerInventory.Instance.coins + "c. Item collected: " + data.itemName);            
         OnItemPickedUp?.Invoke(data);
+        TooltipManager.Instance.Hide();
 
         Destroy(gameObject);
     }
