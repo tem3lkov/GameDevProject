@@ -43,7 +43,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     [Header("Run Information")]
     [Tooltip("Leave at 0 to generate a random seed. Enter a number to play a specific seed!")]
     public int customPlayerSeed = 0;
-    public bool continueRun = false;
 
     private RunData CurrentRun = new();
 
