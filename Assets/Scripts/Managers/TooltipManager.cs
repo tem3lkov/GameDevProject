@@ -18,6 +18,9 @@ public class TooltipManager : SingletonMonoBehaviour<TooltipManager>
         nameText.text = item.itemName;
         descriptionText.text = item.description;
 
+        if (item is ItemActiveScriptable && ((ItemActiveScriptable)item).cooldownTime == 0)
+            descriptionText.text += " (one time use)";
+
         tooltipPanel.SetActive(true);
     }
 

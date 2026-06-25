@@ -2,7 +2,6 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;
 
 public enum GameState
 {
@@ -32,7 +31,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     [Header("Game State")]
     public GameState currentState;
     public StartMode PendingStartMode;
-    private GameState stateBeforePause;
     public static event Action<GameState> OnGameStateChanged;
 
     [Header("Level Progression")]
@@ -105,22 +103,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         GameManager.Instance.currentState = GameState.playingLevel;
     }
     
-    private void Update()
-    {
-        if (Keyboard.current.pKey.wasPressedThisFrame)
-        {
-            if (currentState != GameState.gamePaused)
-            {
-                stateBeforePause = currentState;
-                ChangeState(GameState.gamePaused);
-            }
-            else
-            {
-                ChangeState(stateBeforePause);
-            }
-        }
-    }
-
     public void ChangeState(GameState newState)
     {
         if (currentState == newState) return;
@@ -147,6 +129,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
             case GameState.engagingEnemies:
             case GameState.engagingBoss:
+                Time.timeScale = 1f;
                 break;
 
             case GameState.gamePaused:
@@ -155,7 +138,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
             case GameState.gameLost:
                 SaveManager.Instance.DeleteSave();
-                SceneManager.LoadScene("MainMenu");
+                ReturnToMainMenu();
                 break;
 
             case GameState.levelCompleted:
@@ -169,7 +152,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             case GameState.gameWon:
                 SaveManager.Instance.DeleteSave();
                 Debug.Log("🏆 CONGRATULATIONS! YOU ESCAPED THE DUNGEON! 🏆");
-                SceneManager.LoadScene("MainMenu");
+                ReturnToMainMenu();
                 break;
 
             case GameState.restartGame:
@@ -208,6 +191,10 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         {
             ChangeState(GameState.gameWon);
         }
+    }
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void ResetGameVariables(int specificSeed = 0)
