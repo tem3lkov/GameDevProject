@@ -3,6 +3,14 @@
 ![Game Engine](https://img.shields.io/badge/Engine-Unity-blue) 
 ![Status](https://img.shields.io/badge/Status-In%20Development-orange)
 
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=UR1626kNoQ4">
+    <img src="https://img.youtube.com/vi/UR1626kNoQ4/0.jpg" width="600" alt="Gameplay Demo Video">
+  </a>
+  <br>
+  <i><b>🎥 Click the image to watch the Gameplay Demo on YouTube</b><br>Featuring 4-directional combat, procedural room generation, and enemy AI in action.</i>
+</div>
+
 ## 📖 About the Project
 This project is a 2D top-down action roguelike / dungeon crawler, heavily inspired by classic arcade mechanics. It features procedurally generated levels, dynamic enemy AI, and a modular upgrade system. The core focus of this project is building scalable game architecture, smooth 2D physics-based combat, and replayable gameplay loops.
 
@@ -40,6 +48,9 @@ This project is a 2D top-down action roguelike / dungeon crawler, heavily inspir
 - **HUD:** Real-time user interface displaying current health, resource counters, and active effects.
 
 ## 🛠️ Technical Details
-* **Language:** C#
-* **Engine/Framework:** Unity
-* **Architecture:** Utilizes modular component design for items and object-oriented principles for character/enemy classes.
+- **Language:** C#
+- **Engine/Framework:** Unity
+- **Architecture:** Utilizes modular component design for items and object-oriented principles for character/enemy classes.
+
+## 📝 Credits & Disclaimer
+This project was developed strictly for educational purposes as a programming exercise in C# and Unity. It is heavily inspired by *The Binding of Isaac*. All visual and audio assets used in this project are placeholders gathered from the internet and belong to their respective original creators and copyright holders. Our work focuses entirely on the codebase, architecture, and game logic.
